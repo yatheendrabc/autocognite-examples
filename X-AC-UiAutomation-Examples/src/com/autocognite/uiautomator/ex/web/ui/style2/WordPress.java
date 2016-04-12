@@ -2,7 +2,7 @@ package com.autocognite.uiautomator.ex.web.ui.style2;
 
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
-import com.autocognite.configurator.lib.property.Properties;
+import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.core.Ui;
 import com.autocognite.uiautomator.api.core.UiMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
@@ -12,7 +12,7 @@ import com.autocognite.uiautomator.lib.ext.uiautomator.UiMapperFactory;
 public class WordPress {
 	
 	private static String getIniMapFilePath(RunConfiguration runConfig, String pageName){
-		return  runConfig.get(Properties.UI_MAPS_DIR) + "/wordpress-pages" + "/" + pageName + ".ini";
+		return  runConfig.get(UiAutomator.UI_MAPS_DIR) + "/wordpress-pages" + "/" + pageName + ".ini";
 	}
 	
 	public static Ui getPage(BaseTest test, String pageName) throws Exception{

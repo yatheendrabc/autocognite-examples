@@ -2,7 +2,7 @@ package com.autocognite.teststyler.ddt.ex.basic;
 
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 
-import com.autocognite.configurator.lib.property.Properties;
+import com.autocognite.databroker.DataBroker;
 import com.autocognite.teststyler.lib.ext.ddt.DDTestSuiteForObjectListData;
 
 public class ExcelFileDDT_ObjectListData extends DDTestSuiteForObjectListData{
@@ -12,7 +12,7 @@ public class ExcelFileDDT_ObjectListData extends DDTestSuiteForObjectListData{
 	}
 	
 	public void init() throws Exception {
-		setDataSource(runConfig.get(Properties.DATA_DIR) + "/input.xls");
+		setDataSource(runConfig.get(DataBroker.DATA_DIR) + "/input.xls");
 	}
 		
 	public void repeat(String leftOp, String rightOp, String expectedSum) throws Exception{

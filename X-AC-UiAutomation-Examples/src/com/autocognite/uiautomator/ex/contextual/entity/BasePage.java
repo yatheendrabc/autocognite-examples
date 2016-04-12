@@ -2,7 +2,7 @@ package com.autocognite.uiautomator.ex.contextual.entity;
 
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
-import com.autocognite.configurator.lib.property.Properties;
+import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.core.UiDriver;
 import com.autocognite.uiautomator.api.core.UiMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
@@ -16,7 +16,7 @@ public abstract class BasePage extends DefaultUiEntity {
 	UiDriver uiDriver = null;
 	
 	private String getIniMapFilePath(){
-		return  runConfig.get(Properties.UI_MAPS_DIR) + "/wordpress-pages" + "/" + getName() + ".ini";
+		return  runConfig.get(UiAutomator.UI_MAPS_DIR) + "/wordpress-pages" + "/" + getName() + ".ini";
 	}
 	
 	private void initialize() throws Exception{

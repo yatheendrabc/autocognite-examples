@@ -8,8 +8,8 @@ import java.util.Date;
 
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
-import com.autocognite.configurator.lib.property.Properties;
 import com.autocognite.teststyler.lib.ext.TestCase;
+import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.core.Ui;
 import com.autocognite.uiautomator.api.core.UiDriver;
 import com.autocognite.uiautomator.api.core.UiElement;
@@ -34,7 +34,7 @@ public class WebTestAutomationWithUiStyle1 extends TestCase{
 	}
 	
 	private static String getIniMapFilePath(RunConfiguration runConfig){
-		return  runConfig.get(Properties.UI_MAPS_DIR) + "/wordpress_single_ui" + "/" + "WordPress.ini";
+		return  runConfig.get(UiAutomator.UI_MAPS_DIR) + "/wordpress_single_ui" + "/" + "WordPress.ini";
 	}
 	
 	private void goToHomePage() throws Exception{

@@ -2,7 +2,7 @@ package com.autocognite.teststyler.ddt.ex.filter;
 
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 
-import com.autocognite.configurator.lib.property.Properties;
+import com.autocognite.databroker.DataBroker;
 import com.autocognite.databroker.api.datarecord.MapDataRecord;
 import com.autocognite.teststyler.lib.ext.ddt.DDTestSuiteForMapData;
 
@@ -13,7 +13,7 @@ public class Filter_IniFileDDT_MapData extends DDTestSuiteForMapData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(runConfig.get(Properties.DATA_DIR) + "/input_exclude_option.ini");
+		setDataSource(runConfig.get(DataBroker.DATA_DIR) + "/input_exclude_option.ini");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {
