@@ -12,7 +12,6 @@ public class SimpleTestMethodSuite extends TestMethodSuite{
 	}
 	
 	public void testMethodFail() throws Exception{
-		
 		assertEquals(1,2);
 	}
 	

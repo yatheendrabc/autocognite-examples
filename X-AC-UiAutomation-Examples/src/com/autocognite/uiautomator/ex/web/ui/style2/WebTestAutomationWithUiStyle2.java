@@ -8,14 +8,15 @@ import java.util.Date;
 
 import com.autocognite.uiautomator.api.core.Ui;
 import com.autocognite.uiautomator.api.core.UiElement;
+import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 
-public class PCWebTestWithMultipleWebUi extends BaseTest{
+public class WebTestAutomationWithUiStyle2 extends BaseTest{
 	Ui home = null;
 	Ui leftNav = null;
 	
 	private void goToHomePage() throws Exception{
 		home = getPage("HomePage");
-		home.goTo("http://192.168.56.101/wp-admin");		
+		home.goTo(WordPressConfiguration.getAdminUrl());		
 	}
 	
 	private void login() throws Exception{
@@ -72,7 +73,7 @@ public class PCWebTestWithMultipleWebUi extends BaseTest{
 	}
 	
 	private void logout() throws Exception{
-		home.goTo("http://192.168.56.101/wp-login.php?action=logout");
+		home.goTo(WordPressConfiguration.getLogoutUrl());
 		home.element("LOGOUT_CONFIRM").click();
 	}
 	

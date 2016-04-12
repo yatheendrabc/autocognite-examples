@@ -21,7 +21,7 @@ public class WordPress {
 												FileFormat.INI, 
 												getIniMapFilePath(test.getRunConfiguration(), pageName));
 		// Create Ui
-		Ui ui = UiFactory.getUi(test.getRunConfiguration(), test.getAutomator(), mapper, AutomationContext.PC_WEB);
+		Ui ui = UiFactory.getUi(test.getRunConfiguration(), test.getUiDriver(), mapper, AutomationContext.PC_WEB);
 		return ui;
 	}
 }

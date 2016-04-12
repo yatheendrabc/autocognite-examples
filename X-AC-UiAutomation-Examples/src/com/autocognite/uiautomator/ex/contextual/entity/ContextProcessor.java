@@ -9,10 +9,8 @@ import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 
-public enum ConfigSingleton {
-	INSTANCE;
+public class ContextProcessor {
 
-	
 	public static AutomationContext getCurrentContext(RunConfiguration runConfig) throws Exception{
 		ArrayList<AutomationContext> contexts = UiAutomator.getAllowedAutomationContexts(runConfig);
 		int exclusiveContextCount = 0;

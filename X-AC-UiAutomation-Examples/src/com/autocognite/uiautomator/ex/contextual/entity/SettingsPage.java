@@ -12,8 +12,8 @@ import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.uiautomator.api.core.UiDriver;
 
 public class SettingsPage extends BasePage {
-	public SettingsPage (RunConfiguration runConfig, UiDriver automator) throws Exception{
-		super("Settings", runConfig, automator);
+	public SettingsPage (RunConfiguration runConfig, UiDriver uiDriver) throws Exception{
+		super("Settings", runConfig, uiDriver);
 	}
 	
 	public void tweakSettings() throws Exception {

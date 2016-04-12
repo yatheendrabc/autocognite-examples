@@ -1,7 +1,5 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import javax.security.auth.login.Configuration;
-
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.configurator.lib.property.Properties;
@@ -15,7 +13,7 @@ public abstract class BasePage extends DefaultUiEntity {
 	LeftNavigationSubPage leftNavigation = null;
 	public static final String web = "web";
 	private AutomationContext context = null;
-	UiDriver automator = null;
+	UiDriver uiDriver = null;
 	
 	private String getIniMapFilePath(){
 		return  runConfig.get(Properties.UI_MAPS_DIR) + "/wordpress-pages" + "/" + getName() + ".ini";
@@ -26,21 +24,21 @@ public abstract class BasePage extends DefaultUiEntity {
 		populate(mapper);		
 	}
 
-	public BasePage(String entityName, RunConfiguration runConfig, UiDriver automator) throws Exception{
+	public BasePage(String entityName, RunConfiguration runConfig, UiDriver uiDriver) throws Exception{
 		super(entityName, runConfig);
-		this.automator = automator;
-		this.registerAutomator(web, this.automator);
-		this.context = ConfigSingleton.getCurrentContext(runConfig);
+		this.uiDriver = uiDriver;
+		this.registerAutomator(web, this.uiDriver);
+		this.context = ContextProcessor.getCurrentContext(runConfig);
 		initialize();
 	}
 	
-	protected UiDriver getAutomator(){
-		return this.automator;
+	protected UiDriver getUiDriver(){
+		return this.uiDriver;
 	}
 	
 	public LeftNavigationSubPage getLeftNavigation() throws Exception{
 		if (leftNavigation == null){
-			return new LeftNavigationSubPage(runConfig, this.getAutomator());
+			return new LeftNavigationSubPage(runConfig, this.getUiDriver());
 		} else {
 			return leftNavigation;
 		}

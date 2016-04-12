@@ -8,11 +8,11 @@ public class WordPressConfiguration {
 	// If you are using UI Automation with UniTEE, the same can be done directly by putting these in unitee.properties file.
 	
 	static String appUrl = "http://192.168.56.101";
-	static String loginUrl = appUrl + "/wp-admin/";
+	static String adminUrl = appUrl + "/wp-admin/";
 	static String logoutUrl = appUrl + "/wp-login.php?action=logout";
 	
-	public static String getLoginUrl(){
-		return loginUrl;
+	public static String getAdminUrl(){
+		return adminUrl;
 	}
 	
 	public static String getLogoutUrl(){

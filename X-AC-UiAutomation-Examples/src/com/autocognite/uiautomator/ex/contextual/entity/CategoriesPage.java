@@ -1,14 +1,12 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import javax.security.auth.login.Configuration;
-
 import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.uiautomator.api.core.UiDriver;
 import com.autocognite.uiautomator.api.core.UiElement;
 
 public class CategoriesPage extends BasePage {
-	public CategoriesPage (RunConfiguration runConfig, UiDriver automator) throws Exception{
-		super("Categories", runConfig, automator);
+	public CategoriesPage (RunConfiguration runConfig, UiDriver uiDriver) throws Exception{
+		super("Categories", runConfig, uiDriver);
 	}
 	
 	public void tweakCategories() throws Exception {

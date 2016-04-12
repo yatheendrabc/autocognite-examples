@@ -7,9 +7,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 import com.autocognite.teststyler.lib.ext.TestCase;
-import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.core.UiDriver;
 import com.autocognite.uiautomator.api.core.UiElement;
+import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
 
 public class WebTestAutomationWithUiDriver extends TestCase{
@@ -20,7 +20,7 @@ public class WebTestAutomationWithUiDriver extends TestCase{
 	}
 
 	private void goToHomePage() throws Exception{
-		uiDriver.goTo("http://192.168.56.101/wp-admin");		
+		uiDriver.goTo(WordPressConfiguration.getAdminUrl());		
 	}
 	
 	private void login() throws Exception{
@@ -85,7 +85,7 @@ public class WebTestAutomationWithUiDriver extends TestCase{
 	}
 	
 	private void logout() throws Exception{
-		uiDriver.goTo("http://192.168.56.101/wp-login.php?action=logout");
+		uiDriver.goTo(WordPressConfiguration.getLogoutUrl());
 		uiDriver.elementWithLinkText("log out").click();
 	}
 	

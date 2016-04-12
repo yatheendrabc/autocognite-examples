@@ -1,7 +1,6 @@
 package com.autocognite.uiautomator.ex.web.ui.style2;
 
 import com.autocognite.teststyler.lib.ext.TestCase;
-import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.core.Ui;
 import com.autocognite.uiautomator.api.core.UiDriver;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
@@ -17,7 +16,7 @@ public abstract class BaseTest extends TestCase{
 		uiDriver.close();
 	}
 	
-	public UiDriver getAutomator(){
+	public UiDriver getUiDriver(){
 		return uiDriver;
 	}
 	

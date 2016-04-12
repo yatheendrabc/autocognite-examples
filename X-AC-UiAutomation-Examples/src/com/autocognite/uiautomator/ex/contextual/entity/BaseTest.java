@@ -7,26 +7,26 @@ import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
 
 public abstract class BaseTest extends TestMethodSuite{
 	private AutomationContext context = null;
-	private UiDriver automator = null;
+	private UiDriver uiDriver = null;
 
 	public void setUpClass() throws Exception{ 
-		this.context = ConfigSingleton.getCurrentContext(runConfig);
+		this.context = ContextProcessor.getCurrentContext(runConfig);
 		switch(context){
-		case PC_WEB: automator = UiDriverFactory.getUiDriver(runConfig, AutomationContext.PC_WEB); break;
-		case MOBILE_WEB: automator = UiDriverFactory.getUiDriver(runConfig, AutomationContext.MOBILE_WEB); break;
+		case PC_WEB: uiDriver = UiDriverFactory.getUiDriver(runConfig, AutomationContext.PC_WEB); break;
+		case MOBILE_WEB: uiDriver = UiDriverFactory.getUiDriver(runConfig, AutomationContext.MOBILE_WEB); break;
 		default: break;
 		}
 	}
 	
 	public void tearDownClass() throws Exception{
-		automator.close();
+		uiDriver.close();
 	}
 	
-	public UiDriver getAutomator(){
-		return automator;
+	public UiDriver getUiDriver(){
+		return uiDriver;
 	}
 	
 	public HomePage createHomePage() throws Exception{
-		return new HomePage(this.getRunConfiguration(), this.getAutomator());	
+		return new HomePage(this.getRunConfiguration(), this.getUiDriver());	
 	}
 }

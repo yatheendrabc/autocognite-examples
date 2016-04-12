@@ -10,22 +10,22 @@ import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.configurator.lib.property.Properties;
 import com.autocognite.teststyler.lib.ext.TestCase;
-import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.core.Ui;
 import com.autocognite.uiautomator.api.core.UiDriver;
 import com.autocognite.uiautomator.api.core.UiElement;
 import com.autocognite.uiautomator.api.core.UiMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
+import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
 import com.autocognite.uiautomator.lib.ext.factories.UiFactory;
 import com.autocognite.uiautomator.lib.ext.uiautomator.UiMapperFactory;
 
-public class WebTestWithDefaultUi extends TestCase{
+public class WebTestAutomationWithUiStyle1 extends TestCase{
 	UiDriver uiDriver = null;
 	Ui ui = null;
 	
 	public void setUpClass() throws Exception{
-		// Create Automator
+		// Create UiDriver
 		uiDriver = UiDriverFactory.getWebUiDriver(runConfig);
 		// Create Ui Mapper
 		UiMapper mapper = UiMapperFactory.getFileMapper(FileFormat.INI, getIniMapFilePath(runConfig));
@@ -38,7 +38,7 @@ public class WebTestWithDefaultUi extends TestCase{
 	}
 	
 	private void goToHomePage() throws Exception{
-		ui.goTo("http://192.168.56.101/wp-admin");		
+		ui.goTo(WordPressConfiguration.getAdminUrl());		
 	}
 	
 	private void login() throws Exception{
@@ -91,7 +91,7 @@ public class WebTestWithDefaultUi extends TestCase{
 	}
 	
 	private void logout() throws Exception{
-		ui.goTo("http://192.168.56.101/wp-login.php?action=logout");
+		ui.goTo(WordPressConfiguration.getLogoutUrl());
 		ui.element("Home_LOGOUT_CONFIRM").click();
 	}
 	
