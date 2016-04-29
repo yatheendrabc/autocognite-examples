@@ -3,13 +3,13 @@ package com.autocognite.uiautomator.ex.contextual.entity;
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
-import com.autocognite.uiautomator.api.core.UiDriver;
-import com.autocognite.uiautomator.api.core.UiMapper;
+import com.autocognite.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.api.UiMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
-import com.autocognite.uiautomator.lib.ext.uiautomator.DefaultUiEntity;
-import com.autocognite.uiautomator.lib.ext.uiautomator.UiMapperFactory;
+import com.autocognite.uiautomator.lib.DefaultCompositePage;
+import com.autocognite.uiautomator.lib.ext.factories.UiMapperFactory;
 
-public abstract class BasePage extends DefaultUiEntity {
+public abstract class BasePage extends DefaultCompositePage {
 	LeftNavigationSubPage leftNavigation = null;
 	public static final String web = "web";
 	private AutomationContext context = null;
@@ -27,7 +27,7 @@ public abstract class BasePage extends DefaultUiEntity {
 	public BasePage(String entityName, RunConfiguration runConfig, UiDriver uiDriver) throws Exception{
 		super(entityName, runConfig);
 		this.uiDriver = uiDriver;
-		this.registerAutomator(web, this.uiDriver);
+		this.registerPage(web, this.uiDriver);
 		this.context = ContextProcessor.getCurrentContext(runConfig);
 		initialize();
 	}

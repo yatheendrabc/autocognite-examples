@@ -1,8 +1,8 @@
 package com.autocognite.uiautomator.ex.web.ui.style2;
 
-import com.autocognite.teststyler.lib.ext.TestCase;
-import com.autocognite.uiautomator.api.core.Ui;
-import com.autocognite.uiautomator.api.core.UiDriver;
+import com.autocognite.teststyler.lib.TestCase;
+import com.autocognite.uiautomator.api.StandalonePage;
+import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
 
 public abstract class BaseTest extends TestCase{
@@ -20,7 +20,7 @@ public abstract class BaseTest extends TestCase{
 		return uiDriver;
 	}
 	
-	public Ui getPage(String pageName) throws Exception{
+	public StandalonePage getPage(String pageName) throws Exception{
 		return WordPress.getPage(this, pageName);
 	}
 }

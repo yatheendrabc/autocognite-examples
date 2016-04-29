@@ -1,6 +1,6 @@
 package com.autocognite.teststyler.ex.fixtures;
 
-import static com.autocognite.validator.lib.Assertions.assertEquals;
+import static com.autocognite.validator.lib.Assertions.*;
 
 import com.autocognite.teststyler.lib.ext.TestMethodSuite;
 

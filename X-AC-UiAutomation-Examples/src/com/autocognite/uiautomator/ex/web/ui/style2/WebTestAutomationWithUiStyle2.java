@@ -6,13 +6,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.autocognite.uiautomator.api.core.Ui;
-import com.autocognite.uiautomator.api.core.UiElement;
+import com.autocognite.uiautomator.api.StandalonePage;
+import com.autocognite.uiautomator.api.UiElement;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 
 public class WebTestAutomationWithUiStyle2 extends BaseTest{
-	Ui home = null;
-	Ui leftNav = null;
+	StandalonePage home = null;
+	StandalonePage leftNav = null;
 	
 	private void goToHomePage() throws Exception{
 		home = getPage("HomePage");
@@ -32,7 +32,7 @@ public class WebTestAutomationWithUiStyle2 extends BaseTest{
 	}
 	
 	private void tweakCategories() throws Exception{
-		Ui categories = getPage("Categories");
+		StandalonePage categories = getPage("Categories");
 		categories.element("CAT_CHECKBOXES").getInstanceAtOrdinal(2).check();
 		categories.element("CAT_CHECKBOXES").getInstanceAtIndex(1).uncheck();
 		
@@ -47,7 +47,7 @@ public class WebTestAutomationWithUiStyle2 extends BaseTest{
 	}
 	
 	private void tweakSettings() throws Exception{
-		Ui settings = getPage("Settings");
+		StandalonePage settings = getPage("Settings");
 		
 		settings.element("BLOG_NAME").enterText("Hello");
 		settings.element("BLOG_NAME").enterText("Hello");

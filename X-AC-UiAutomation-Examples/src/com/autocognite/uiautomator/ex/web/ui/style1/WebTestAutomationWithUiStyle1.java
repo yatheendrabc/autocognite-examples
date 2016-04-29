@@ -8,21 +8,21 @@ import java.util.Date;
 
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
-import com.autocognite.teststyler.lib.ext.TestCase;
+import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.UiAutomator;
-import com.autocognite.uiautomator.api.core.Ui;
-import com.autocognite.uiautomator.api.core.UiDriver;
-import com.autocognite.uiautomator.api.core.UiElement;
-import com.autocognite.uiautomator.api.core.UiMapper;
+import com.autocognite.uiautomator.api.StandalonePage;
+import com.autocognite.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.api.UiElement;
+import com.autocognite.uiautomator.api.UiMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
-import com.autocognite.uiautomator.lib.ext.factories.UiFactory;
-import com.autocognite.uiautomator.lib.ext.uiautomator.UiMapperFactory;
+import com.autocognite.uiautomator.lib.ext.factories.PageFactory;
+import com.autocognite.uiautomator.lib.ext.factories.UiMapperFactory;
 
 public class WebTestAutomationWithUiStyle1 extends TestCase{
 	UiDriver uiDriver = null;
-	Ui ui = null;
+	StandalonePage ui = null;
 	
 	public void setUpClass() throws Exception{
 		// Create UiDriver
@@ -30,7 +30,7 @@ public class WebTestAutomationWithUiStyle1 extends TestCase{
 		// Create Ui Mapper
 		UiMapper mapper = UiMapperFactory.getFileMapper(FileFormat.INI, getIniMapFilePath(runConfig));
 		// Create Ui
-		ui = UiFactory.getUi(runConfig, uiDriver, mapper, AutomationContext.PC_WEB);
+		ui = PageFactory.getPage(runConfig, uiDriver, mapper, AutomationContext.PC_WEB);
 	}
 	
 	private static String getIniMapFilePath(RunConfiguration runConfig){

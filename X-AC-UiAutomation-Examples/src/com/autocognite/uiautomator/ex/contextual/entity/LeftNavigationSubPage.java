@@ -1,7 +1,7 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
 import com.autocognite.configurator.api.config.RunConfiguration;
-import com.autocognite.uiautomator.api.core.UiDriver;
+import com.autocognite.uiautomator.api.UiDriver;
 
 public class LeftNavigationSubPage extends BasePage {
 	public LeftNavigationSubPage (RunConfiguration runConfig, UiDriver uiDriver) throws Exception{
@@ -10,21 +10,21 @@ public class LeftNavigationSubPage extends BasePage {
 	
 	public SettingsPage getSettingsPage() throws Exception {
 		toggleMenu();
-		ui(web).element("SETTINGS").identify().click();
-		ui(web).element("GENERAL").identify().click();
+		page(web).element("SETTINGS").identify().click();
+		page(web).element("GENERAL").identify().click();
 		return new SettingsPage(runConfig, this.getUiDriver());
 	}
 	
 	public CategoriesPage getCategoriesPage() throws Exception{
 		toggleMenu();
-		ui(web).element("POSTS").click();
-		ui(web).element("CATEGORIES").click();
+		page(web).element("POSTS").click();
+		page(web).element("CATEGORIES").click();
 		return new CategoriesPage(runConfig, this.getUiDriver());
 	}
 	
 	public void toggleMenu() throws Exception{
 		if (this.isInMobileWebContext()){
-			ui(web).element("MENU_TOGGLE").identify().click();
+			page(web).element("MENU_TOGGLE").identify().click();
 		}
 	}
 }

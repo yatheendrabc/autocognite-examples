@@ -1,7 +1,7 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import com.autocognite.teststyler.lib.ext.TestMethodSuite;
-import com.autocognite.uiautomator.api.core.UiDriver;
+import com.autocognite.teststyler.lib.TestMethodSuite;
+import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
 

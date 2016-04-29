@@ -1,7 +1,7 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
 import com.autocognite.configurator.api.config.RunConfiguration;
-import com.autocognite.uiautomator.api.core.UiDriver;
+import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 
 public class HomePage extends BasePage {
@@ -11,18 +11,18 @@ public class HomePage extends BasePage {
 	}
 	
 	public void goToBaseUrl() throws Exception{
-		ui(web).goTo(WordPressConfiguration.getAdminUrl());
+		page(web).goTo(WordPressConfiguration.getAdminUrl());
 	}
 	
 	public void login() throws Exception{
-		ui(web).element("LOGIN").waitForPresence();
-		ui(web).element("LOGIN").enterText("user");
-		ui(web).element("PASSWORD").enterText("bitnami");
-		ui(web).element("SUBMIT").click();
+		page(web).element("LOGIN").waitForPresence();
+		page(web).element("LOGIN").enterText("user");
+		page(web).element("PASSWORD").enterText("bitnami");
+		page(web).element("SUBMIT").click();
 	}
 	
 	public void logout() throws Exception{
-		ui(web).goTo(WordPressConfiguration.getLogoutUrl());
-		ui(web).element("LOGOUT_CONFIRM").click();
+		page(web).goTo(WordPressConfiguration.getLogoutUrl());
+		page(web).element("LOGOUT_CONFIRM").click();
 	}
 }

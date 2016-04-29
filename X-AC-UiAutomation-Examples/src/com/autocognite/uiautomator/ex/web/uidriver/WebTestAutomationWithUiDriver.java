@@ -6,9 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.autocognite.teststyler.lib.ext.TestCase;
-import com.autocognite.uiautomator.api.core.UiDriver;
-import com.autocognite.uiautomator.api.core.UiElement;
+import com.autocognite.appium.lib.AppiumWebUiDriver;
+import com.autocognite.teststyler.lib.TestCase;
+import com.autocognite.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.api.UiElement;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
 
@@ -16,7 +17,7 @@ public class WebTestAutomationWithUiDriver extends TestCase{
 	UiDriver uiDriver = null;
 	
 	public void setUpClass() throws Exception{
-		uiDriver = UiDriverFactory.getWebUiDriver(runConfig);
+		uiDriver = UiDriverFactory.getMobileWebUiDriver(runConfig);
 	}
 
 	private void goToHomePage() throws Exception{
