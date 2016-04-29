@@ -1,8 +1,9 @@
 Please refer to the LICENSE and NOTICE files for 
 license and copyright information.
 
-AutoCognite Data Broker is an AutoCognite component
-that provides data handling facilities.
+AutoCognite Examples is an AutoCognite project
+aimed at providing practical examples of how
+to use various AutoCognite components effectively.
 
 Visit AutoCognite (http://www.autocognite.com) for more details.
 
