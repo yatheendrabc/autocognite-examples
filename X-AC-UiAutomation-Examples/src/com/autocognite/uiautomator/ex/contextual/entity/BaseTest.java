@@ -3,7 +3,7 @@ package com.autocognite.uiautomator.ex.contextual.entity;
 import com.autocognite.teststyler.lib.TestMethodSuite;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
-import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
+import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
 
 public abstract class BaseTest extends TestMethodSuite{
 	private AutomationContext context = null;

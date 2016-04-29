@@ -11,7 +11,7 @@ import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.UiElement;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
-import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
+import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
 
 public class WebTestAutomationWithUiDriver extends TestCase{
 	UiDriver uiDriver = null;

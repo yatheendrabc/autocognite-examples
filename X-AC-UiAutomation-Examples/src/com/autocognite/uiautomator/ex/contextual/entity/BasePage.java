@@ -4,10 +4,10 @@ import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.UiDriver;
-import com.autocognite.uiautomator.api.UiMapper;
+import com.autocognite.uiautomator.api.PageMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.lib.DefaultCompositePage;
-import com.autocognite.uiautomator.lib.ext.factories.UiMapperFactory;
+import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
 
 public abstract class BasePage extends DefaultCompositePage {
 	LeftNavigationSubPage leftNavigation = null;
@@ -20,7 +20,7 @@ public abstract class BasePage extends DefaultCompositePage {
 	}
 	
 	private void initialize() throws Exception{
-		UiMapper mapper = UiMapperFactory.getFileMapper(FileFormat.INI, getIniMapFilePath());
+		PageMapper mapper = PageMapperFactory.getFileMapper(FileFormat.INI, getIniMapFilePath());
 		populate(mapper);		
 	}
 

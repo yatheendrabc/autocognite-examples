@@ -4,10 +4,10 @@ import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.config.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.StandalonePage;
-import com.autocognite.uiautomator.api.UiMapper;
+import com.autocognite.uiautomator.api.PageMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
-import com.autocognite.uiautomator.lib.ext.factories.PageFactory;
-import com.autocognite.uiautomator.lib.ext.factories.UiMapperFactory;
+import com.autocognite.uiautomator.lib.factory.PageFactory;
+import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
 
 public class WordPress {
 	
@@ -17,7 +17,7 @@ public class WordPress {
 	
 	public static StandalonePage getPage(BaseTest test, String pageName) throws Exception{
 		// Create Ui Mapper
-		UiMapper mapper = UiMapperFactory.getFileMapper(
+		PageMapper mapper = PageMapperFactory.getFileMapper(
 												FileFormat.INI, 
 												getIniMapFilePath(test.getRunConfiguration(), pageName));
 		// Create Ui

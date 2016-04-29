@@ -13,12 +13,12 @@ import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.StandalonePage;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.UiElement;
-import com.autocognite.uiautomator.api.UiMapper;
+import com.autocognite.uiautomator.api.PageMapper;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
-import com.autocognite.uiautomator.lib.ext.factories.UiDriverFactory;
-import com.autocognite.uiautomator.lib.ext.factories.PageFactory;
-import com.autocognite.uiautomator.lib.ext.factories.UiMapperFactory;
+import com.autocognite.uiautomator.lib.factory.PageFactory;
+import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
 
 public class WebTestAutomationWithUiStyle1 extends TestCase{
 	UiDriver uiDriver = null;
@@ -28,7 +28,7 @@ public class WebTestAutomationWithUiStyle1 extends TestCase{
 		// Create UiDriver
 		uiDriver = UiDriverFactory.getWebUiDriver(runConfig);
 		// Create Ui Mapper
-		UiMapper mapper = UiMapperFactory.getFileMapper(FileFormat.INI, getIniMapFilePath(runConfig));
+		PageMapper mapper = PageMapperFactory.getFileMapper(FileFormat.INI, getIniMapFilePath(runConfig));
 		// Create Ui
 		ui = PageFactory.getPage(runConfig, uiDriver, mapper, AutomationContext.PC_WEB);
 	}
