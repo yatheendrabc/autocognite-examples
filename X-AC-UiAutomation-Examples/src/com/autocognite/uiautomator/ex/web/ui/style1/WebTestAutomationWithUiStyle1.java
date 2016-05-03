@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import com.autocognite.batteries.api.enums.FileFormat;
-import com.autocognite.configurator.api.config.RunConfiguration;
+import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.StandalonePage;

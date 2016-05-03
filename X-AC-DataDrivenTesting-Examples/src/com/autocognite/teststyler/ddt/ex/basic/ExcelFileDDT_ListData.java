@@ -4,7 +4,7 @@ import static com.autocognite.validator.lib.Assertions.assertEquals;
 
 import com.autocognite.databroker.DataBroker;
 import com.autocognite.databroker.api.datarecord.ListDataRecord;
-import com.autocognite.teststyler.lib.ext.ddt.DDTestSuiteForListData;
+import com.autocognite.ddtstyler.lib.DDTestSuiteForListData;
 
 public class ExcelFileDDT_ListData extends DDTestSuiteForListData {
 

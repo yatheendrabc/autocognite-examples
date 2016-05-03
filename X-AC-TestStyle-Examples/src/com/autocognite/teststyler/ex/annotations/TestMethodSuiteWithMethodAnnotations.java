@@ -4,7 +4,7 @@ import static com.autocognite.validator.lib.Assertions.assertEquals;
 import static com.autocognite.validator.lib.Assertions.error;
 
 import com.autocognite.testcommons.api.annotate.TestProperties;
-import com.autocognite.teststyler.lib.ext.TestMethodSuite;
+import com.autocognite.teststyler.lib.TestMethodSuite;
 
 @TestProperties(name="Custom name", category="Some-Category")
 public class TestMethodSuiteWithMethodAnnotations extends TestMethodSuite{

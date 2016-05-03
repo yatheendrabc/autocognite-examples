@@ -2,7 +2,7 @@ package com.autocognite.teststyler.ex.fixtures;
 
 import static com.autocognite.validator.lib.Assertions.*;
 
-import com.autocognite.teststyler.lib.ext.TestMethodSuite;
+import com.autocognite.teststyler.lib.TestMethodSuite;
 
 public class TestMethodSuiteWithAllFixtures extends TestMethodSuite{
 	public void setUpClass(){

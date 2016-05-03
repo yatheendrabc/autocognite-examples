@@ -3,7 +3,7 @@ package com.autocognite.teststyler.ddt.ex.basic;
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 
 import com.autocognite.databroker.DataBroker;
-import com.autocognite.teststyler.lib.ext.ddt.DDTestSuiteForObjectListData;
+import com.autocognite.ddtstyler.lib.DDTestSuiteForObjectListData;
 
 public class ExcelFileDDT_ObjectListData extends DDTestSuiteForObjectListData{
 

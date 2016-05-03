@@ -8,7 +8,7 @@ import static com.autocognite.validator.lib.Assertions.assertTrue;
 import static com.autocognite.validator.lib.Assertions.error;
 import static com.autocognite.validator.lib.Assertions.fail;
 
-import com.autocognite.teststyler.lib.ext.TestMethodSuite;
+import com.autocognite.teststyler.lib.TestMethodSuite;
 
 public class AssertionsTestMethodSuite extends TestMethodSuite{
 

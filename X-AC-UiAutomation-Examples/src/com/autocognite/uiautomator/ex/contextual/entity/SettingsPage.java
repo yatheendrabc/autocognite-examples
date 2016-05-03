@@ -8,7 +8,7 @@ import java.util.Date;
 
 import javax.security.auth.login.Configuration;
 
-import com.autocognite.configurator.api.config.RunConfiguration;
+import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.api.UiDriver;
 
 public class SettingsPage extends BasePage {

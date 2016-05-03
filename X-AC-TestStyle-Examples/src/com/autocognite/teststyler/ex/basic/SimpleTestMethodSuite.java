@@ -3,7 +3,7 @@ package com.autocognite.teststyler.ex.basic;
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 import static com.autocognite.validator.lib.Assertions.error;
 
-import com.autocognite.teststyler.lib.ext.TestMethodSuite;
+import com.autocognite.teststyler.lib.TestMethodSuite;
 
 public class SimpleTestMethodSuite extends TestMethodSuite{
 

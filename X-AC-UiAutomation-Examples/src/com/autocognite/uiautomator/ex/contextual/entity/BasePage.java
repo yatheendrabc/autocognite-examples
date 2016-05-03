@@ -1,7 +1,7 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
 import com.autocognite.batteries.api.enums.FileFormat;
-import com.autocognite.configurator.api.config.RunConfiguration;
+import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.PageMapper;

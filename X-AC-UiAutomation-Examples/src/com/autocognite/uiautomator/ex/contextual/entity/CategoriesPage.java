@@ -1,6 +1,6 @@
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import com.autocognite.configurator.api.config.RunConfiguration;
+import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.UiElement;
 

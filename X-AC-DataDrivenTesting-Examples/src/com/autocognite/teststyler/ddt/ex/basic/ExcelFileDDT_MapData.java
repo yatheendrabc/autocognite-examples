@@ -4,7 +4,7 @@ import static com.autocognite.validator.lib.Assertions.assertEquals;
 
 import com.autocognite.databroker.DataBroker;
 import com.autocognite.databroker.api.datarecord.MapDataRecord;
-import com.autocognite.teststyler.lib.ext.ddt.DDTestSuiteForMapData;
+import com.autocognite.ddtstyler.lib.DDTestSuiteForMapData;
 
 public class ExcelFileDDT_MapData extends DDTestSuiteForMapData {
 
