@@ -6,8 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import javax.security.auth.login.Configuration;
-
 import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.api.UiDriver;
 

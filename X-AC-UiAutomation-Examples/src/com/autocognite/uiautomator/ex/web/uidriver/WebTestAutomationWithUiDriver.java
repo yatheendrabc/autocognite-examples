@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.autocognite.appium.lib.AppiumWebUiDriver;
 import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.UiElement;
@@ -17,7 +16,7 @@ public class WebTestAutomationWithUiDriver extends TestCase{
 	UiDriver uiDriver = null;
 	
 	public void setUpClass() throws Exception{
-		uiDriver = UiDriverFactory.getMobileWebUiDriver(runConfig);
+		uiDriver = UiDriverFactory.getMobileWebUiDriver(getRunConfig());
 	}
 
 	private void goToHomePage() throws Exception{

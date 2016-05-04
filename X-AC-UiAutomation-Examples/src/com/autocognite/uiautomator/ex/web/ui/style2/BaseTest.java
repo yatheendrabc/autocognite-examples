@@ -6,10 +6,10 @@ import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
 
 public abstract class BaseTest extends TestCase{
-	protected UiDriver uiDriver = null;
+	private UiDriver uiDriver = null;
 
 	public void setUpClass() throws Exception{
-		uiDriver = UiDriverFactory.getWebUiDriver(runConfig);
+		uiDriver = UiDriverFactory.getWebUiDriver(getRunConfig());
 	}
 	
 	public void tearDownClass() throws Exception{

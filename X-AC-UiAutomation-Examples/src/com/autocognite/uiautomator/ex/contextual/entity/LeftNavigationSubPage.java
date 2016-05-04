@@ -12,14 +12,14 @@ public class LeftNavigationSubPage extends BasePage {
 		toggleMenu();
 		page(web).element("SETTINGS").identify().click();
 		page(web).element("GENERAL").identify().click();
-		return new SettingsPage(runConfig, this.getUiDriver());
+		return new SettingsPage(getRunConfig(), this.getUiDriver());
 	}
 	
 	public CategoriesPage getCategoriesPage() throws Exception{
 		toggleMenu();
 		page(web).element("POSTS").click();
 		page(web).element("CATEGORIES").click();
-		return new CategoriesPage(runConfig, this.getUiDriver());
+		return new CategoriesPage(getRunConfig(), this.getUiDriver());
 	}
 	
 	public void toggleMenu() throws Exception{

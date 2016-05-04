@@ -3,8 +3,8 @@ package com.autocognite.uiautomator.ex.contextual.entity;
 import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
-import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.PageMapper;
+import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.lib.DefaultCompositePage;
 import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
@@ -16,7 +16,7 @@ public abstract class BasePage extends DefaultCompositePage {
 	UiDriver uiDriver = null;
 	
 	private String getIniMapFilePath(){
-		return  runConfig.get(UiAutomator.UI_MAPS_DIR) + "/wordpress-pages" + "/" + getName() + ".ini";
+		return  getRunConfig().get(UiAutomator.UI_MAPS_DIR) + "/wordpress-pages" + "/" + getName() + ".ini";
 	}
 	
 	private void initialize() throws Exception{
@@ -38,7 +38,7 @@ public abstract class BasePage extends DefaultCompositePage {
 	
 	public LeftNavigationSubPage getLeftNavigation() throws Exception{
 		if (leftNavigation == null){
-			return new LeftNavigationSubPage(runConfig, this.getUiDriver());
+			return new LeftNavigationSubPage(getRunConfig(), this.getUiDriver());
 		} else {
 			return leftNavigation;
 		}

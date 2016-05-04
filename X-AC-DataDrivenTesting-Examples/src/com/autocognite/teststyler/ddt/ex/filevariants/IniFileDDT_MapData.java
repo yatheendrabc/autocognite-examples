@@ -13,7 +13,7 @@ public class IniFileDDT_MapData extends DDTestSuiteForMapData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(runConfig.get(DataBroker.DATA_DIR) + "/input.ini");
+		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input.ini");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {

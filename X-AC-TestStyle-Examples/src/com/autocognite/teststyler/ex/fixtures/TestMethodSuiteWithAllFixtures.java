@@ -1,10 +1,15 @@
 package com.autocognite.teststyler.ex.fixtures;
 
-import static com.autocognite.validator.lib.Assertions.*;
+import static com.autocognite.validator.lib.Assertions.assertEquals;
 
+import org.apache.log4j.Logger;
+
+import com.autocognite.batteries.Batteries;
 import com.autocognite.teststyler.lib.TestMethodSuite;
 
 public class TestMethodSuiteWithAllFixtures extends TestMethodSuite{
+	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+	
 	public void setUpClass(){
 		logger.info(getClassName() + ": Called setUpClass");
 	}

@@ -13,7 +13,7 @@ public class Filter_ExcelFileDDT_MapData extends DDTestSuiteForMapData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(runConfig.get(DataBroker.DATA_DIR) + "/input_exclude_option.xls");
+		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input_exclude_option.xls");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {

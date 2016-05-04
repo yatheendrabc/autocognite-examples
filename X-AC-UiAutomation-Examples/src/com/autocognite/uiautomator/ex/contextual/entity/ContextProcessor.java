@@ -2,9 +2,6 @@ package com.autocognite.uiautomator.ex.contextual.entity;
 
 import java.util.ArrayList;
 
-import javax.security.auth.login.Configuration;
-
-import com.autocognite.Unitee;
 import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
