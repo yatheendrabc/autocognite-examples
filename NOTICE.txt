@@ -1,17 +1,17 @@
-AutoCognite Examples
+AutoCognite Examples (hereinafter also referred as Software)
 Copyright 2015-2016 Rahul Verma
 
-This software includes software developed by Rahul Verma 
-at AutoCognite (http://www.autcognite.com)
+This Software includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
 
 AutoCognite Examples is released under Apache 2.0 license.
 
-AutoCognite Examples uses UNMODIFIED versions of all of the 
+This Software uses UNMODIFIED versions of all of the 
 listed libraries and may include one or more of these 
 as a part of its distribution.
 
 Following are the contents of notice files of all libraries 
-used by AutoCognite Examples.
+used by this Software.
 
 Apache Commons CLI
 --------------------
@@ -116,6 +116,30 @@ This product contains parts of the eID Applet project
 FedICT (federal ICT department of Belgium), e-Contract.be BVBA (https://www.e-contract.be),
 Bart Hanssens from FedICT
 
+Appium
+------
+Source Link: http://www.appium.io/
+
+The following software may be included in this product:  Selenium.
+
+Appium
+Copyright 2012-2015 Sauce Labs, Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
+
+
 [ini4j] by Ivan SZIBA
 -------------------
 Source Link: http://sourceforge.net/projects/ini4j/
@@ -138,4 +162,287 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+Java Native Access (JNA)
+------------------------
+Source Link: https://github.com/java-native-access
+
+The following software may be included in this product: Java Native Access (JNA).
+
+Selenium
+--------
+Source Link: http://www.seleniumhq.org/
+
+The following software may be included in this product:  Selenium.
+
+Selenium
+Copyright 2011-2015 Software Freedom Conservancy
+Copyright 2004-2011 Selenium committers
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
+
+Sikuli X
+--------
+Source Link: www.sikuli.org
+
+The following software may be included in this product:  Sikuli X.
+
+Sikuli X
+Copyright (c) 2010-2011 Sikuli.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+AutoCognite Appium
+------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Appium.
+
+This software contains the following notice:
+
+AutoCognite Appium
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Batteries
+---------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Batteries.
+
+This software contains the following notice:
+
+AutoCognite Batteries
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Configurator
+------------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Configurator.
+
+This software contains the following notice:
+
+AutoCognite Configurator
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Data Broker
+-----------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Data Broker.
+
+This software contains the following notice:
+
+AutoCognite Data Broker
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Data Filter
+-----------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Data Filter.
+
+This software contains the following notice:
+
+AutoCognite Data Filter
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Data Driven Test Styler
+-----------------------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Data Driven Test Styler.
+
+This software contains the following notice:
+
+AutoCognite Data Driven Test Styler
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Discoverer
+----------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Discoverer.
+
+This software contains the following notice:
+
+AutoCognite Discoverer
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Selenium
+--------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Selenium.
+
+This software contains the following notice:
+
+AutoCognite Selenium
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Sikuli
+------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Sikuli.
+
+This software contains the following notice:
+
+AutoCognite Sikuli
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Test Commons
+------------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Test Commons.
+
+This software contains the following notice:
+
+AutoCognite Test Commons
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Test Reporter
+-------------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Test Reporter.
+
+This software contains the following notice:
+
+AutoCognite Test Reporter
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Test Runner
+-----------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Test Runner.
+
+This software contains the following notice:
+
+AutoCognite Test Runner
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite Test Styler
+-----------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Test Styler. 
+
+This software contains the following notice:
+
+AutoCognite Test Styler
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite UI Automator
+------------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite UI Automator.
+
+This software contains the following notice:
+
+AutoCognite UI Automator
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+AutoCognite UniTEE
+------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite UniTEE.
+
+This software contains the following notice:
+
+AutoCognite UniTEE
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+
+
+
+AutoCognite Validator
+---------------------
+Source Link: http://www.autocognite.com
+
+The following software may be included in this product: AutoCognite Validator.
+
+This software contains the following notice:
+
+AutoCognite Validator
+Copyright 2015-16 Rahul Verma
+
+This product includes software developed by
+Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
 

@@ -3,7 +3,8 @@ license and copyright information.
 
 AutoCognite Examples is an AutoCognite project
 aimed at providing practical examples of how
-to use various AutoCognite components effectively.
+to use various AutoCognite components and tools
+effectively.
 
 Visit AutoCognite (http://www.autocognite.com) for more details.
 
