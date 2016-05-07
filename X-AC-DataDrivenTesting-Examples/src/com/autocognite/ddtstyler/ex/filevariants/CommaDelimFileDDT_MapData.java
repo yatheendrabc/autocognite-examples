@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.teststyler.ddt.ex.filevariants;
+package com.autocognite.ddtstyler.ex.filevariants;
 
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.teststyler.ddt.ex.filter;
+package com.autocognite.ddtstyler.ddt.ex.filter;
 
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 
@@ -21,14 +21,14 @@ import com.autocognite.databroker.DataBroker;
 import com.autocognite.databroker.api.datarecord.MapDataRecord;
 import com.autocognite.ddtstyler.lib.DDTestSuiteForMapData;
 
-public class Filter_IniFileDDT_MapData extends DDTestSuiteForMapData {
+public class Filter_TabDelimFileDDT_MapData extends DDTestSuiteForMapData {
 
 	private int strToInt(Object object) {
 		return Integer.parseInt((String) object);
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input_exclude_option.ini");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input_exclude_option.txt");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {

@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.teststyler.ddt.ex.filter;
+package com.autocognite.ddtstyler.ex.basic;
 
 import static com.autocognite.validator.lib.Assertions.assertEquals;
 
 import com.autocognite.databroker.DataBroker;
-import com.autocognite.databroker.api.datarecord.MapDataRecord;
-import com.autocognite.ddtstyler.lib.DDTestSuiteForMapData;
+import com.autocognite.databroker.api.datarecord.ListDataRecord;
+import com.autocognite.ddtstyler.lib.DDTestSuiteForListData;
 
-public class Filter_ExcelFileDDT_MapData extends DDTestSuiteForMapData {
+public class ExcelFileDDT_ListData extends DDTestSuiteForListData {
 
 	private int strToInt(Object object) {
 		return Integer.parseInt((String) object);
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input_exclude_option.xls");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input.xls");
 	}
 		
-	public void repeat(MapDataRecord map) throws Exception {
-		int left = strToInt(map.get("Left"));
-		int right = strToInt(map.get("Right"));
-		int expectedSum = strToInt(map.get("Sum"));
+	public void repeat(ListDataRecord record) throws Exception {
+		int left = strToInt(record.get(0));
+		int right = strToInt(record.get(1));
+		int expectedSum = strToInt(record.get(2));
 		assertEquals(expectedSum, left+right);
 	}
 }
