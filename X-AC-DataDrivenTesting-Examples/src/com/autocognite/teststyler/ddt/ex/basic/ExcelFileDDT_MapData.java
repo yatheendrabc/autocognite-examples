@@ -28,7 +28,7 @@ public class ExcelFileDDT_MapData extends DDTestSuiteForMapData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input.xls");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input.xls");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {

@@ -28,7 +28,7 @@ public class TabDelimFileDDT_MapData extends DDTestSuiteForMapData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input.txt");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input.txt");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {

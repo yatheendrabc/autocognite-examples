@@ -27,7 +27,7 @@ public class ExcelFileDDT_ObjectListData extends DDTestSuiteForObjectListData{
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input.xls");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input.xls");
 	}
 		
 	public void repeat(String leftOp, String rightOp, String expectedSum) throws Exception{

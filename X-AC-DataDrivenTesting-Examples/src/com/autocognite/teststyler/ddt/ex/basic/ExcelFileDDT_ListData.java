@@ -28,7 +28,7 @@ public class ExcelFileDDT_ListData extends DDTestSuiteForListData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input.xls");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input.xls");
 	}
 		
 	public void repeat(ListDataRecord record) throws Exception {

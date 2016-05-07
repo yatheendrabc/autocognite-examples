@@ -28,7 +28,7 @@ public class Filter_TabDelimFileDDT_MapData extends DDTestSuiteForMapData {
 	}
 	
 	public void init() throws Exception {
-		setDataSource(getRunConfig().get(DataBroker.DATA_DIR) + "/input_exclude_option.txt");
+		setDataSource(getRunConfig().get(DataBroker.DATA_SOURCES_DIR) + "/input_exclude_option.txt");
 	}
 		
 	public void repeat(MapDataRecord map) throws Exception {
