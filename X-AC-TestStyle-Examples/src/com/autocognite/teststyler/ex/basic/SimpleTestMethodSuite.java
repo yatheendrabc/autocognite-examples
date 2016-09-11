@@ -15,12 +15,12 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ex.basic;
 
-import static com.autocognite.validator.lib.Assertions.assertEquals;
-import static com.autocognite.validator.lib.Assertions.error;
+import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.user.validator.lib.Assertions.error;
 
-import com.autocognite.teststyler.lib.TestMethodSuite;
+import com.autocognite.user.testcore.lib.test.Test;
 
-public class SimpleTestMethodSuite extends TestMethodSuite{
+public class SimpleTestMethodSuite extends Test{
 
 	public void testMethodPass() throws Exception{	
 		assertEquals(1,1);

@@ -15,14 +15,14 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ex.fixtures;
 
-import static com.autocognite.validator.lib.Assertions.assertEquals;
+import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 
 import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
-import com.autocognite.teststyler.lib.TestMethodSuite;
+import com.autocognite.user.testcore.lib.test.Test;
 
-public class TestMethodSuiteWithAllFixtures extends TestMethodSuite{
+public class TestMethodSuiteWithAllFixtures extends Test{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass(){

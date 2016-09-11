@@ -15,17 +15,17 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ex.assertions;
 
-import static com.autocognite.validator.lib.Assertions.assertArrayEquals;
-import static com.autocognite.validator.lib.Assertions.assertEquals;
-import static com.autocognite.validator.lib.Assertions.assertNull;
-import static com.autocognite.validator.lib.Assertions.assertSame;
-import static com.autocognite.validator.lib.Assertions.assertTrue;
-import static com.autocognite.validator.lib.Assertions.error;
-import static com.autocognite.validator.lib.Assertions.fail;
+import static com.autocognite.user.validator.lib.Assertions.assertArrayEquals;
+import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.user.validator.lib.Assertions.assertNull;
+import static com.autocognite.user.validator.lib.Assertions.assertSame;
+import static com.autocognite.user.validator.lib.Assertions.assertTrue;
+import static com.autocognite.user.validator.lib.Assertions.error;
+import static com.autocognite.user.validator.lib.Assertions.fail;
 
-import com.autocognite.teststyler.lib.TestMethodSuite;
+import com.autocognite.user.testcore.lib.test.Test;
 
-public class AssertionsTestMethodSuite extends TestMethodSuite{
+public class AssertionsTestMethodSuite extends Test{
 
 	/*
 	 * Example Code - Basic Assertion without Message, Expected to pass
