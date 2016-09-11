@@ -15,7 +15,6 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.web.ui.style2;
 
-import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.PageMapper;
@@ -23,6 +22,7 @@ import com.autocognite.uiautomator.api.StandalonePage;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.lib.factory.PageFactory;
 import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
+import com.autocognite.utils.api.enums.FileFormat;
 
 public class WordPress {
 	

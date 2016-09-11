@@ -15,15 +15,13 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.web.ui.style1;
 
-import static com.autocognite.validator.lib.Assertions.assertTrue;
+import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.RunConfiguration;
-import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.PageMapper;
 import com.autocognite.uiautomator.api.StandalonePage;
@@ -34,8 +32,10 @@ import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 import com.autocognite.uiautomator.lib.factory.PageFactory;
 import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
 import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.user.testcore.lib.test.Test;
+import com.autocognite.utils.api.enums.FileFormat;
 
-public class WebTestAutomationWithUiStyle1 extends TestCase{
+public class WebTestAutomationWithUiStyle1 extends Test{
 	UiDriver uiDriver = null;
 	StandalonePage ui = null;
 	
@@ -110,7 +110,7 @@ public class WebTestAutomationWithUiStyle1 extends TestCase{
 		ui.element("Home_LOGOUT_CONFIRM").click();
 	}
 	
-	public void run() throws Exception{
+	public void test() throws Exception{
 		goToHomePage();
 		login();
 		goToCategoriesPage();

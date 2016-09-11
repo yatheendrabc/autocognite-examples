@@ -15,12 +15,12 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.web.ui.style2;
 
-import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.api.StandalonePage;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.user.testcore.lib.test.Test;
 
-public abstract class BaseTest extends TestCase{
+public abstract class BaseTest extends Test{
 	private UiDriver uiDriver = null;
 
 	public void setUpClass() throws Exception{

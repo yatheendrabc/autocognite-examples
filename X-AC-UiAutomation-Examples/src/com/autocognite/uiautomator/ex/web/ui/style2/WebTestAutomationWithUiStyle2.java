@@ -15,7 +15,7 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.web.ui.style2;
 
-import static com.autocognite.validator.lib.Assertions.assertTrue;
+import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

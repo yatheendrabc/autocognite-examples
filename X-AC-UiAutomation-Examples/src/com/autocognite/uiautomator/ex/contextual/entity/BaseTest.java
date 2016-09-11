@@ -15,12 +15,12 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import com.autocognite.teststyler.lib.TestMethodSuite;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.user.testcore.lib.test.Test;
 
-public abstract class BaseTest extends TestMethodSuite{
+public abstract class BaseTest extends Test{
 	private AutomationContext context = null;
 	private UiDriver uiDriver = null;
 

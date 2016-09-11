@@ -15,19 +15,19 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.web.uidriver;
 
-import static com.autocognite.validator.lib.Assertions.assertTrue;
+import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.autocognite.teststyler.lib.TestCase;
 import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.UiElement;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
 import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.user.testcore.lib.test.Test;
 
-public class WebTestAutomationWithUiDriver extends TestCase{
+public class WebTestAutomationWithUiDriver extends Test{
 	UiDriver uiDriver = null;
 	
 	public void setUpClass() throws Exception{

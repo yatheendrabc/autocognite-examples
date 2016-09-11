@@ -15,7 +15,6 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import com.autocognite.batteries.api.enums.FileFormat;
 import com.autocognite.configurator.api.RunConfiguration;
 import com.autocognite.uiautomator.UiAutomator;
 import com.autocognite.uiautomator.api.PageMapper;
@@ -23,6 +22,7 @@ import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.api.enums.AutomationContext;
 import com.autocognite.uiautomator.lib.DefaultCompositePage;
 import com.autocognite.uiautomator.lib.factory.PageMapperFactory;
+import com.autocognite.utils.api.enums.FileFormat;
 
 public abstract class BasePage extends DefaultCompositePage {
 	LeftNavigationSubPage leftNavigation = null;

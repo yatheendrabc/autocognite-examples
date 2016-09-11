@@ -15,7 +15,7 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.contextual.entity;
 
-import static com.autocognite.validator.lib.Assertions.assertTrue;
+import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
