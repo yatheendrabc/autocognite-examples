@@ -84,15 +84,42 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 		int es = strToInt(expectedSum);
 		assertEquals(es, l + r);
 	}	
+	
+	// Another key point to note is that now we are not confined on data types because of Java annotation limitations.
+	// When the data is directly supplied by Java Annotation, we could have anything like Object[] or Object[][]
+	// Because of this we had to fall into the trap of writing data conversion methods. Let's make it simple.
+	// Let's take the previous example again
+	@DataGenerator("DGWithActualDataType")
+	public DataRecordContainer dataGenWithNonStringData(){
+		DataRecordContainer container = new DataRecordContainer();
+		Object[][] records = {
+				{4,5,9},
+				{4,5,10}
+		};
+		container.addAll(records);
+		return container;
+	}
 
-	// As seen in case of other DDT options, you can also choose to get all data as DataRecord instead.
+	@DriveWithDataMethod("DGWithActualDataType") // This would use dataGen() as the data generator.
+	public void testWithLocalNamedGeneratorMethodActualDataType(int leftOp, int rightOp, int expectedSum) throws Exception{
+		// Here you do not need type conversion
+		int l = leftOp;
+		int r = rightOp;
+		int es = expectedSum;
+		assertEquals(es, l + r);
+	}
+	
+	// You can get the same benefit for DataRecord by using object* API instead of value* API.
+	// For consistency amongst annotations, value* API returns gives strings.
+	
+	// Another thing to keep in mind is how you populate the data.
 	// What you need to keep in mind is how you plan to use it.
 	// For example the dataGen() above is good for a List data format.
-	@DriveWithDataMethod(name="SomeName", format=DataFormat.LIST) // This would use dataGen() as the data generator.
+	@DriveWithDataMethod(name="DGWithActualDataType", format=DataFormat.LIST) // This would use dataGen() as the data generator.
 	public void testWithLocalNamedGeneratorMethodListFormat(DataRecord record) throws Exception{
-		int l = strToInt(record.valueAt(0));
-		int r = strToInt(record.valueAt(1));
-		int es = strToInt(record.valueAt(2));
+		int l = (int) record.objectAt(0);
+		int r = (int) record.objectAt(1);
+		int es = (int) record.objectAt(2);
 		assertEquals(es, l + r);
 	}	
 
@@ -105,9 +132,8 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 		container.setHeaders(names);
 		//Rest is same
 		Object[][] records = {
-				{"4","5","9"},
-				{"4","5","10"},
-				{"2","3","Wrong"}
+				{4,5,9},
+				{4,5,10}
 		};
 		container.addAll(records);
 		return container;
@@ -116,12 +142,11 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 	@DriveWithDataMethod(name="DGForMapFormat", format=DataFormat.MAP) // This would use dataGen() as the data generator.
 	public void testWithLocalNamedGeneratorMethodMapFormat(DataRecord record) throws Exception{
 		DataBatteries.print(record.map());
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
-		int es = strToInt(record.valueOf("SUM"));
+		int l = (int) record.objectOf("left");
+		int r = (int) record.objectOf("right");
+		int es = (int) record.objectOf("SUM");
 		assertEquals(es, l + r);
 	}	
-
 
 }
 
