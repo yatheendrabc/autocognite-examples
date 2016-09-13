@@ -147,6 +147,28 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 		int es = (int) record.objectOf("SUM");
 		assertEquals(es, l + r);
 	}	
+	
+	// And you are not confined to one type of data, of course
+	// Let's take the previous example again
+	@DataGenerator("DGWithMixDataType")
+	public DataRecordContainer dataGenWithMixData(){
+		DataRecordContainer container = new DataRecordContainer();
+		Object[][] records = {
+				{4,5,"45"},
+				{4,5,"50"}
+		};
+		container.addAll(records);
+		return container;
+	}
+	
+	@DriveWithDataMethod("DGWithMixDataType") // This would use dataGen() as the data generator.
+	public void testWithLocalNamedGeneratorMethodMixData(int leftOp, int rightOp, String expectedString) throws Exception{
+		// Here you do not need type conversion
+		int l = leftOp;
+		int r = rightOp;
+		String es = expectedString;
+		assertEquals(es, String.format("%d%d", l,r));
+	}
 
 }
 
