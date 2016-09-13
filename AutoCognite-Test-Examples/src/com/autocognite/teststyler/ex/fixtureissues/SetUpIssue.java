@@ -15,7 +15,8 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ex.fixtureissues;
 
-import static com.autocognite.user.validator.lib.Assertions.*;
+import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.user.validator.lib.Assertions.fail;
 
 import org.apache.log4j.Logger;
 

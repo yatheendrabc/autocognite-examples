@@ -15,10 +15,11 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ex.annotations;
 
-import static com.autocognite.user.validator.lib.Assertions.*;
+import static com.autocognite.user.validator.lib.Assertions.assertContains;
+import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.user.validator.lib.Assertions.assertNull;
+import static com.autocognite.user.validator.lib.Assertions.error;
 
-import com.autocognite.dev.testcore.api.TestResultHandler;
-import com.autocognite.dev.teststyler.lib.resulthandler.DefaultTestResultHandler;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.TestProperties;
 

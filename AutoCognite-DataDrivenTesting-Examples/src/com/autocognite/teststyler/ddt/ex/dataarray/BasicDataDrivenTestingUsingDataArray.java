@@ -25,6 +25,7 @@ import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.DriveWithData;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
+import com.autocognite.user.testcore.lib.annotate.Data;
 import com.autocognite.user.testcore.lib.annotate.DataFormat;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
@@ -42,8 +43,8 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 	// Formats work as expected.
 	@DriveWithDataArray(
 			{
-				@DriveWithData({"1","2","3"}), 
-				@DriveWithData({"3","4","10"})
+				@Data({"1","2","3"}), 
+				@Data({"3","4","10"})
 			}
 	)
 	public void testWithDataArray(String leftOp, String rightOp, String expectedSum) throws Exception{
@@ -55,8 +56,8 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 
 	@DriveWithDataArray(
 	records = {
-				@DriveWithData({"1","2","3"}), 
-				@DriveWithData({"3","4","10"})
+				@Data({"1","2","3"}), 
+				@Data({"3","4","10"})
 			},
 	format = DataFormat.LIST
 	)
@@ -69,8 +70,8 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 	
 	@DriveWithDataArray(
 	records = {
-				@DriveWithData({"left=1","right=2","expected=3"}), 
-				@DriveWithData({"left=3","right=4","expected=10"})
+				@Data({"left=1","right=2","expected=3"}), 
+				@Data({"left=3","right=4","expected=10"})
 			},
 	format = DataFormat.MAP
 	)
