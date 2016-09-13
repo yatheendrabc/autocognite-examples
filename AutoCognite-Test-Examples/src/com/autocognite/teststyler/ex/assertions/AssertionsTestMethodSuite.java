@@ -23,7 +23,7 @@ import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 import static com.autocognite.user.validator.lib.Assertions.error;
 import static com.autocognite.user.validator.lib.Assertions.fail;
 
-import com.autocognite.user.testcore.lib.test.Test;
+import com.autocognite.user.testcore.lib.Test;
 
 public class AssertionsTestMethodSuite extends Test{
 

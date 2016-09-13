@@ -20,7 +20,7 @@ import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
-import com.autocognite.user.testcore.lib.test.Test;
+import com.autocognite.user.testcore.lib.Test;
 
 public class TestMethodSuiteWithAllFixtures extends Test{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());

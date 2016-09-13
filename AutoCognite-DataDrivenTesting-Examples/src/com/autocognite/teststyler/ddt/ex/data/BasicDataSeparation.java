@@ -21,9 +21,9 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
-import com.autocognite.user.testcore.lib.annotate.Data;
+import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.DriveWithData;
 import com.autocognite.user.testcore.lib.annotate.DataFormat;
-import com.autocognite.user.testcore.lib.test.Test;
 
 public class BasicDataSeparation extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
@@ -35,7 +35,7 @@ public class BasicDataSeparation extends Test {
 	// To pass a single data record. Argument must be a String[]
 	// You would need to take care of the data conversion in the test body.
 	// Can be used to place data outside of test method or of test methods take arguments.
-	@Data({"1","2","3"})
+	@DriveWithData({"1","2","3"})
 	public void testWithSingleDataRecordPass(String leftOp, String rightOp, String expectedSum) throws Exception{
 		int l = strToInt(leftOp);
 		int r = strToInt(rightOp);
@@ -43,7 +43,7 @@ public class BasicDataSeparation extends Test {
 		assertEquals(es, l + r);
 	}
 	
-	@Data({"1","2","4"})
+	@DriveWithData({"1","2","4"})
 	public void testWithSingleDataRecordFail(String leftOp, String rightOp, String expectedSum) throws Exception{
 		int l = strToInt(leftOp);
 		int r = strToInt(rightOp);
@@ -55,7 +55,7 @@ public class BasicDataSeparation extends Test {
 	// In such cases you might want to retain consistent test signatures and process the arrays that contain
 	// different number of items.
 	// Note the arguments of Annotation as well as the test method.
-	@Data(record={"1","2","3"}, format=DataFormat.LIST)
+	@DriveWithData(record={"1","2","3"}, format=DataFormat.LIST)
 	public void testWithSingleDataRecordListFormatPass(DataRecord record) throws Exception{
 		int l = strToInt(record.valueAt(0));
 		int r = strToInt(record.valueAt(1));
@@ -66,7 +66,7 @@ public class BasicDataSeparation extends Test {
 	// There is still another use case especially with more data arguments.
 	// You don't want the test code to be brittle by referring to arguments by position.
 	// Note the arguments of Annotation as well as the test method.
-	@Data(record={"left=1","right=2","expected=3"}, format=DataFormat.MAP)
+	@DriveWithData(record={"left=1","right=2","expected=3"}, format=DataFormat.MAP)
 	public void testWithSingleDataRecordMapFormatPass(DataRecord record) throws Exception{
 		int l = strToInt(record.valueOf("left"));
 		int r = strToInt(record.valueOf("right"));

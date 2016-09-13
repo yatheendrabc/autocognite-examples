@@ -18,7 +18,7 @@ package com.autocognite.teststyler.ex.basic;
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.error;
 
-import com.autocognite.user.testcore.lib.test.Test;
+import com.autocognite.user.testcore.lib.Test;
 
 public class SimpleTestMethodSuite extends Test{
 

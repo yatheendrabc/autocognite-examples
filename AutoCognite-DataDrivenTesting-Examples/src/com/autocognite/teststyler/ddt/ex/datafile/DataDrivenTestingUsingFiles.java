@@ -21,11 +21,11 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
-import com.autocognite.user.testcore.lib.annotate.Data;
-import com.autocognite.user.testcore.lib.annotate.DataArray;
-import com.autocognite.user.testcore.lib.annotate.DataSourceFile;
+import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.DriveWithData;
+import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
+import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
 import com.autocognite.user.testcore.lib.annotate.DataFormat;
-import com.autocognite.user.testcore.lib.test.Test;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class DataDrivenTestingUsingFiles extends Test {
@@ -39,7 +39,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 	// An easy way to get this managed is by putting data in external files.
 	// If you provide a full file path, that is considered, else it is considered relative to default data directory.
 	
-	@DataSourceFile("/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls")
+	@DriveWithDataFile("/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls")
 	public void testWithXLSDataFile(String leftOp, String rightOp, String expectedSum) throws Exception{
 		int l = strToInt(leftOp);
 		int r = strToInt(rightOp);
@@ -47,7 +47,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 		assertEquals(es, l + r);
 	}	
 
-	@DataSourceFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls", format=DataFormat.LIST)
+	@DriveWithDataFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls", format=DataFormat.LIST)
 	public void testWithXLSDataFileListFormat(DataRecord record) throws Exception{
 		int l = strToInt(record.valueAt(0));
 		int r = strToInt(record.valueAt(1));
@@ -55,7 +55,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 		assertEquals(es, l + r);
 	}	
 	
-	@DataSourceFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls", format=DataFormat.MAP)
+	@DriveWithDataFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls", format=DataFormat.MAP)
 	public void testWithXLSDataFileMapFormat(DataRecord record) throws Exception{
 		logger.debug(DataBatteries.flatten(record.map()));
 		int l = strToInt(record.valueOf("left"));
@@ -65,7 +65,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 	}
 	
 	// You can use a tab delimited file in the same manner
-	@DataSourceFile("/Users/rahulverma/Documents/coding_workbench/temp/data/input.txt")
+	@DriveWithDataFile("/Users/rahulverma/Documents/coding_workbench/temp/data/input.txt")
 	public void testWithTSVDataFile(String leftOp, String rightOp, String expectedSum) throws Exception{
 		int l = strToInt(leftOp);
 		int r = strToInt(rightOp);
@@ -73,7 +73,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 		assertEquals(es, l + r);
 	}	
 
-	@DataSourceFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.txt", format=DataFormat.LIST)
+	@DriveWithDataFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.txt", format=DataFormat.LIST)
 	public void testWithTSVDataFileListFormat(DataRecord record) throws Exception{
 		int l = strToInt(record.valueAt(0));
 		int r = strToInt(record.valueAt(1));
@@ -81,7 +81,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 		assertEquals(es, l + r);
 	}	
 	
-	@DataSourceFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.txt", format=DataFormat.MAP)
+	@DriveWithDataFile(location="/Users/rahulverma/Documents/coding_workbench/temp/data/input.txt", format=DataFormat.MAP)
 	public void testWithTSVDataFileMapFormat(DataRecord record) throws Exception{
 		logger.debug(DataBatteries.flatten(record.map()));
 		int l = strToInt(record.valueOf("left"));
@@ -91,7 +91,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 	}
 	
 	// You can use a CSV file or any other delimited file by specifying delimiter
-	@DataSourceFile(
+	@DriveWithDataFile(
 			location = "/Users/rahulverma/Documents/coding_workbench/temp/data/input.csv",
 			delimiter = ","
 	)
@@ -102,7 +102,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 		assertEquals(es, l + r);
 	}	
 
-	@DataSourceFile(
+	@DriveWithDataFile(
 			location = "/Users/rahulverma/Documents/coding_workbench/temp/data/input.csv",
 			delimiter = ",", 
 			format=DataFormat.LIST
@@ -114,7 +114,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 		assertEquals(es, l + r);
 	}	
 	
-	@DataSourceFile(
+	@DriveWithDataFile(
 			location = "/Users/rahulverma/Documents/coding_workbench/temp/data/input.csv",
 			delimiter = ",", 
 			format=DataFormat.MAP
@@ -130,7 +130,7 @@ public class DataDrivenTestingUsingFiles extends Test {
 	// You can also use INI file.
 	// As the section data inside an INI file is unordered, don't use it for positional reading.
 	// This means that the INI format should only be used for Map data format.	
-	@DataSourceFile(
+	@DriveWithDataFile(
 			location = "/Users/rahulverma/Documents/coding_workbench/temp/data/input.ini",
 			format=DataFormat.MAP
 	)

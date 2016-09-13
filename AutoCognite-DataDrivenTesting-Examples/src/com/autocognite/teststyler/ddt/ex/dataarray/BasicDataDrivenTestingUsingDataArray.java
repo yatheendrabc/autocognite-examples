@@ -21,11 +21,11 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
-import com.autocognite.user.testcore.lib.annotate.Data;
-import com.autocognite.user.testcore.lib.annotate.DataArray;
-import com.autocognite.user.testcore.lib.annotate.DataSourceFile;
+import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.DriveWithData;
+import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
+import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
 import com.autocognite.user.testcore.lib.annotate.DataFormat;
-import com.autocognite.user.testcore.lib.test.Test;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class BasicDataDrivenTestingUsingDataArray extends Test {
@@ -40,10 +40,10 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 	// You can use the DataArray annotation.
 	// The test method would run as many times as the number of records provided.
 	// Formats work as expected.
-	@DataArray(
+	@DriveWithDataArray(
 			{
-				@Data({"1","2","3"}), 
-				@Data({"3","4","10"})
+				@DriveWithData({"1","2","3"}), 
+				@DriveWithData({"3","4","10"})
 			}
 	)
 	public void testWithDataArray(String leftOp, String rightOp, String expectedSum) throws Exception{
@@ -53,10 +53,10 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 		assertEquals(es, l + r);
 	}
 
-	@DataArray(
+	@DriveWithDataArray(
 	records = {
-				@Data({"1","2","3"}), 
-				@Data({"3","4","10"})
+				@DriveWithData({"1","2","3"}), 
+				@DriveWithData({"3","4","10"})
 			},
 	format = DataFormat.LIST
 	)
@@ -67,10 +67,10 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 		assertEquals(es, l + r);
 	}
 	
-	@DataArray(
+	@DriveWithDataArray(
 	records = {
-				@Data({"left=1","right=2","expected=3"}), 
-				@Data({"left=3","right=4","expected=10"})
+				@DriveWithData({"left=1","right=2","expected=3"}), 
+				@DriveWithData({"left=3","right=4","expected=10"})
 			},
 	format = DataFormat.MAP
 	)

@@ -19,8 +19,8 @@ import static com.autocognite.user.validator.lib.Assertions.*;
 
 import com.autocognite.dev.testcore.api.TestResultHandler;
 import com.autocognite.dev.teststyler.lib.resulthandler.DefaultTestResultHandler;
+import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.TestProperties;
-import com.autocognite.user.testcore.lib.test.Test;
 
 @TestProperties(
 		name="Custom name", 
