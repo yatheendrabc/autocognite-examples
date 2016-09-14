@@ -23,7 +23,7 @@ import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.DriveWithData;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithData;
 
 public class BasicDataSeparation extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());

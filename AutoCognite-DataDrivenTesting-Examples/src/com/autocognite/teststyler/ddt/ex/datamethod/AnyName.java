@@ -1,13 +1,14 @@
 package com.autocognite.teststyler.ddt.ex.datamethod;
 
 import com.autocognite.databroker.lib.datarecord.DataRecordContainer;
-import com.autocognite.user.testcore.lib.annotate.DataMethod;
-import com.autocognite.user.testcore.lib.annotate.DataMethodContainer;
+import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
+import com.autocognite.user.testcore.lib.annotate.ddt.DataMethodContainer;
 
 @DataMethodContainer("SampleDataMethodContainer")
 public class AnyName{
 
-	// This must be a STATIC method
+	// This must be a STATIC method. 
+	// Allowing non-static would have come at a cost of complicating annotation parameters or having only one data method per Class.
 	// Definitions are pre-loaded by Test Commons before testing starts
 	@DataMethod("ExternalDGMethod")
 	public static DataRecordContainer dataGen(){

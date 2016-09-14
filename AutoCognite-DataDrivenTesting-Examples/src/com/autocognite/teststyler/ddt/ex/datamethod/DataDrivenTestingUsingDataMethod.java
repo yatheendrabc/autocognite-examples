@@ -24,11 +24,11 @@ import com.autocognite.databroker.lib.datarecord.DataRecord;
 import com.autocognite.databroker.lib.datarecord.DataRecordContainer;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.DriveWithData;
-import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
-import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
-import com.autocognite.user.testcore.lib.annotate.DataMethod;
-import com.autocognite.user.testcore.lib.annotate.DriveWithDataMethod;
+import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithData;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataArray;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataFile;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class DataDrivenTestingUsingDataMethod extends Test {
@@ -64,7 +64,7 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 	}	
 
 	// You can also used named generator methods
-
+	// Framework first looks for methods labeled with name string provided and then for methods with this name.
 	@DataMethod("SomeName")
 	public DataRecordContainer dataGen(){
 		DataRecordContainer container = new DataRecordContainer();
