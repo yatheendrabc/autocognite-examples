@@ -21,12 +21,12 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
+import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.DriveWithData;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
 import com.autocognite.user.testcore.lib.annotate.Data;
-import com.autocognite.user.testcore.lib.annotate.DataFormat;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class BasicDataDrivenTestingUsingDataArray extends Test {
@@ -69,9 +69,10 @@ public class BasicDataDrivenTestingUsingDataArray extends Test {
 	}
 	
 	@DriveWithDataArray(
+	headers = {"left", "right", "expected"},
 	records = {
-				@Data({"left=1","right=2","expected=3"}), 
-				@Data({"left=3","right=4","expected=10"})
+				@Data({"1","2","3"}), 
+				@Data({"3","4","10"})
 			},
 	format = DataFormat.MAP
 	)

@@ -21,9 +21,9 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
+import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.DriveWithData;
-import com.autocognite.user.testcore.lib.annotate.DataFormat;
 
 public class BasicDataSeparation extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
@@ -34,7 +34,7 @@ public class BasicDataSeparation extends Test {
 	
 	// To pass a single data record. Argument must be a String[]
 	// You would need to take care of the data conversion in the test body.
-	// Can be used to place data outside of test method or of test methods take arguments.
+	// Can be used to place data outside of test method or if test methods take arguments.
 	@DriveWithData({"1","2","3"})
 	public void testWithSingleDataRecordPass(String leftOp, String rightOp, String expectedSum) throws Exception{
 		int l = strToInt(leftOp);
@@ -75,5 +75,19 @@ public class BasicDataSeparation extends Test {
 		assertEquals(es, l + r);
 	}
 	
+	// You can also separate headers and values
+	// This is the suggested way as it is consistent with other advanced annotations
+	@DriveWithData(
+			headers = {"left", "right", "expected"},
+			record={"1","2","3"},
+			format=DataFormat.MAP
+	)
+	public void testWithSingleDataRecordMapFormatSepHeaders(DataRecord record) throws Exception{
+		int l = strToInt(record.valueOf("left"));
+		int r = strToInt(record.valueOf("right"));
+		//you also get case insensitivity
+		int es = strToInt(record.valueOf("EXPECTED"));
+		assertEquals(es, l + r);
+	}
 }
 

@@ -21,11 +21,11 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
+import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.DriveWithData;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
-import com.autocognite.user.testcore.lib.annotate.DataFormat;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class DataDrivenTestingUsingFiles extends Test {

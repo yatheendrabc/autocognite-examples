@@ -22,12 +22,12 @@ import org.apache.log4j.Logger;
 import com.autocognite.batteries.Batteries;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
 import com.autocognite.databroker.lib.datarecord.DataRecordContainer;
+import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.DriveWithData;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataArray;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataFile;
-import com.autocognite.user.testcore.lib.annotate.DataFormat;
-import com.autocognite.user.testcore.lib.annotate.DataGenerator;
+import com.autocognite.user.testcore.lib.annotate.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.DriveWithDataMethod;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
@@ -65,7 +65,7 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 
 	// You can also used named generator methods
 
-	@DataGenerator("SomeName")
+	@DataMethod("SomeName")
 	public DataRecordContainer dataGen(){
 		DataRecordContainer container = new DataRecordContainer();
 		Object[][] records = {
@@ -89,7 +89,7 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 	// When the data is directly supplied by Java Annotation, we could have anything like Object[] or Object[][]
 	// Because of this we had to fall into the trap of writing data conversion methods. Let's make it simple.
 	// Let's take the previous example again
-	@DataGenerator("DGWithActualDataType")
+	@DataMethod("DGWithActualDataType")
 	public DataRecordContainer dataGenWithNonStringData(){
 		DataRecordContainer container = new DataRecordContainer();
 		Object[][] records = {
@@ -124,7 +124,7 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 	}	
 
 	// However if you want name based retrieval, you must populate the data in the same fasion as well:
-	@DataGenerator("DGForMapFormat")
+	@DataMethod("DGForMapFormat")
 	public DataRecordContainer mapDataGen(){
 		DataRecordContainer container = new DataRecordContainer();
 		// Create headers and assign to container
@@ -150,7 +150,7 @@ public class DataDrivenTestingUsingDataMethod extends Test {
 	
 	// And you are not confined to one type of data, of course
 	// Let's take the previous example again
-	@DataGenerator("DGWithMixDataType")
+	@DataMethod("DGWithMixDataType")
 	public DataRecordContainer dataGenWithMixData(){
 		DataRecordContainer container = new DataRecordContainer();
 		Object[][] records = {
