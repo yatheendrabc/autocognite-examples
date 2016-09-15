@@ -8,4 +8,4 @@ effectively.
 
 Visit AutoCognite (http://www.autocognite.com) for more details.
 
-You can write to Rahul Verma at rv@autocognite.com
+You can write to us at support@autocognite.com

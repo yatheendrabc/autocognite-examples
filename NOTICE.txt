@@ -1,8 +1,11 @@
 AutoCognite Examples (hereinafter also referred as Software)
-Copyright 2015-2016 Rahul Verma
+Copyright 2016 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
 This Software includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 AutoCognite Examples is released under Apache 2.0 license.
 
