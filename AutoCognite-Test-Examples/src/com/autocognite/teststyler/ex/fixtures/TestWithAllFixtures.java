@@ -13,45 +13,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.teststyler.ex.fixtureissues;
+package com.autocognite.teststyler.ex.fixtures;
 
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.fail;
 
 import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
 
-public class SetUpIssue extends Test{
+public class TestWithAllFixtures extends Test{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
-	public void setUpClass() throws Exception{
-		logger.info("UserTest: Called setUpClass");
+	public void setUpClass(){
+		logger.info(getClassName() + ": Called setUpClass");
 	}
 	
-	public void setUp() throws Exception{
-		logger.info("UserTest: Called setUp");
-		fail("Simulating an issue in setUp");
+	public void setUp(){
+		logger.info(getClassName() + ": Called setUp");
 	}
 	
-	public void tearDown() throws Exception{
-		logger.info("UserTest: Called tearDown");
-		fail("Simulating an issue in tearDown");
+	public void tearDown(){
+		logger.info(getClassName() + ": Called tearDown");
 	}
 	
-	public void tearDownClass() throws Exception{
-		logger.info("UserTest: Called tearDownClass");
-		fail("Simulating an issue in tearDownClass");
+	public void tearDownClass(){
+		logger.info(getClassName() + ": Called tearDownClass");
 	}
 
 	public void testMethod1() throws Exception{
-		logger.info("UserTest: Called testMethod1");
+		logger.info(getClassName() + ": Called testMethod 1");
 		assertEquals(1,1);
 	}
 	
 	public void testMethod2() throws Exception{
-		logger.info("UserTest: Called testMethod2");
+		logger.info(getClassName() + ": Called testMethod 2");
 		assertEquals(3,4);
 	}
 }

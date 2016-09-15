@@ -29,7 +29,7 @@ import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataGenerator;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
-public class DataDrivenTestingUsingDataGenerators extends Test {
+public class DataDrivenTestUsingDataGenerators extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
 	private int strToInt(Object object) {
@@ -80,6 +80,16 @@ public class DataDrivenTestingUsingDataGenerators extends Test {
 
 	@DriveWithDataGenerator("DataGenerator-2")
 	public void testLazy(int leftOp, int rightOp, String expectedString) throws Exception{
+		// Here you do not need type conversion
+		int l = leftOp;
+		int r = rightOp;
+		String es = expectedString;
+		assertEquals(es, String.format("%d%d", l,r));
+	}	
+	
+	// What if you have any Data Source class without annotation of DataGenerator?
+	@DriveWithDataGenerator(klass = NonAnnotatedDG.class)
+	public void testNonAnnotatedDG(int leftOp, int rightOp, String expectedString) throws Exception{
 		// Here you do not need type conversion
 		int l = leftOp;
 		int r = rightOp;

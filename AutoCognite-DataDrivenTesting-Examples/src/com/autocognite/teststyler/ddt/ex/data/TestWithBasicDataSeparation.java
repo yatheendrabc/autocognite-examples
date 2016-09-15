@@ -25,7 +25,7 @@ import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithData;
 
-public class BasicDataSeparation extends Test {
+public class TestWithBasicDataSeparation extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
 	private int strToInt(Object object) {

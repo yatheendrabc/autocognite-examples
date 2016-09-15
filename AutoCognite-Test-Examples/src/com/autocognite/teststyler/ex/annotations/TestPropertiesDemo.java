@@ -20,18 +20,21 @@ import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.assertNull;
 import static com.autocognite.user.validator.lib.Assertions.error;
 
+import com.autocognite.databroker.DataBroker;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.TestProperties;
+import com.autocognite.utils.lib.DataBatteries;
 
 @TestProperties(
 		name="Custom name", 
 		category="Some-Category",
 		customProps={"my1=3"},
 		tags ="Level1,Critical,Functional")
-public class TestMethodSuiteWithMethodAnnotations extends Test{
+public class TestPropertiesDemo extends Test{
 
 	@TestProperties(id="Custom id-1", name="a")
 	public void test1MethodPass() throws Exception{	
+		DataBatteries.print(DataBroker.getDataRecord(this.getRunConfig(), "input", "1").map());
 		assertEquals(3,3).evaluate();
 	}
 	
@@ -40,7 +43,7 @@ public class TestMethodSuiteWithMethodAnnotations extends Test{
 		assertEquals(1,2);
 	}
 	
-	@TestProperties(id="Custom id-3", customProps={"POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
+	@TestProperties(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
 	public void test3MethodFail() throws Exception{
 		assertNull("abc");
 	}

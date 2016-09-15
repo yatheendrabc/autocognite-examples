@@ -25,7 +25,7 @@ import static com.autocognite.user.validator.lib.Assertions.fail;
 
 import com.autocognite.user.testcore.lib.Test;
 
-public class AssertionsTestMethodSuite extends Test{
+public class TestMultipleAssertionTypes extends Test{
 
 	/*
 	 * Example Code - Basic Assertion without Message, Expected to pass

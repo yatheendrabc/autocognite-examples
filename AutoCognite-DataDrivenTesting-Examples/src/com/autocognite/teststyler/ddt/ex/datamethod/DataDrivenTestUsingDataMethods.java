@@ -31,7 +31,7 @@ import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataFile;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
-public class DataDrivenTestingUsingDataMethod extends Test {
+public class DataDrivenTestUsingDataMethods extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
 	private int strToInt(Object object) {

@@ -23,19 +23,22 @@ import org.apache.log4j.Logger;
 import com.autocognite.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
 
-public class TearDownClassIssue extends Test{
+public class TestWithSetUpClassIssue extends Test{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass() throws Exception{
 		logger.info("UserTest: Called setUpClass");
+		fail("Simulating an issue in setUpClass");
 	}
 	
 	public void setUp() throws Exception{
 		logger.info("UserTest: Called setUp");
+		fail("Simulating an issue in setUp");
 	}
 	
 	public void tearDown() throws Exception{
 		logger.info("UserTest: Called tearDown");
+		fail("Simulating an issue in tearDown");
 	}
 	
 	public void tearDownClass() throws Exception{

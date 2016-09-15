@@ -23,7 +23,7 @@ import org.apache.log4j.Logger;
 import com.autocognite.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
 
-public class TearDownIssue extends Test{
+public class TestWithSetUpIssue extends Test{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass() throws Exception{
@@ -32,6 +32,7 @@ public class TearDownIssue extends Test{
 	
 	public void setUp() throws Exception{
 		logger.info("UserTest: Called setUp");
+		fail("Simulating an issue in setUp");
 	}
 	
 	public void tearDown() throws Exception{
