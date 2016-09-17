@@ -20,16 +20,11 @@ import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import org.apache.log4j.Logger;
 
 import com.autocognite.batteries.Batteries;
-import com.autocognite.databroker.lib.datarecord.DataRecord;
-import com.autocognite.databroker.lib.datarecord.DataRecordContainer;
-import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
-import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class DataDrivenTestUsingDataMethods extends Test {
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
 	@DataMethod
 	public Object[][] getData(){

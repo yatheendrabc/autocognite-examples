@@ -15,7 +15,6 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ddt.ex.datagenerator;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 import com.autocognite.databroker.api.datasource.DataSource;
@@ -36,13 +35,15 @@ public class GreedyDataGenerator implements DataSource {
 	Iterator<DataRecord> iter = null;
 	
 	public GreedyDataGenerator(){
-		// This code is fully under your control
-		DataRecordContainer container = new DataRecordContainer();
+		container = new DataRecordContainer();
+		// Create headers and assign to container
+		String[] names = {"left", "right", "printStr"};
+		container.setHeaders(names);
+		//Rest is same
 		Object[][] records = {
-				{4,5,"45"},
-				{4,5,"50"}
+				{1,2,"1::2"},
+				{1,2,"1::5"},
 		};
-		container.setHeaders(new String[] {"Left", "Right", "Sum"});
 		container.addAll(records);
 		iter = container.iterator();
 	}

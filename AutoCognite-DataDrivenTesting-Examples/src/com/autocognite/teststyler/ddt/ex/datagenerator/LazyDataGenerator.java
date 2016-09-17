@@ -16,13 +16,11 @@
 package com.autocognite.teststyler.ddt.ex.datagenerator;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 
 import com.autocognite.databroker.api.datasource.DataSource;
 import com.autocognite.databroker.api.datasource.exceptions.DataSourceFinishedException;
 import com.autocognite.databroker.lib.datarecord.DataRecord;
-import com.autocognite.databroker.lib.datarecord.DataRecordContainer;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataGenerator;
 
 /*
@@ -31,11 +29,11 @@ import com.autocognite.user.testcore.lib.annotate.ddt.DataGenerator;
  * (Optional) Notice that we are providing header values. This makes it useful for all test signatures.
  */
 
-@DataGenerator("DataGenerator-2")
+@DataGenerator("Lazy")
 public class LazyDataGenerator implements DataSource {
 	int counter = -1;
 	Random random = new Random();
-	String[] headers = new String[] {"Left", "Right", "Sum"};
+	String[] headers = new String[] {"Left", "Right", "printStr"};
 	
 	public LazyDataGenerator(){
 	}
@@ -45,21 +43,20 @@ public class LazyDataGenerator implements DataSource {
 		counter += 1;
 		DataRecord record = null;
 		ArrayList<Object> objList = new ArrayList<Object>();
-		if (counter < 4 ){
+		if (counter < 20){
 			int l = random.nextInt(9);
 			int r = random.nextInt(9);
+			String buffer = "";
+			boolean induceFailure = random.nextBoolean();
+			if (induceFailure){
+				buffer = "FAULT";
+			}
 			objList.add(l);
 			objList.add(r);
-			objList.add(String.format("%d%d",l,r));
+			// The buffer string is added to simulate failures.
+			objList.add(String.format("%d::%d%s",l,r, buffer));
 			record = new DataRecord(this.headers, objList);
-			return record;
-		} else if (counter == 4 ){
-			// To check behavior for assertion failure
-			objList.add(1);
-			objList.add(2);
-			objList.add(String.format("mismatch"));
-			record = new DataRecord(this.headers, objList);
-			return record;			
+			return record;		
 		} else {
 			throw new DataSourceFinishedException("Done");
 		}

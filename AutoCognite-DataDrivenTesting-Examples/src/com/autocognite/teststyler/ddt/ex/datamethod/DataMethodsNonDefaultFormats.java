@@ -28,11 +28,10 @@ import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
 import com.autocognite.utils.lib.DataBatteries;
 //Test
-public class DataMethodsNonDefaultFormats extends Test {
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
-
-	@DataMethod
-	public Object[][] getData(){
+public class DataMethodsNonDefaultFormats extends Test {	
+	
+	@DataMethod("DG1")
+	public Object[][] getObjectsArray(){
 		Object[][] records = {
 				{1,2,"1::2"},
 				{1,2,"1::5"},
@@ -40,81 +39,62 @@ public class DataMethodsNonDefaultFormats extends Test {
 		return records;
 	}
 
-	@DriveWithDataMethod("getData")
-	public void testWithLocalDataMethod1(int left, int right, String expected) throws Exception{
+	@DriveWithDataMethod("DG1")
+	public void testDefault(int left, int right, String expected) throws Exception{
 		String actual = String.format("%d::%d", left, right);
 		assertEquals(actual, expected);
+	}
+	
+	@DriveWithDataMethod(name="DG1", format=DataFormat.LIST)
+	public void testWithLocalNamedGeneratorMethodListFormat1(DataRecord record) throws Exception{
+		int l = (int) record.objectAt(0);
+		int r = (int) record.objectAt(1);
+		String es = (String) record.objectAt(2);
+		assertEquals(es, String.format("%d::%d", l + r));
 	}	
 	
-	
-	@DataMethod("A User Friendly Name")
-	public Object[][] getData2(){
+	@DataMethod("DG2")
+	public DataRecordContainer getListData(){
+		DataRecordContainer container = new DataRecordContainer();
 		Object[][] records = {
 				{1,2,"1::2"},
 				{1,2,"1::5"},
 		};
-		return records;
+		container.addAll(records);
+		return container;
 	}
 
-	@DriveWithDataMethod("A User Friendly Name")
-	public void testWithLocalDataMethod2(int left, int right, String expected) throws Exception{
-		String actual = String.format("%d::%d", left, right);
-		assertEquals(actual, expected);
+	@DriveWithDataMethod(name="DG1", format=DataFormat.LIST)
+	public void testWithLocalNamedGeneratorMethodListFormat2(DataRecord record) throws Exception{
+		int l = (int) record.objectAt(0);
+		int r = (int) record.objectAt(1);
+		String es = (String) record.objectAt(2);
+		assertEquals(es, String.format("%d::%d", l + r));
+	}	
+	
+	@DataMethod("DG3")
+	public DataRecordContainer getMapData(){
+		DataRecordContainer container = new DataRecordContainer();
+		// Create headers and assign to container
+		String[] names = {"left", "right", "printStr"};
+		container.setHeaders(names);
+		//Rest is same
+		Object[][] records = {
+				{1,2,"1::2"},
+				{1,2,"1::5"},
+		};
+		container.addAll(records);
+		return container;
 	}
 
-
-//	
-//	@DriveWithDataMethod(name="DGWithActualDataType", format=DataFormat.LIST) // This would use dataGen() as the data generator.
-//	public void testWithLocalNamedGeneratorMethodListFormat(DataRecord record) throws Exception{
-//		int l = (int) record.objectAt(0);
-//		int r = (int) record.objectAt(1);
-//		int es = (int) record.objectAt(2);
-//		assertEquals(es, l + r);
-//	}	
-//
-//	@DataMethod("DGForMapFormat")
-//	public DataRecordContainer mapDataGen(){
-//		DataRecordContainer container = new DataRecordContainer();
-//		// Create headers and assign to container
-//		String[] names = {"left", "right", "sum"};
-//		container.setHeaders(names);
-//		//Rest is same
-//		Object[][] records = {
-//				{4,5,9},
-//				{4,5,10}
-//		};
-//		container.addAll(records);
-//		return container;
-//	}
-//
-//	@DriveWithDataMethod(name="DGForMapFormat", format=DataFormat.MAP) // This would use dataGen() as the data generator.
-//	public void testWithLocalNamedGeneratorMethodMapFormat(DataRecord record) throws Exception{
-//		DataBatteries.print(record.map());
-//		int l = (int) record.objectOf("left");
-//		int r = (int) record.objectOf("right");
-//		int es = (int) record.objectOf("SUM");
-//		assertEquals(es, l + r);
-//	}	
-//	
-//	@DataMethod("DGWithMixDataType")
-//	public DataRecordContainer dataGenWithMixData(){
-//		DataRecordContainer container = new DataRecordContainer();
-//		Object[][] records = {
-//				{4,5,"45"},
-//				{4,5,"50"}
-//		};
-//		container.addAll(records);
-//		return container;
-//	}
-//	
-//	@DriveWithDataMethod("DGWithMixDataType") // This would use dataGen() as the data generator.
-//	public void testWithLocalNamedGeneratorMethodMixData(int leftOp, int rightOp, String expectedString) throws Exception{
-//		// Here you do not need type conversion
-//		int l = leftOp;
-//		int r = rightOp;
-//		String es = expectedString;
-//		assertEquals(es, String.format("%d%d", l,r));
-//	}
-
+	@DriveWithDataMethod(name="DG2", format=DataFormat.MAP) // This would use dataGen() as the data generator.
+	public void testWithLocalNamedGeneratorMethodMapFormat(DataRecord record) throws Exception{
+		DataBatteries.print(record.map());
+		int l = (int) record.objectOf("left");
+		int r = (int) record.objectOf("right");
+		String es = (String) record.objectOf("printStr");
+		assertEquals(es, String.format("%d::%d", l + r));
+	}	
+	
 }
 
