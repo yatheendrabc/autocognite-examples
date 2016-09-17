@@ -15,21 +15,18 @@
  ******************************************************************************/
 package com.autocognite.teststyler.ddt.ex.datamethod;
 
-import com.autocognite.databroker.lib.datarecord.DataRecordContainer;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethodContainer;
 
-// This example demonstrates using any class and its static methods as Data methods.
+@DataMethodContainer("User friendly method container name.")
+public class AnnotatedMethodContainer{
 
-public class NonAnnotatedDMCClass{
-
-	public static DataRecordContainer dataGen(){
-		DataRecordContainer container = new DataRecordContainer();
+	@DataMethod("User defined method name")
+	public static Object[][] getData2(){
 		Object[][] records = {
-				{4,5,"45"},
-				{4,5,"50"}
+				{1,2,"1::2"},
+				{1,2,"1::5"},
 		};
-		container.addAll(records);
-		return container;
+		return records;
 	}
 }

@@ -24,10 +24,7 @@ import com.autocognite.databroker.lib.datarecord.DataRecord;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.ddt.Data;
-import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithData;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataArray;
-import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataFile;
-import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class DataDrivenTestWithDataArray extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());

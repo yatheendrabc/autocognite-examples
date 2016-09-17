@@ -27,27 +27,20 @@ import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithData;
 
 public class TestWithBasicDataSeparation extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
-
-	private int strToInt(Object object) {
-		return Integer.parseInt((String) object);
-	}
 	
-	// To pass a single data record. Argument must be a String[]
-	// You would need to take care of the data conversion in the test body.
-	// Can be used to place data outside of test method or if test methods take arguments.
 	@DriveWithData({"1","2","3"})
 	public void testWithSingleDataRecordPass(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
+		int l = Integer.parseInt(leftOp);
+		int r = Integer.parseInt(rightOp);
+		int es = Integer.parseInt(expectedSum);
 		assertEquals(es, l + r);
 	}
 	
 	@DriveWithData({"1","2","4"})
 	public void testWithSingleDataRecordFail(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
+		int l = Integer.parseInt(leftOp);
+		int r = Integer.parseInt(rightOp);
+		int es = Integer.parseInt(expectedSum);
 		assertEquals(es, l + r);
 	}
 	
@@ -57,9 +50,9 @@ public class TestWithBasicDataSeparation extends Test {
 	// Note the arguments of Annotation as well as the test method.
 	@DriveWithData(record={"1","2","3"}, format=DataFormat.LIST)
 	public void testWithSingleDataRecordListFormatPass(DataRecord record) throws Exception{
-		int l = strToInt(record.valueAt(0));
-		int r = strToInt(record.valueAt(1));
-		int es = strToInt(record.valueAt(2));
+		int l = Integer.parseInt(record.valueAt(0));
+		int r = Integer.parseInt(record.valueAt(1));
+		int es = Integer.parseInt(record.valueAt(2));
 		assertEquals(es, l + r);
 	}	
 	
@@ -68,10 +61,10 @@ public class TestWithBasicDataSeparation extends Test {
 	// Note the arguments of Annotation as well as the test method.
 	@DriveWithData(record={"left=1","right=2","expected=3"}, format=DataFormat.MAP)
 	public void testWithSingleDataRecordMapFormatPass(DataRecord record) throws Exception{
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
+		int l = Integer.parseInt(record.valueOf("left"));
+		int r = Integer.parseInt(record.valueOf("right"));
 		//you also get case insensitivity
-		int es = strToInt(record.valueOf("EXPECTED"));
+		int es = Integer.parseInt(record.valueOf("EXPECTED"));
 		assertEquals(es, l + r);
 	}
 	
@@ -83,10 +76,10 @@ public class TestWithBasicDataSeparation extends Test {
 			format=DataFormat.MAP
 	)
 	public void testWithSingleDataRecordMapFormatSepHeaders(DataRecord record) throws Exception{
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
+		int l = Integer.parseInt(record.valueOf("left"));
+		int r = Integer.parseInt(record.valueOf("right"));
 		//you also get case insensitivity
-		int es = strToInt(record.valueOf("EXPECTED"));
+		int es = Integer.parseInt(record.valueOf("EXPECTED"));
 		assertEquals(es, l + r);
 	}
 }
