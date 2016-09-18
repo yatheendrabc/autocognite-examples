@@ -18,9 +18,9 @@ package com.autocognite.teststyler.ddt.ex.datagenerator;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.autocognite.databroker.api.datasource.DataSource;
-import com.autocognite.databroker.api.datasource.exceptions.DataSourceFinishedException;
-import com.autocognite.databroker.lib.datarecord.DataRecord;
+import com.autocognite.user.databroker.api.DataSource;
+import com.autocognite.user.databroker.api.exceptions.DataSourceFinishedException;
+import com.autocognite.user.databroker.lib.datarecord.DataRecord;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataGenerator;
 
 /*

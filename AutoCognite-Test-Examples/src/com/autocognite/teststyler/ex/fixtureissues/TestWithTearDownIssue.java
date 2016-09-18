@@ -20,7 +20,7 @@ import static com.autocognite.user.validator.lib.Assertions.fail;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.batteries.Batteries;
+import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
 
 public class TestWithTearDownIssue extends Test{

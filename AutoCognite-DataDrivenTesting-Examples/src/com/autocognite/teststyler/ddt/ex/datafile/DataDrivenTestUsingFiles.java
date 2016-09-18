@@ -19,12 +19,12 @@ import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.batteries.Batteries;
-import com.autocognite.databroker.lib.datarecord.DataRecord;
+import com.autocognite.user.batteries.Batteries;
+import com.autocognite.user.databroker.lib.datarecord.DataRecord;
+import com.autocognite.user.generic.utils.lib.DataBatteries;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataFile;
-import com.autocognite.utils.lib.DataBatteries;
 //Test
 public class DataDrivenTestUsingFiles extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());

@@ -20,10 +20,10 @@ import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.assertNull;
 import static com.autocognite.user.validator.lib.Assertions.error;
 
-import com.autocognite.databroker.DataBroker;
+import com.autocognite.user.databroker.DataBroker;
+import com.autocognite.user.generic.utils.lib.DataBatteries;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.TestProperties;
-import com.autocognite.utils.lib.DataBatteries;
 
 @TestProperties(
 		name="Custom name", 
