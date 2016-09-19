@@ -46,7 +46,7 @@ public abstract class DashBoardPage extends SimplePage {
 class LeftNavigation extends BasePageSection {
 	public LeftNavigation (Page parent, UiDriver uiDriver) throws Exception{
 		super("LeftNavigation", parent, uiDriver);
-		this.populate("wordpress" + "/" + "LeftNavigation" + ".ini");
+		this.populate("wordpress/LeftNavigation.ini");
 	}
 	
 	public SettingsPage getSettingsPage() throws Exception {
@@ -65,7 +65,7 @@ class LeftNavigation extends BasePageSection {
 class TopMenu extends BasePageSection {
 	public TopMenu (Page parent, UiDriver uiDriver) throws Exception{
 		super("TopMenu", parent, uiDriver);
-		this.populate("wordpress" + "/" + "TopMenu" + ".ini");
+		this.populate("wordpress/TopMenu.ini");
 	}
 	
 	public HomePage logout() throws Exception{
