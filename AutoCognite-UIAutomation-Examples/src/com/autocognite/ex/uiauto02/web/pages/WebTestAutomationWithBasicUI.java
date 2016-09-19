@@ -21,11 +21,11 @@ package com.autocognite.ex.uiauto02.web.pages;
 import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 
 import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.uiautomator.api.StandalonePage;
+import com.autocognite.user.uiautomator.api.Page;
 import com.autocognite.user.uiautomator.api.UiDriver;
 import com.autocognite.user.uiautomator.api.UiElement;
-import com.autocognite.user.uiautomator.lib.factory.UiFactory;
 import com.autocognite.user.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.user.uiautomator.lib.factory.UiFactory;
 
 public class WebTestAutomationWithBasicUI extends Test{
 	static String appUrl = "http://10.10.1.32";
@@ -36,17 +36,17 @@ public class WebTestAutomationWithBasicUI extends Test{
 		UiDriver uiDriver = UiDriverFactory.getWebUiDriver(getRunConfig());
 		uiDriver.goTo(adminUrl);
 		
-		StandalonePage home = UiFactory.getPage(uiDriver, "/wordpress/HomePage.ini");		
+		Page home = UiFactory.getPage(uiDriver, "/wordpress/HomePage.ini");		
 
 		home.element("LOGIN").waitForPresence();
 		home.element("LOGIN").enterText("user");
 		home.element("PASSWORD").enterText("bitnami");
 		home.element("SUBMIT").click();		
 		
-		StandalonePage leftNav = UiFactory.getPage(uiDriver, "/wordpress/LeftNavigation.ini");	
+		Page leftNav = UiFactory.getPage(uiDriver, "/wordpress/LeftNavigation.ini");	
 		leftNav.element("POSTS").hoverAndClickElement(leftNav.element("CATEGORIES"));	
 		
-		StandalonePage categories = UiFactory.getPage(uiDriver, "/wordpress/Categories.ini");
+		Page categories = UiFactory.getPage(uiDriver, "/wordpress/Categories.ini");
 
 		categories.element("CAT_CHECKBOXES").getInstanceAtOrdinal(2).check();
 		categories.element("CAT_CHECKBOXES").getInstanceAtIndex(1).uncheck();
@@ -58,7 +58,7 @@ public class WebTestAutomationWithBasicUI extends Test{
 
 		leftNav.element("SETTINGS").click();
 
-		StandalonePage settings = UiFactory.getPage(uiDriver, "/wordpress/Settings.ini");
+		Page settings = UiFactory.getPage(uiDriver, "/wordpress/Settings.ini");
 			
 		settings.element("BLOG_NAME").enterText("Hello");
 		settings.element("BLOG_NAME").enterText("Hello");
