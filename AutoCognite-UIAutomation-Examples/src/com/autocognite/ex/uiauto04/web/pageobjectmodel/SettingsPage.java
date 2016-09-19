@@ -19,6 +19,7 @@ import static com.autocognite.user.validator.lib.Assertions.assertTrue;
 
 import com.autocognite.user.configurator.api.RunConfiguration;
 import com.autocognite.user.uiautomator.api.UiDriver;
+import com.autocognite.user.uiautomator.api.UiElement;
 
 public class SettingsPage extends DashBoardPage {
 	public SettingsPage (UiDriver uiDriver) throws Exception{
@@ -26,17 +27,19 @@ public class SettingsPage extends DashBoardPage {
 	}
 	
 	public void tweakSettings() throws Exception {
-		element("BLOG_NAME").enterText("Hello");
-		element("BLOG_NAME").enterText("Hello");
-		element("BLOG_NAME").setText("Hello");
+		UiElement blogName = element("BLOG_NAME");
+		blogName.enterText("Hello");
+		blogName.enterText("Hello");
+		blogName.setText("Hello");
 		
 		element("MEMBERSHIP").check();
 		
-		element("ROLE").selectLabel("Author");
-		assertTrue(element("ROLE").hasSelectedLabel("Author"));
-		element("ROLE").selectIndex(0);
-		assertTrue(element("ROLE").hasSelectedIndex(0));
-		element("ROLE").selectValue("author");
-		assertTrue(element("ROLE").hasSelectedValue("author"));
+		UiElement role = element("ROLE");
+		role.selectLabel("Author");
+		assertTrue(role.hasSelectedLabel("Author"));
+		role.selectIndex(0);
+		assertTrue(role.hasSelectedIndex(0));
+		role.selectValue("author");
+		assertTrue(role.hasSelectedValue("author"));
 	}
 }
