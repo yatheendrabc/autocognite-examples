@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.autocognite.uiautomator.ex.config;
 
+//Test
 public class WordPressConfiguration {
 
 	// For demonstration focus on UI Automation, these properties have been kept here.
