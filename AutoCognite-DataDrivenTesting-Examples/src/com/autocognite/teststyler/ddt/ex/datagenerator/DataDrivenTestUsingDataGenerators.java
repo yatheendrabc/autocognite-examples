@@ -48,7 +48,7 @@ public class DataDrivenTestUsingDataGenerators extends Test {
 		assertEquals(es, String.format("%d::%d", l, r));
 	}	
 	
-	@DriveWithDataGenerator(klass = NonAnnotatedDG.class, format=DataFormat.MAP)
+	@DriveWithDataGenerator(generatorClass = NonAnnotatedDG.class, format=DataFormat.MAP)
 	public void testNonAnnotatedDG(DataRecord record) throws Exception{
 		int l = (int) record.objectOf("left");
 		int r = (int) record.objectOf("right");
