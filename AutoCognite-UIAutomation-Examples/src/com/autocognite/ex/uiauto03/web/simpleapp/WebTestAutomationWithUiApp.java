@@ -38,42 +38,49 @@ public class WebTestAutomationWithUiApp extends Test{
 		uiDriver.goTo(adminUrl);
 		
 		App wordpress = UiFactory.getSimpleApp("wordpress", uiDriver, "wordpress");
-		Page home = wordpress.page("HomePage");
+		Page home = wordpress.page("HomePage");	
 
-		home.element("LOGIN").waitForPresence();
-		home.element("LOGIN").enterText("user");
+		UiElement userTextBox = home.element("LOGIN");
+		userTextBox.waitForPresence();
+		userTextBox.enterText("user");
 		home.element("PASSWORD").enterText("bitnami");
 		home.element("SUBMIT").click();		
-	
-		Page leftNav = wordpress.page("LeftNavigation");
-		leftNav.element("POSTS").hoverAndClickElement(wordpress.page("LeftNavigation").element("CATEGORIES"));	
-
+		
+		Page leftNav = wordpress.page("LeftNavigation");	
+		leftNav.element("POSTS").hoverAndClickElement(leftNav.element("CATEGORIES"));	
+		
 		Page categories = wordpress.page("Categories");
-		categories.element("CAT_CHECKBOXES").getInstanceAtOrdinal(2).check();
-		categories.element("CAT_CHECKBOXES").getInstanceAtIndex(1).uncheck();
+
+		UiElement tags = categories.element("CAT_CHECKBOXES");
+		tags.getInstanceAtOrdinal(2).check();
+		tags.getInstanceAtIndex(1).uncheck();
 			
-		for (UiElement element: categories.element("CAT_CHECKBOXES").getAllInstances()){
+		for (UiElement element: tags.getAllInstances()){
 			element.check();
 			element.uncheck();
 		}
 
 		leftNav.element("SETTINGS").click();
+
+		Page settings = wordpress.page("Settings");
 			
-		Page setttings = wordpress.page("Settings");
-		setttings.element("BLOG_NAME").enterText("Hello");
-		setttings.element("BLOG_NAME").enterText("Hello");
-		setttings.element("BLOG_NAME").setText("Hello");
-		setttings.element("MEMBERSHIP").check();
+		UiElement blogNameTextBox = settings.element("BLOG_NAME");
+		blogNameTextBox.enterText("Hello");
+		blogNameTextBox.enterText("Hello");
+		blogNameTextBox.setText("Hello");
+		
+		settings.element("MEMBERSHIP").check();
 
 		// Experiments with Select control - Selection using different attributes
-		setttings.element("ROLE").selectLabel("Author");
-		assertTrue(setttings.element("ROLE").hasSelectedLabel("Author"));
-		setttings.element("ROLE").selectIndex(0);
-		assertTrue(setttings.element("ROLE").hasSelectedIndex(0));
-		wordpress.page("Settings").element("ROLE").selectValue("author");
-		assertTrue(setttings.element("ROLE").hasSelectedValue("author"));
+		UiElement roleDropDown = settings.element("ROLE");
+		roleDropDown.selectLabel("Author");
+		assertTrue(roleDropDown.hasSelectedLabel("Author"));
+		roleDropDown.selectIndex(0);
+		assertTrue(roleDropDown.hasSelectedIndex(0));
+		roleDropDown.selectValue("author");
+		assertTrue(roleDropDown.hasSelectedValue("author"));
 
-		setttings.goTo(logoutUrl);
+		settings.goTo(logoutUrl);
 
 		uiDriver.close();
 	}

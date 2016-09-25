@@ -35,44 +35,51 @@ public class WebTestAutomationWithUiDriver extends Test{
 		UiDriver uiDriver = UiDriverFactory.getWebUiDriver(getRunConfig());
 		uiDriver.goTo(adminUrl);		
 
-		uiDriver.elementWithId("user_login").waitForPresence();
-		uiDriver.elementWithId("user_login").enterText("user");
+		UiElement userTextBox = uiDriver.elementWithId("user_login");
+		userTextBox.waitForPresence();
+		userTextBox.enterText("user");
 		uiDriver.elementWithId("user_pass").enterText("bitnami");
 		uiDriver.elementWithId("wp-submit").click();
 		
 		uiDriver.elementWithCss(".dashicons-admin-post").hoverAndClickElement(uiDriver.elementWithLinkText("Categories"));
-		uiDriver.elementWithName("delete_tags[]").getInstanceAtOrdinal(2).check();
-		uiDriver.elementWithName("delete_tags[]").getInstanceAtIndex(1).uncheck();
 		
-		for (UiElement element: uiDriver.elementWithName("delete_tags[]").getAllInstances()){
+		UiElement tags = uiDriver.elementWithName("delete_tags[]");
+		tags.getInstanceAtOrdinal(2).check();
+		tags.getInstanceAtIndex(1).uncheck();
+		
+		for (UiElement element: tags.getAllInstances()){
 			element.check();
 			element.uncheck();
 		}
 		
 		// Tests for alternate instance methods
-		uiDriver.elementWithName("delete_tags[]").getFirstInstance().check();
-		uiDriver.elementWithName("delete_tags[]").getFirstInstance().uncheck();
+		tags.getFirstInstance().check();
+		tags.getFirstInstance().uncheck();
 		
-		uiDriver.elementWithName("delete_tags[]").identifyAll().getLastInstance().check();
-		uiDriver.elementWithName("delete_tags[]").identifyAll().getLastInstance().uncheck();
+		tags.identifyAll().getLastInstance().check();
+		tags.identifyAll().getLastInstance().uncheck();
 		
 		
-		uiDriver.elementWithName("delete_tags[]").identifyAll().getRandomInstance().check();
-		uiDriver.elementWithName("delete_tags[]").identifyAll().getRandomInstance().uncheck();
+		tags.identifyAll().getRandomInstance().check();
+		tags.identifyAll().getRandomInstance().uncheck();
 	
 		uiDriver.elementWithCss(".dashicons-admin-settings").click();
-		uiDriver.elementWithId("blogname").enterText("Hello");
-		uiDriver.elementWithId("blogname").enterText("Hello");
-		uiDriver.elementWithId("blogname").setText("Hello");
+		
+		UiElement blogNameTextBox = uiDriver.elementWithId("blogname");
+		blogNameTextBox.enterText("Hello");
+		blogNameTextBox.enterText("Hello");
+		blogNameTextBox.setText("Hello");
+		
 		uiDriver.elementWithId("users_can_register").check();
 
 		// Experiments with Select control - Selection using different attributes
-		uiDriver.elementWithId("default_role").selectLabel("Author");
-		assertTrue(uiDriver.elementWithId("default_role").hasSelectedLabel("Author"));
-		uiDriver.elementWithId("default_role").selectIndex(0);
-		assertTrue(uiDriver.elementWithId("default_role").hasSelectedIndex(0));
-		uiDriver.elementWithId("default_role").selectValue("author");
-		assertTrue(uiDriver.elementWithId("default_role").hasSelectedValue("author"));
+		UiElement roleDropDown = uiDriver.elementWithId("default_role");
+		roleDropDown.selectLabel("Author");
+		assertTrue(roleDropDown.hasSelectedLabel("Author"));
+		roleDropDown.selectIndex(0);
+		assertTrue(roleDropDown.hasSelectedIndex(0));
+		roleDropDown.selectValue("author");
+		assertTrue(roleDropDown.hasSelectedValue("author"));
 		
 		uiDriver.goTo(logoutUrl);
 		uiDriver.close();

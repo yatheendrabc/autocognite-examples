@@ -21,7 +21,7 @@ import com.autocognite.user.uiautomator.lib.factory.UiDriverFactory;
 public class WPTest extends Test {
 	HomePage home = null;
 	
-	public void setUpClass() throws Exception{
+	public void setUp() throws Exception{
 		home = new HomePage(UiDriverFactory.getWebUiDriver(getRunConfig()));	
 	}
 
@@ -32,6 +32,9 @@ public class WPTest extends Test {
 		SettingsPage settings = categories.leftNav.getSettingsPage();
 		settings.tweakSettings();
 		home = settings.topMenu.logout();
+	}
+	
+	public void tearDown() throws Exception{
 		home.close();
 	}
 

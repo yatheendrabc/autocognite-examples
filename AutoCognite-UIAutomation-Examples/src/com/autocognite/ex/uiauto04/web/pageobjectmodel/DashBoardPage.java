@@ -16,10 +16,8 @@
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
-import com.autocognite.user.configurator.api.RunConfiguration;
 import com.autocognite.user.uiautomator.api.Page;
 import com.autocognite.user.uiautomator.api.UiDriver;
-import com.autocognite.user.uiautomator.lib.BasePage;
 import com.autocognite.user.uiautomator.lib.BasePageSection;
 
 public abstract class DashBoardPage extends SimplePage {

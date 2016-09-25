@@ -16,7 +16,6 @@
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
-import com.autocognite.user.configurator.api.RunConfiguration;
 import com.autocognite.user.uiautomator.api.UiDriver;
 
 public class HomePage extends SimplePage {

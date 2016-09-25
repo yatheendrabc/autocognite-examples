@@ -38,8 +38,9 @@ public class WebTestAutomationWithBasicUI extends Test{
 		
 		Page home = UiFactory.getPage(uiDriver, "/wordpress/HomePage.ini");		
 
-		home.element("LOGIN").waitForPresence();
-		home.element("LOGIN").enterText("user");
+		UiElement userTextBox = home.element("LOGIN");
+		userTextBox.waitForPresence();
+		userTextBox.enterText("user");
 		home.element("PASSWORD").enterText("bitnami");
 		home.element("SUBMIT").click();		
 		
@@ -48,10 +49,11 @@ public class WebTestAutomationWithBasicUI extends Test{
 		
 		Page categories = UiFactory.getPage(uiDriver, "/wordpress/Categories.ini");
 
-		categories.element("CAT_CHECKBOXES").getInstanceAtOrdinal(2).check();
-		categories.element("CAT_CHECKBOXES").getInstanceAtIndex(1).uncheck();
+		UiElement tags = categories.element("CAT_CHECKBOXES");
+		tags.getInstanceAtOrdinal(2).check();
+		tags.getInstanceAtIndex(1).uncheck();
 			
-		for (UiElement element: categories.element("CAT_CHECKBOXES").getAllInstances()){
+		for (UiElement element: tags.getAllInstances()){
 			element.check();
 			element.uncheck();
 		}
@@ -60,18 +62,21 @@ public class WebTestAutomationWithBasicUI extends Test{
 
 		Page settings = UiFactory.getPage(uiDriver, "/wordpress/Settings.ini");
 			
-		settings.element("BLOG_NAME").enterText("Hello");
-		settings.element("BLOG_NAME").enterText("Hello");
-		settings.element("BLOG_NAME").setText("Hello");
+		UiElement blogNameTextBox = settings.element("BLOG_NAME");
+		blogNameTextBox.enterText("Hello");
+		blogNameTextBox.enterText("Hello");
+		blogNameTextBox.setText("Hello");
+		
 		settings.element("MEMBERSHIP").check();
 
 		// Experiments with Select control - Selection using different attributes
-		settings.element("ROLE").selectLabel("Author");
-		assertTrue(settings.element("ROLE").hasSelectedLabel("Author"));
-		settings.element("ROLE").selectIndex(0);
-		assertTrue(settings.element("ROLE").hasSelectedIndex(0));
-		settings.element("ROLE").selectValue("author");
-		assertTrue(settings.element("ROLE").hasSelectedValue("author"));
+		UiElement roleDropDown = settings.element("ROLE");
+		roleDropDown.selectLabel("Author");
+		assertTrue(roleDropDown.hasSelectedLabel("Author"));
+		roleDropDown.selectIndex(0);
+		assertTrue(roleDropDown.hasSelectedIndex(0));
+		roleDropDown.selectValue("author");
+		assertTrue(roleDropDown.hasSelectedValue("author"));
 
 		uiDriver.goTo(logoutUrl);
 

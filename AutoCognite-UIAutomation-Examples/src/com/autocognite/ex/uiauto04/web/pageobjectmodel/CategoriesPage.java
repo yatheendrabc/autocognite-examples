@@ -15,7 +15,6 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import com.autocognite.user.configurator.api.RunConfiguration;
 import com.autocognite.user.uiautomator.api.UiDriver;
 import com.autocognite.user.uiautomator.api.UiElement;
 

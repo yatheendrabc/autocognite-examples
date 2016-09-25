@@ -30,9 +30,8 @@ import com.autocognite.user.testcore.lib.annotate.TestProperties;
 
 @TestProperties(
 		name="Custom name", 
-		category="Some-Category",
-		customProps={"my1=3"},
-		tags ="Level1,Critical,Functional")
+		customProps={"my1=3"}
+)
 public class TestPropertiesDemo extends Test{
 
 	@TestProperties(id="Custom id-1", name="a")
