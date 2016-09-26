@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto05.fixtureissues;
+package com.autocognite.ex.ddt07.fixtureerrors;
 
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.fail;
@@ -25,24 +25,30 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
-
-public class TestWithTearDownIssue extends Test{
+import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
+//Test
+public class SetUpClassIssueWithDDT extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass() throws Exception{
 		logger.info("UserTest: Called setUpClass");
+		fail("Simulating an issue in setUpClass");
 	}
 	
 	public void setUp() throws Exception{
 		logger.info("UserTest: Called setUp");
+		fail("Simulating an issue in setUp");
 	}
 	
 	public void setUpInstance() throws Exception{
 		logger.info(getClassName() + ": Called setUpInstance");
+		fail("Simulating an issue in setUpInstance");
 	}
 	
 	public void tearDownInstance() throws Exception{
 		logger.info(getClassName() + ": Called tearDownInstance");
+		fail("Simulating an issue in tearDownInstance");
 	}
 	
 	public void tearDown() throws Exception{
@@ -55,13 +61,46 @@ public class TestWithTearDownIssue extends Test{
 		fail("Simulating an issue in tearDownClass");
 	}
 
-	public void testMethod1() throws Exception{
-		logger.info("UserTest: Called testMethod1");
-		assertEquals(1,1);
+	@DataMethod
+	public Object[][] getData(){
+		Object[][] records = {
+				{1,2,"1::2"},
+				{1,2,"1::5"},
+		};
+		return records;
 	}
 	
-	public void testMethod2() throws Exception{
-		logger.info("UserTest: Called testMethod2");
-		assertEquals(3,4);
+	@DataMethod
+	public Object[][] getData2(){
+		Object[][] records = {
+				{1,2,"1::2"},
+				{1,2,"1::5"},
+		};
+		return records;
 	}
+
+	@DriveWithDataMethod("getData")
+	public void test1(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
+	
+	@DriveWithDataMethod("getData")
+	public void test2(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
+	
+	@DriveWithDataMethod("getData2")
+	public void test3(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
+	
+	@DriveWithDataMethod("getData2")
+	public void test4(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
 }
+

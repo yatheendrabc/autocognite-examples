@@ -31,10 +31,6 @@ import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataArray;
 //Test
 public class DataDrivenTestWithDataArray extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
-
-	private int strToInt(Object object) {
-		return Integer.parseInt((String) object);
-	}
 	
 	// What we have done so far is good for one record.
 	// What happens when we need more?
@@ -48,9 +44,9 @@ public class DataDrivenTestWithDataArray extends Test {
 			}
 	)
 	public void testWithDataArray(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
+		int l = Integer.parseInt(leftOp);
+		int r = Integer.parseInt(rightOp);
+		int es = Integer.parseInt(expectedSum);
 		assertEquals(es, l + r);
 	}
 
@@ -62,9 +58,9 @@ public class DataDrivenTestWithDataArray extends Test {
 	format = DataFormat.LIST
 	)
 	public void testWithDataArrayListFormat(DataRecord record) throws Exception{
-		int l = strToInt(record.valueAt(0));
-		int r = strToInt(record.valueAt(1));
-		int es = strToInt(record.valueAt(2));
+		int l = Integer.parseInt(record.valueAt(0));
+		int r = Integer.parseInt(record.valueAt(1));
+		int es = Integer.parseInt(record.valueAt(2));
 		assertEquals(es, l + r);
 	}
 	
@@ -77,9 +73,9 @@ public class DataDrivenTestWithDataArray extends Test {
 	format = DataFormat.MAP
 	)
 	public void testWithDataArrayMapFormat(DataRecord record) throws Exception{
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
-		int es = strToInt(record.valueOf("EXPECTED"));
+		int l = Integer.parseInt(record.valueOf("left"));
+		int r = Integer.parseInt(record.valueOf("right"));
+		int es = Integer.parseInt(record.valueOf("EXPECTED"));
 		assertEquals(es, l + r);
 	}
 	

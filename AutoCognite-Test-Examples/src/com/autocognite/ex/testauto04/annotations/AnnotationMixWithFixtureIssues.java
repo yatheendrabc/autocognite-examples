@@ -25,10 +25,10 @@ import static com.autocognite.user.validator.lib.Assertions.*;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.AfterTestClass;
-import com.autocognite.user.testcore.lib.annotate.AfterTestMethod;
-import com.autocognite.user.testcore.lib.annotate.BeforeTestClass;
-import com.autocognite.user.testcore.lib.annotate.BeforeTestMethod;
+import com.autocognite.user.testcore.lib.annotate.AfterClass;
+import com.autocognite.user.testcore.lib.annotate.AfterMethod;
+import com.autocognite.user.testcore.lib.annotate.BeforeClass;
+import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
 import com.autocognite.user.testcore.lib.annotate.TestMethod;
 import com.autocognite.user.testcore.lib.annotate.TestProperties;
 
@@ -39,23 +39,23 @@ import com.autocognite.user.testcore.lib.annotate.TestProperties;
 public class AnnotationMixWithFixtureIssues extends Test{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
-	@BeforeTestClass
+	@BeforeClass
 	public void createTestFiles() throws Exception{
 		logger.info("Custom Set Up class executed");
 		fail("Simulating an issue in setUpClass");
 	}
 	
-	@BeforeTestMethod
+	@BeforeMethod
 	public void launchTool(){
 		logger.info("Custom Set Up executed");
 	}
 	
-	@AfterTestMethod
+	@AfterMethod
 	public void stopTool(){
 		logger.info("Custom Tear Down executed");
 	}
 	
-	@AfterTestClass
+	@AfterClass
 	public void deleteTestFiles() throws Exception{
 		logger.info("Custom Tear Down Class executed");
 		fail("Simulating an issue in setUpClass");

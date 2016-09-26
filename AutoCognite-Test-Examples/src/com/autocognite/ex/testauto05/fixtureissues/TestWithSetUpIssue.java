@@ -38,6 +38,16 @@ public class TestWithSetUpIssue extends Test{
 		fail("Simulating an issue in setUp");
 	}
 	
+	public void setUpInstance() throws Exception{
+		logger.info(getClassName() + ": Called setUpInstance");
+		fail("Simulating an issue in setUpInstance");
+	}
+	
+	public void tearDownInstance() throws Exception{
+		logger.info(getClassName() + ": Called tearDownInstance");
+		fail("Simulating an issue in tearDownInstance");
+	}
+	
 	public void tearDown() throws Exception{
 		logger.info("UserTest: Called tearDown");
 		fail("Simulating an issue in tearDown");

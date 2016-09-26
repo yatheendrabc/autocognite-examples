@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto02.fixtures;
+package com.autocognite.ex.ddt06.fixtures;
 
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 
@@ -24,8 +24,10 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
-
-public class TestWithAllFixtures extends Test{
+import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
+import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
+//Test
+public class FixturesWithDDT extends Test {
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass(){
@@ -52,13 +54,46 @@ public class TestWithAllFixtures extends Test{
 		logger.info(getClassName() + ": Called tearDownClass");
 	}
 
-	public void testMethod1() throws Exception{
-		logger.info(getClassName() + ": Called testMethod 1");
-		assertEquals(1,1);
+	@DataMethod
+	public Object[][] getData(){
+		Object[][] records = {
+				{1,2,"1::2"},
+				{1,2,"1::5"},
+		};
+		return records;
 	}
 	
-	public void testMethod2() throws Exception{
-		logger.info(getClassName() + ": Called testMethod 2");
-		assertEquals(3,4);
+	@DataMethod
+	public Object[][] getData2(){
+		Object[][] records = {
+				{1,2,"1::2"},
+				{1,2,"1::5"},
+		};
+		return records;
 	}
+
+	@DriveWithDataMethod("getData")
+	public void test1(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
+	
+	@DriveWithDataMethod("getData")
+	public void test2(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
+	
+	@DriveWithDataMethod("getData2")
+	public void test3(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
+	
+	@DriveWithDataMethod("getData2")
+	public void test4(int left, int right, String expected) throws Exception{
+		String actual = String.format("%d::%d", left, right);
+		assertEquals(actual, expected);
+	}	
 }
+

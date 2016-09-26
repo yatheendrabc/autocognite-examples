@@ -23,31 +23,31 @@ import static com.autocognite.user.validator.lib.Assertions.*;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.AfterTestClass;
-import com.autocognite.user.testcore.lib.annotate.AfterTestMethod;
-import com.autocognite.user.testcore.lib.annotate.BeforeTestClass;
-import com.autocognite.user.testcore.lib.annotate.BeforeTestMethod;
+import com.autocognite.user.testcore.lib.annotate.AfterClass;
+import com.autocognite.user.testcore.lib.annotate.AfterMethod;
+import com.autocognite.user.testcore.lib.annotate.BeforeClass;
+import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
 import com.autocognite.user.testcore.lib.annotate.TestMethod;
 
 public class FlexibleMethodsDemo extends Test{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
-	@BeforeTestClass
+	@BeforeClass
 	public void createTestFiles(){
 		logger.info("Custom Set Up class executed");
 	}
 	
-	@BeforeTestMethod
+	@BeforeMethod
 	public void launchTool(){
 		logger.info("Custom Set Up executed");
 	}
 	
-	@AfterTestMethod
+	@AfterMethod
 	public void stopTool(){
 		logger.info("Custom Tear Down executed");
 	}
 	
-	@AfterTestClass
+	@AfterClass
 	public void deleteTestFiles(){
 		logger.info("Custom Tear Down Class executed");
 	}
