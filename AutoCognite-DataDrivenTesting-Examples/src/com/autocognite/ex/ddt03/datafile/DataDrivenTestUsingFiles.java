@@ -121,7 +121,7 @@ public class DataDrivenTestUsingFiles extends Test {
 			format=DataFormat.MAP
 	)
 	public void testWithCSVDataFileMapFormat(DataRecord record) throws Exception{
-		logger.debug(DataBatteries.flatten(record.map()));
+		logger.info(DataBatteries.flatten(record.map()));
 		int l = strToInt(record.valueOf("left"));
 		int r = strToInt(record.valueOf("right"));
 		int es = strToInt(record.valueOf("SUM"));
@@ -136,7 +136,7 @@ public class DataDrivenTestUsingFiles extends Test {
 			format=DataFormat.MAP
 	)
 	public void testWithINIDataFileMapFormat(DataRecord record) throws Exception{
-		logger.debug(DataBatteries.flatten(record.map()));
+//		logger.info(DataBatteries.flatten(record.map()));
 		int l = strToInt(record.valueOf("left"));
 		int r = strToInt(record.valueOf("right"));
 		int es = strToInt(record.valueOf("SUM"));
