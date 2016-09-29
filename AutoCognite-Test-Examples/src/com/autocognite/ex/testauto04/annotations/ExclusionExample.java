@@ -16,26 +16,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto01.basic;
+package com.autocognite.ex.testauto04.annotations;
 
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.error;
 
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.Exclude;
 
-public class SimpleTest extends Test{
+public class ExclusionExample extends Test{
 
 	public void testMethodPass() throws Exception{	
 		assertEquals(1,1);
 	}
 	
+	@Exclude
 	public void testMethodFail() throws Exception{
 		assertEquals(1,2);
 	}
 	
 	public void testMethodError() throws Exception{
-		//error();
-		throw new AssertionError("Mouli");
+		error();
 	}
 
 }

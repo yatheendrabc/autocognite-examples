@@ -16,26 +16,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto01.basic;
+package com.autocognite.ex.problem01.fixtures;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.error;
+import org.apache.log4j.Logger;
 
+import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.BeforeClass;
+import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
 
-public class SimpleTest extends Test{
-
-	public void testMethodPass() throws Exception{	
-		assertEquals(1,1);
+public class MultipleFixturesOfSameType2 extends Test{
+	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+	
+	@BeforeClass
+	public void someMethod1(){
+		
 	}
 	
-	public void testMethodFail() throws Exception{
-		assertEquals(1,2);
+	public void setUpClass(){
+		
 	}
-	
-	public void testMethodError() throws Exception{
-		//error();
-		throw new AssertionError("Mouli");
+
+	public void test1(){
+		logger.debug("Should not have happened.");
 	}
 
 }

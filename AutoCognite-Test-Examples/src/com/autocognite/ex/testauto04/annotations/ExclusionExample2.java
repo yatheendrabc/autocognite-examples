@@ -16,14 +16,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.problem01.fixtures;
+package com.autocognite.ex.testauto04.annotations;
 
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.error;
 
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.Exclude;
 
-public class SimpleTest extends Test{
+@Exclude
+public class ExclusionExample2 extends Test{
 
 	public void testMethodPass() throws Exception{	
 		assertEquals(1,1);
