@@ -34,8 +34,7 @@ public class SimpleTest extends Test{
 	}
 	
 	public void testMethodError() throws Exception{
-		//error();
-		throw new AssertionError("Mouli");
+		error();
 	}
 
 }
