@@ -24,8 +24,10 @@ import static com.autocognite.user.validator.lib.Assertions.*;
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.AfterClass;
+import com.autocognite.user.testcore.lib.annotate.AfterInstance;
 import com.autocognite.user.testcore.lib.annotate.AfterMethod;
 import com.autocognite.user.testcore.lib.annotate.BeforeClass;
+import com.autocognite.user.testcore.lib.annotate.BeforeInstance;
 import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
 import com.autocognite.user.testcore.lib.annotate.TestMethod;
 import com.autocognite.user.testcore.lib.annotate.TestClass;
@@ -42,19 +44,29 @@ public class AnnotationMix extends Test{
 		logger.info("Custom Set Up class executed");
 	}
 	
-	@BeforeMethod
-	public void launchTool(){
-		logger.info("Custom Set Up executed");
-	}
-	
-	@AfterMethod
-	public void stopTool(){
-		logger.info("Custom Tear Down executed");
-	}
-	
 	@AfterClass
 	public void deleteTestFiles(){
 		logger.info("Custom Tear Down Class executed");
+	}
+	
+	@BeforeMethod
+	public void addEnvVarForTool(){
+		logger.info("Custom Set Up Method executed");
+	}
+	
+	@AfterMethod
+	public void clearEnvVarForTool(){
+		logger.info("Custom Tear Down Method executed");
+	}
+	
+	@BeforeInstance
+	public void launchTool(){
+		logger.info("Custom Set Up Instance executed");
+	}
+	
+	@AfterInstance
+	public void stopTool(){
+		logger.info("Custom Tear Down Instance executed");
 	}
 	
 	@TestMethod(id="Custom id-2", name="b")

@@ -36,7 +36,7 @@ public class SetUpClassIssueWithDDT extends Test {
 		fail("Simulating an issue in setUpClass");
 	}
 	
-	public void setUp() throws Exception{
+	public void setUpMethod() throws Exception{
 		logger.info("UserTest: Called setUp");
 		fail("Simulating an issue in setUp");
 	}
@@ -51,7 +51,7 @@ public class SetUpClassIssueWithDDT extends Test {
 		fail("Simulating an issue in tearDownInstance");
 	}
 	
-	public void tearDown() throws Exception{
+	public void tearDownMethod() throws Exception{
 		logger.info("UserTest: Called tearDown");
 		fail("Simulating an issue in tearDown");
 	}

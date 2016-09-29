@@ -33,7 +33,7 @@ public class TestWithTearDownClassIssue extends Test{
 		logger.info("UserTest: Called setUpClass");
 	}
 	
-	public void setUp() throws Exception{
+	public void setUpMethod() throws Exception{
 		logger.info("UserTest: Called setUp");
 	}
 	
@@ -45,7 +45,7 @@ public class TestWithTearDownClassIssue extends Test{
 		logger.info(getClassName() + ": Called tearDownInstance");
 	}
 	
-	public void tearDown() throws Exception{
+	public void tearDownMethod() throws Exception{
 		logger.info("UserTest: Called tearDown");
 	}
 	

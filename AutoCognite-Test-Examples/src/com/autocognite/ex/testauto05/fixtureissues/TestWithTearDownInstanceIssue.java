@@ -33,7 +33,7 @@ public class TestWithTearDownInstanceIssue extends Test{
 		logger.info("UserTest: Called setUpClass");
 	}
 	
-	public void setUp() throws Exception{
+	public void setUpMethod() throws Exception{
 		logger.info("UserTest: Called setUp");
 	}
 	
@@ -46,7 +46,7 @@ public class TestWithTearDownInstanceIssue extends Test{
 		fail("Simulating an issue in tearDownInstance");
 	}
 	
-	public void tearDown() throws Exception{
+	public void tearDownMethod() throws Exception{
 		logger.info("UserTest: Called tearDown");
 		fail("Simulating an issue in tearDown");
 	}
