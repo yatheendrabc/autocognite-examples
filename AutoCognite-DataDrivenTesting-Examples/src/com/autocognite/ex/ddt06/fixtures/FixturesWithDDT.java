@@ -34,7 +34,7 @@ public class FixturesWithDDT extends Test {
 		logger.info(getClassName() + ": Called setUpClass");
 	}
 	
-	public void setUp(){
+	public void setUpMethod(){
 		logger.info(getClassName() + ": Called setUp");
 	}
 	
@@ -46,7 +46,7 @@ public class FixturesWithDDT extends Test {
 		logger.info(getClassName() + ": Called tearDownInstance");
 	}
 	
-	public void tearDown(){
+	public void tearDownMethod(){
 		logger.info(getClassName() + ": Called tearDown");
 	}
 	

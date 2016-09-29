@@ -32,8 +32,8 @@ public class TestWithAllFixtures extends Test{
 		logger.info(getClassName() + ": Called setUpClass");
 	}
 	
-	public void setUp(){
-		logger.info(getClassName() + ": Called setUp");
+	public void setUpMethod(){
+		logger.info(getClassName() + ": Called setUpMethod");
 	}
 	
 	public void setUpInstance(){
@@ -44,8 +44,8 @@ public class TestWithAllFixtures extends Test{
 		logger.info(getClassName() + ": Called tearDownInstance");
 	}
 	
-	public void tearDown(){
-		logger.info(getClassName() + ": Called tearDown");
+	public void tearDownMethod(){
+		logger.info(getClassName() + ": Called tearDownMethod");
 	}
 	
 	public void tearDownClass(){

@@ -53,7 +53,7 @@ public class DataMethodsNonDefaultFormats extends Test {
 		int l = (int) record.objectAt(0);
 		int r = (int) record.objectAt(1);
 		String es = (String) record.objectAt(2);
-		assertEquals(es, String.format("%d::%d", l + r));
+		assertEquals(es, String.format("%d::%d", l, r));
 	}	
 	
 	@DataMethod("DG2")
@@ -72,10 +72,10 @@ public class DataMethodsNonDefaultFormats extends Test {
 		int l = (int) record.objectAt(0);
 		int r = (int) record.objectAt(1);
 		String es = (String) record.objectAt(2);
-		assertEquals(es, String.format("%d::%d", l + r));
+		assertEquals(es, String.format("%d::%d", l, r));
 	}	
 	
-	@DataMethod("DG3")
+	@DataMethod("DG2")
 	public DataRecordContainer getMapData(){
 		DataRecordContainer container = new DataRecordContainer();
 		// Create headers and assign to container
@@ -90,13 +90,13 @@ public class DataMethodsNonDefaultFormats extends Test {
 		return container;
 	}
 
-	@DriveWithDataMethod(name="DG2", format=DataFormat.MAP) // This would use dataGen() as the data generator.
+	@DriveWithDataMethod(name="DG2", format=DataFormat.MAP) 
 	public void testWithLocalNamedGeneratorMethodMapFormat(DataRecord record) throws Exception{
 		DataBatteries.print(record.map());
 		int l = (int) record.objectOf("left");
 		int r = (int) record.objectOf("right");
 		String es = (String) record.objectOf("printStr");
-		assertEquals(es, String.format("%d::%d", l + r));
+		assertEquals(es, String.format("%d::%d", l, r));
 	}	
 	
 }

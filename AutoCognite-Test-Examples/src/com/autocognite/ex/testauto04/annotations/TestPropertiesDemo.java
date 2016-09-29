@@ -26,36 +26,37 @@ import static com.autocognite.user.validator.lib.Assertions.error;
 import com.autocognite.user.databroker.DataBroker;
 import com.autocognite.user.generic.utils.lib.DataBatteries;
 import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestProperties;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
+import com.autocognite.user.testcore.lib.annotate.TestMethod;
 
-@TestProperties(
+@TestClass(
 		name="Custom name", 
 		customProps={"my1=3"}
 )
 public class TestPropertiesDemo extends Test{
 
-	@TestProperties(id="Custom id-1", name="a")
+	@TestMethod(id="Custom id-1", name="a")
 	public void test1MethodPass() throws Exception{	
 		DataBatteries.print(DataBroker.getDataRecord(this.getRunConfig(), "input", "1").map());
 		assertEquals(3,3).evaluate();
 	}
 	
-	@TestProperties(id="Custom id-2", name="b")
+	@TestMethod(id="Custom id-2", name="b")
 	public void test2MethodFail() throws Exception{
 		assertEquals(1,2);
 	}
 	
-	@TestProperties(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
+	@TestMethod(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
 	public void test3MethodFail() throws Exception{
 		assertNull("abc");
 	}
 	
-	@TestProperties(id="Custom id-4", customProps={"POLICY Name = Hoho1", "qh_prop=d", "tags=def"})
+	@TestMethod(id="Custom id-4", customProps={"POLICY Name = Hoho1", "qh_prop=d", "tags=def"})
 	public void test4MethodFail() throws Exception{
 		assertContains("Some purpose", "parent", "rent1");
 	}
 
-	@TestProperties(id="Custom id-5", customProps={"POLICY Name = Hoho2", "name=f", "tags=xyz"})
+	@TestMethod(id="Custom id-5", customProps={"POLICY Name = Hoho2", "name=f", "tags=xyz"})
 	public void test5methodError2() throws Exception{
 		error();
 	}

@@ -30,9 +30,9 @@ import com.autocognite.user.testcore.lib.annotate.AfterMethod;
 import com.autocognite.user.testcore.lib.annotate.BeforeClass;
 import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
 import com.autocognite.user.testcore.lib.annotate.TestMethod;
-import com.autocognite.user.testcore.lib.annotate.TestProperties;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 
-@TestProperties(
+@TestClass(
 		name="Custom name", 
 		customProps={"my1=3"}
 )
@@ -61,22 +61,19 @@ public class AnnotationMixWithFixtureIssues extends Test{
 		fail("Simulating an issue in setUpClass");
 	}
 	
-	@TestMethod
-	@TestProperties(id="Custom id-2", name="b")
+	@TestMethod(id="Custom id-2", name="b")
 	public void deleteFile() throws Exception{	
 		logger.info("Custom Test Method delete File executed.");
 	}
 	
-	@TestMethod
-	@TestProperties(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
+	@TestMethod(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
 	public void createFile() throws Exception{	
 		logger.info("Custom Test Method create File executed.");
 		// Simulate failure
 		fail("Simulated Failure");
 	}
 	
-	@TestMethod
-	@TestProperties(id="Custom id-5", customProps={"POLICY Name = Hoho2", "name=f", "tags=xyz"})
+	@TestMethod(id="Custom id-5", customProps={"POLICY Name = Hoho2", "name=f", "tags=xyz"})
 	public void updateFile() throws Exception{	
 		logger.info("Custom Test Method create File executed.");
 		// Simulate failure
