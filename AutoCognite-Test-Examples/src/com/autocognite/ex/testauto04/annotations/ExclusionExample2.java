@@ -23,9 +23,11 @@ import static com.autocognite.user.validator.lib.Assertions.error;
 
 import com.autocognite.user.testcore.lib.Test;
 import com.autocognite.user.testcore.lib.annotate.Exclude;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 
 @Exclude
-public class ExclusionExample2 extends Test{
+@TestClass
+public class ExclusionExample2{
 
 	public void testMethodPass() throws Exception{	
 		assertEquals(1,1);

@@ -25,46 +25,48 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 
-public class TestWithSetUpMethodIssue extends Test{
+@TestClass
+public class TestWithSetUpMethodIssue{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass() throws Exception{
-		logger.info("UserTest: Called setUpClass");
+		System.out.println("UserTest: Called setUpClass");
 	}
 	
 	public void setUpMethod() throws Exception{
-		logger.info("UserTest: Called setUp");
+		System.out.println("UserTest: Called setUp");
 		fail("Simulating an issue in setUp");
 	}
 	
 	public void setUpInstance() throws Exception{
-		logger.info(getClassName() + ": Called setUpInstance");
+		System.out.println("" + ": Called setUpInstance");
 		fail("Simulating an issue in setUpInstance");
 	}
 	
 	public void tearDownInstance() throws Exception{
-		logger.info(getClassName() + ": Called tearDownInstance");
+		System.out.println("" + ": Called tearDownInstance");
 		fail("Simulating an issue in tearDownInstance");
 	}
 	
 	public void tearDownMethod() throws Exception{
-		logger.info("UserTest: Called tearDown");
+		System.out.println("UserTest: Called tearDown");
 		fail("Simulating an issue in tearDown");
 	}
 	
 	public void tearDownClass() throws Exception{
-		logger.info("UserTest: Called tearDownClass");
+		System.out.println("UserTest: Called tearDownClass");
 		fail("Simulating an issue in tearDownClass");
 	}
 
 	public void testMethod1() throws Exception{
-		logger.info("UserTest: Called testMethod1");
+		System.out.println("UserTest: Called testMethod1");
 		assertEquals(1,1);
 	}
 	
 	public void testMethod2() throws Exception{
-		logger.info("UserTest: Called testMethod2");
+		System.out.println("UserTest: Called testMethod2");
 		assertEquals(3,4);
 	}
 }

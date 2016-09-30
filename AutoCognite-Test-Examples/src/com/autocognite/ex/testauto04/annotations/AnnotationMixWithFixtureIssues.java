@@ -36,46 +36,46 @@ import com.autocognite.user.testcore.lib.annotate.TestClass;
 		name="Custom name", 
 		customProps={"my1=3"}
 )
-public class AnnotationMixWithFixtureIssues extends Test{
+public class AnnotationMixWithFixtureIssues{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	@BeforeClass
 	public void createTestFiles() throws Exception{
-		logger.info("Custom Set Up class executed");
+		System.out.println("Custom Set Up class executed");
 		fail("Simulating an issue in setUpClass");
 	}
 	
 	@BeforeMethod
 	public void launchTool(){
-		logger.info("Custom Set Up executed");
+		System.out.println("Custom Set Up executed");
 	}
 	
 	@AfterMethod
 	public void stopTool(){
-		logger.info("Custom Tear Down executed");
+		System.out.println("Custom Tear Down executed");
 	}
 	
 	@AfterClass
 	public void deleteTestFiles() throws Exception{
-		logger.info("Custom Tear Down Class executed");
+		System.out.println("Custom Tear Down Class executed");
 		fail("Simulating an issue in setUpClass");
 	}
 	
 	@TestMethod(id="Custom id-2", name="b")
 	public void deleteFile() throws Exception{	
-		logger.info("Custom Test Method delete File executed.");
+		System.out.println("Custom Test Method delete File executed.");
 	}
 	
 	@TestMethod(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
 	public void createFile() throws Exception{	
-		logger.info("Custom Test Method create File executed.");
+		System.out.println("Custom Test Method create File executed.");
 		// Simulate failure
 		fail("Simulated Failure");
 	}
 	
 	@TestMethod(id="Custom id-5", customProps={"POLICY Name = Hoho2", "name=f", "tags=xyz"})
 	public void updateFile() throws Exception{	
-		logger.info("Custom Test Method create File executed.");
+		System.out.println("Custom Test Method create File executed.");
 		// Simulate failure
 		error("Simulated Error");
 	}

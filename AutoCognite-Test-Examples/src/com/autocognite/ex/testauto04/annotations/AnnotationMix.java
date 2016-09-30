@@ -36,54 +36,54 @@ import com.autocognite.user.testcore.lib.annotate.TestClass;
 		name="Custom name", 
 		customProps={"my1=3"}
 )
-public class AnnotationMix extends Test{
+public class AnnotationMix{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	@BeforeClass
 	public void createTestFiles(){
-		logger.info("Custom Set Up class executed");
+		System.out.println("Custom Set Up class executed");
 	}
 	
 	@AfterClass
 	public void deleteTestFiles(){
-		logger.info("Custom Tear Down Class executed");
+		System.out.println("Custom Tear Down Class executed");
 	}
 	
 	@BeforeMethod
 	public void addEnvVarForTool(){
-		logger.info("Custom Set Up Method executed");
+		System.out.println("Custom Set Up Method executed");
 	}
 	
 	@AfterMethod
 	public void clearEnvVarForTool(){
-		logger.info("Custom Tear Down Method executed");
+		System.out.println("Custom Tear Down Method executed");
 	}
 	
 	@BeforeInstance
 	public void launchTool(){
-		logger.info("Custom Set Up Instance executed");
+		System.out.println("Custom Set Up Instance executed");
 	}
 	
 	@AfterInstance
 	public void stopTool(){
-		logger.info("Custom Tear Down Instance executed");
+		System.out.println("Custom Tear Down Instance executed");
 	}
 	
 	@TestMethod(id="Custom id-2", name="b")
 	public void deleteFile() throws Exception{	
-		logger.info("Custom Test Method delete File executed.");
+		System.out.println("Custom Test Method delete File executed.");
 	}
 	
 	@TestMethod(id="Custom id-3", customProps={"my1=5","POLICY Name = Hoho", "qh_prop=c", "tags=abc"})
 	public void createFile() throws Exception{	
-		logger.info("Custom Test Method create File executed.");
+		System.out.println("Custom Test Method create File executed.");
 		// Simulate failure
 		fail("Simulated Failure");
 	}
 	
 	@TestMethod(id="Custom id-5", customProps={"POLICY Name = Hoho2", "name=f", "tags=xyz"})
 	public void updateFile() throws Exception{	
-		logger.info("Custom Test Method create File executed.");
+		System.out.println("Custom Test Method create File executed.");
 		// Simulate failure
 		error("Simulated Error");
 	}

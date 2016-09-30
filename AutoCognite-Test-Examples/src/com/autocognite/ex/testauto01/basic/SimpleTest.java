@@ -21,9 +21,10 @@ package com.autocognite.ex.testauto01.basic;
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 import static com.autocognite.user.validator.lib.Assertions.error;
 
-import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 
-public class SimpleTest extends Test{
+@TestClass
+public class SimpleTest{
 
 	public void testMethodPass() throws Exception{	
 		assertEquals(1,1);

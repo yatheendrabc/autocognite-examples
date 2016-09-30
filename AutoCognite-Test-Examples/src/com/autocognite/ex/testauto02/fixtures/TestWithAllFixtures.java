@@ -24,41 +24,43 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 
-public class TestWithAllFixtures extends Test{
+@TestClass
+public class TestWithAllFixtures{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass(){
-		logger.info(getClassName() + ": Called setUpClass");
+		System.out.println("" + ": Called setUpClass");
 	}
 	
 	public void setUpMethod(){
-		logger.info(getClassName() + ": Called setUpMethod");
+		System.out.println("" + ": Called setUpMethod");
 	}
 	
 	public void setUpInstance(){
-		logger.info(getClassName() + ": Called setUpInstance");
+		System.out.println("" + ": Called setUpInstance");
 	}
 	
 	public void tearDownInstance(){
-		logger.info(getClassName() + ": Called tearDownInstance");
+		System.out.println("" + ": Called tearDownInstance");
 	}
 	
 	public void tearDownMethod(){
-		logger.info(getClassName() + ": Called tearDownMethod");
+		System.out.println("" + ": Called tearDownMethod");
 	}
 	
 	public void tearDownClass(){
-		logger.info(getClassName() + ": Called tearDownClass");
+		System.out.println("" + ": Called tearDownClass");
 	}
 
 	public void testMethod1() throws Exception{
-		logger.info(getClassName() + ": Called testMethod 1");
+		System.out.println("" + ": Called testMethod 1");
 		assertEquals(1,1);
 	}
 	
 	public void testMethod2() throws Exception{
-		logger.info(getClassName() + ": Called testMethod 2");
+		System.out.println("" + ": Called testMethod 2");
 		assertEquals(3,4);
 	}
 }

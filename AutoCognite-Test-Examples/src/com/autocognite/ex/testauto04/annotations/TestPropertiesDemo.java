@@ -33,11 +33,10 @@ import com.autocognite.user.testcore.lib.annotate.TestMethod;
 		name="Custom name", 
 		customProps={"my1=3"}
 )
-public class TestPropertiesDemo extends Test{
+public class TestPropertiesDemo{
 
 	@TestMethod(id="Custom id-1", name="a")
 	public void test1MethodPass() throws Exception{	
-		DataBatteries.print(DataBroker.getDataRecord(this.getRunConfig(), "input", "1").map());
 		assertEquals(3,3).evaluate();
 	}
 	

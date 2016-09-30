@@ -29,56 +29,58 @@ import com.autocognite.user.testcore.lib.annotate.AfterMethod;
 import com.autocognite.user.testcore.lib.annotate.BeforeClass;
 import com.autocognite.user.testcore.lib.annotate.BeforeInstance;
 import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.TestMethod;
 
-public class FlexibleMethodsDemo extends Test{
+@TestClass
+public class FlexibleMethodsDemo{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	@BeforeClass
 	public void createTestFiles(){
-		logger.info("Custom Set Up class executed");
+		System.out.println("Custom Set Up class executed");
 	}
 	
 	@AfterClass
 	public void deleteTestFiles(){
-		logger.info("Custom Tear Down Class executed");
+		System.out.println("Custom Tear Down Class executed");
 	}
 	
 	@BeforeMethod
 	public void addEnvVarForTool(){
-		logger.info("Custom Set Up Method executed");
+		System.out.println("Custom Set Up Method executed");
 	}
 	
 	@AfterMethod
 	public void clearEnvVarForTool(){
-		logger.info("Custom Tear Down Method executed");
+		System.out.println("Custom Tear Down Method executed");
 	}
 	
 	@BeforeInstance
 	public void launchTool(){
-		logger.info("Custom Set Up Instance executed");
+		System.out.println("Custom Set Up Instance executed");
 	}
 	
 	@AfterInstance
 	public void stopTool(){
-		logger.info("Custom Tear Down Instance executed");
+		System.out.println("Custom Tear Down Instance executed");
 	}
 	
 	@TestMethod
 	public void deleteFile() throws Exception{	
-		logger.info("Custom Test Method delete File executed.");
+		System.out.println("Custom Test Method delete File executed.");
 	}
 	
 	@TestMethod
 	public void createFile() throws Exception{	
-		logger.info("Custom Test Method create File executed.");
+		System.out.println("Custom Test Method create File executed.");
 		// Simulate failure
 		fail("Simulated Failure");
 	}
 	
 	@TestMethod
 	public void updateFile() throws Exception{	
-		logger.info("Custom Test Method create File executed.");
+		System.out.println("Custom Test Method create File executed.");
 		// Simulate failure
 		error("Simulated Error");
 	}
