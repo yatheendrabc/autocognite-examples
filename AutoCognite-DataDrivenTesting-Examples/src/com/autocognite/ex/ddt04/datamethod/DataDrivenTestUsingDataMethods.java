@@ -24,10 +24,12 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
-//Test
-public class DataDrivenTestUsingDataMethods extends Test {
+
+@TestClass
+public class DataDrivenTestUsingDataMethods{
 
 	@DataMethod
 	public Object[][] getData(){

@@ -26,10 +26,12 @@ import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.databroker.lib.datarecord.DataRecord;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.Data;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataArray;
-//Test
-public class DataDrivenTestWithDataArray extends Test {
+//
+@TestClass
+public class DataDrivenTestWithDataArray{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	// What we have done so far is good for one record.

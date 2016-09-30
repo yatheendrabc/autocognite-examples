@@ -21,9 +21,11 @@ package com.autocognite.ex.ddt04.datamethod;
 import static com.autocognite.user.validator.lib.Assertions.assertEquals;
 
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
 
-public class DataDrivenTestUsingExternalMethods extends Test{
+@TestClass
+public class DataDrivenTestUsingExternalMethods{
 	@DriveWithDataMethod(
 			name = "User defined method name",
 			containerClass = MethodContainer.class

@@ -24,12 +24,13 @@ import static com.autocognite.user.validator.lib.Assertions.fail;
 import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
-//Test
-public class SetUpIssueWithDDT extends Test {
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+
+@TestClass
+public class SetUpIssueWithDDT{
+	private Logger logger = Batteries.getCentralLogger();
 	
 	public void setUpClass() throws Exception{
 		logger.info("UserTest: Called setUpClass");
@@ -41,12 +42,12 @@ public class SetUpIssueWithDDT extends Test {
 	}
 	
 	public void setUpInstance() throws Exception{
-		logger.info(getClassName() + ": Called setUpInstance");
+		logger.info("Called setUpInstance");
 		fail("Simulating an issue in setUpInstance");
 	}
 	
 	public void tearDownInstance() throws Exception{
-		logger.info(getClassName() + ": Called tearDownInstance");
+		logger.info("Called tearDownInstance");
 		fail("Simulating an issue in tearDownInstance");
 	}
 	

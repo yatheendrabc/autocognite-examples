@@ -24,34 +24,36 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
-//Test
-public class FixturesWithDDT extends Test {
+
+@TestClass
+public class FixturesWithDDT{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass(){
-		logger.info(getClassName() + ": Called setUpClass");
+		logger.info("Called setUpClass");
 	}
 	
 	public void setUpMethod(){
-		logger.info(getClassName() + ": Called setUp");
+		logger.info("Called setUp");
 	}
 	
 	public void setUpInstance(){
-		logger.info(getClassName() + ": Called setUpInstance");
+		logger.info("Called setUpInstance");
 	}
 	
 	public void tearDownInstance(){
-		logger.info(getClassName() + ": Called tearDownInstance");
+		logger.info("Called tearDownInstance");
 	}
 	
 	public void tearDownMethod(){
-		logger.info(getClassName() + ": Called tearDown");
+		logger.info("Called tearDown");
 	}
 	
 	public void tearDownClass(){
-		logger.info(getClassName() + ": Called tearDownClass");
+		logger.info("Called tearDownClass");
 	}
 
 	@DataMethod

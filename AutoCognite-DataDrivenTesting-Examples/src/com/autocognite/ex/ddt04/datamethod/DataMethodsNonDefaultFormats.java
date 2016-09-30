@@ -28,10 +28,12 @@ import com.autocognite.user.databroker.lib.datarecord.DataRecordContainer;
 import com.autocognite.user.generic.utils.lib.DataBatteries;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
-//Test
-public class DataMethodsNonDefaultFormats extends Test {	
+
+@TestClass
+public class DataMethodsNonDefaultFormats{	
 	
 	@DataMethod("DG1")
 	public Object[][] getObjectsArray(){

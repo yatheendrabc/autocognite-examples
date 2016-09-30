@@ -26,10 +26,11 @@ import com.autocognite.user.batteries.Batteries;
 import com.autocognite.user.databroker.lib.datarecord.DataRecord;
 import com.autocognite.user.testcore.api.enums.DataFormat;
 import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.user.testcore.lib.annotate.TestClass;
 import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataGenerator;
 
-
-public class DataDrivenTestUsingDataGenerators extends Test {
+@TestClass
+public class DataDrivenTestUsingDataGenerators{
 	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
 	@DriveWithDataGenerator(name="DataGenerator-1", format=DataFormat.MAP)
