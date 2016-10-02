@@ -24,9 +24,9 @@ import static com.autocognite.testcommons.assertions.Assertions.fail;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
-import com.autocognite.testcommons.annotate.TestClass;
-import com.autocognite.testcommons.annotate.ddt.DataMethod;
-import com.autocognite.testcommons.annotate.ddt.DriveWithDataMethod;
+import com.autocognite.testcommons.annotations.TestClass;
+import com.autocognite.testcommons.annotations.ddt.DataMethod;
+import com.autocognite.testcommons.annotations.ddt.DriveWithDataMethod;
 
 @TestClass
 public class SetUpClassIssueWithDDT{

@@ -21,9 +21,9 @@ package com.autocognite.ex.problem01.fixtures;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
-import com.autocognite.testcommons.annotate.BeforeClass;
-import com.autocognite.testcommons.annotate.BeforeMethod;
-import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotations.BeforeClass;
+import com.autocognite.testcommons.annotations.BeforeMethod;
+import com.autocognite.testcommons.annotations.TestClass;
 
 @TestClass
 public class MultipleFixturesOfSameType1{

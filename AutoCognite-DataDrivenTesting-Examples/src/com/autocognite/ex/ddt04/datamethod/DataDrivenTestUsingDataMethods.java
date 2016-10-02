@@ -20,9 +20,9 @@ package com.autocognite.ex.ddt04.datamethod;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
-import com.autocognite.testcommons.annotate.TestClass;
-import com.autocognite.testcommons.annotate.ddt.DataMethod;
-import com.autocognite.testcommons.annotate.ddt.DriveWithDataMethod;
+import com.autocognite.testcommons.annotations.TestClass;
+import com.autocognite.testcommons.annotations.ddt.DataMethod;
+import com.autocognite.testcommons.annotations.ddt.DriveWithDataMethod;
 
 @TestClass
 public class DataDrivenTestUsingDataMethods{

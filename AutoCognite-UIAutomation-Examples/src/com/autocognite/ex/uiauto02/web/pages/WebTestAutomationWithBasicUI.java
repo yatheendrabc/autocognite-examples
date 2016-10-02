@@ -20,7 +20,7 @@ package com.autocognite.ex.uiauto02.web.pages;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertTrue;
 
-import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.user.uiautomator.api.Page;
 import com.autocognite.user.uiautomator.api.UiDriver;
 import com.autocognite.user.uiautomator.api.UiElement;

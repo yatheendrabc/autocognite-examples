@@ -24,7 +24,7 @@ import com.autocognite.batteries.databroker.DataRecord;
 import com.autocognite.batteries.databroker.DataRecordContainer;
 import com.autocognite.batteries.databroker.DataSource;
 import com.autocognite.batteries.databroker.DataSourceFinishedException;
-import com.autocognite.testcommons.annotate.ddt.DataGenerator;
+import com.autocognite.testcommons.annotations.ddt.DataGenerator;
 
 /*
  * It's greedy. All values are loaded in memory.

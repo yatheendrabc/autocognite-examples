@@ -15,7 +15,7 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.user.uiautomator.lib.factory.UiDriverFactory;
 
 @TestClass
