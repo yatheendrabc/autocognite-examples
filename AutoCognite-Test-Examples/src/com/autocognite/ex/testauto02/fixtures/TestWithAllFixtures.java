@@ -18,16 +18,11 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto02.fixtures;
 
-import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
-
-import org.apache.log4j.Logger;
-
-import com.autocognite.Batteries;
-import com.autocognite.testcommons.annotate.TestClass;
+import static com.autocognite.testcommons.assertions.Assertions.*;
+import com.autocognite.testcommons.annotations.*;
 
 @TestClass
 public class TestWithAllFixtures{
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass(){
 		System.out.println("" + ": Called setUpClass");

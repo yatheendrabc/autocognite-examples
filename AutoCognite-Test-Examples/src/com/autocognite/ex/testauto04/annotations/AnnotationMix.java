@@ -18,27 +18,14 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import static com.autocognite.testcommons.assertions.Assertions.error;
-import static com.autocognite.testcommons.assertions.Assertions.fail;
-
-import org.apache.log4j.Logger;
-
-import com.autocognite.Batteries;
-import com.autocognite.testcommons.annotate.AfterClass;
-import com.autocognite.testcommons.annotate.AfterMethod;
-import com.autocognite.testcommons.annotate.AfterTest;
-import com.autocognite.testcommons.annotate.BeforeClass;
-import com.autocognite.testcommons.annotate.BeforeMethod;
-import com.autocognite.testcommons.annotate.BeforeTest;
-import com.autocognite.testcommons.annotate.TestClass;
-import com.autocognite.testcommons.annotate.TestMethod;
+import static com.autocognite.testcommons.assertions.Assertions.*;
+import com.autocognite.testcommons.annotations.*;
 
 @TestClass(
 		name="Custom name", 
 		customProps={"my1=3"}
 )
 public class AnnotationMix{
-	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	@BeforeClass
 	public void createTestFiles(){

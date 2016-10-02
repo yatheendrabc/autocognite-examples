@@ -18,11 +18,8 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
-import static com.autocognite.testcommons.assertions.Assertions.error;
-
-import com.autocognite.testcommons.annotate.Exclude;
-import com.autocognite.testcommons.annotate.TestClass;
+import static com.autocognite.testcommons.assertions.Assertions.*;
+import com.autocognite.testcommons.annotations.*;
 
 @Exclude
 @TestClass

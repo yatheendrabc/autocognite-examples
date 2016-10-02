@@ -18,13 +18,8 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import static com.autocognite.testcommons.assertions.Assertions.assertContains;
-import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
-import static com.autocognite.testcommons.assertions.Assertions.assertNull;
-import static com.autocognite.testcommons.assertions.Assertions.error;
-
-import com.autocognite.testcommons.annotate.TestClass;
-import com.autocognite.testcommons.annotate.TestMethod;
+import static com.autocognite.testcommons.assertions.Assertions.*;
+import com.autocognite.testcommons.annotations.*;
 
 @TestClass(
 		name="Custom name", 
