@@ -18,19 +18,20 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import org.apache.log4j.Logger;
-import static com.autocognite.user.validator.lib.Assertions.*;
+import static com.autocognite.testcommons.assertions.Assertions.error;
+import static com.autocognite.testcommons.assertions.Assertions.fail;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.AfterClass;
-import com.autocognite.user.testcore.lib.annotate.AfterInstance;
-import com.autocognite.user.testcore.lib.annotate.AfterMethod;
-import com.autocognite.user.testcore.lib.annotate.BeforeClass;
-import com.autocognite.user.testcore.lib.annotate.BeforeInstance;
-import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
-import com.autocognite.user.testcore.lib.annotate.TestMethod;
+import org.apache.log4j.Logger;
+
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotate.AfterClass;
+import com.autocognite.testcommons.annotate.AfterMethod;
+import com.autocognite.testcommons.annotate.AfterTest;
+import com.autocognite.testcommons.annotate.BeforeClass;
+import com.autocognite.testcommons.annotate.BeforeMethod;
+import com.autocognite.testcommons.annotate.BeforeTest;
+import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotate.TestMethod;
 
 @TestClass
 public class FlexibleMethodsDemo{
@@ -56,12 +57,12 @@ public class FlexibleMethodsDemo{
 		System.out.println("Custom Tear Down Method executed");
 	}
 	
-	@BeforeInstance
+	@BeforeTest
 	public void launchTool(){
 		System.out.println("Custom Set Up Instance executed");
 	}
 	
-	@AfterInstance
+	@AfterTest
 	public void stopTool(){
 		System.out.println("Custom Tear Down Instance executed");
 	}

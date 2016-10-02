@@ -15,11 +15,10 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import com.autocognite.user.configurator.api.RunConfiguration;
 import com.autocognite.user.uiautomator.api.UiDriver;
 
 public class WelcomePage extends DashBoardPage {
-	public WelcomePage (RunConfiguration runConfig, UiDriver uiDriver) throws Exception{
+	public WelcomePage (UiDriver uiDriver) throws Exception{
 		super("WelcomePage", uiDriver);
 	}
 }

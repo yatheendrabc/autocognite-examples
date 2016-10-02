@@ -18,16 +18,15 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto03.assertions;
 
-import static com.autocognite.user.validator.lib.Assertions.assertArrayEquals;
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.assertNull;
-import static com.autocognite.user.validator.lib.Assertions.assertSame;
-import static com.autocognite.user.validator.lib.Assertions.assertTrue;
-import static com.autocognite.user.validator.lib.Assertions.error;
-import static com.autocognite.user.validator.lib.Assertions.fail;
+import static com.autocognite.testcommons.assertions.Assertions.assertArrayEquals;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.assertNull;
+import static com.autocognite.testcommons.assertions.Assertions.assertSame;
+import static com.autocognite.testcommons.assertions.Assertions.assertTrue;
+import static com.autocognite.testcommons.assertions.Assertions.error;
+import static com.autocognite.testcommons.assertions.Assertions.fail;
 
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
+import com.autocognite.testcommons.annotate.TestClass;
 
 @TestClass
 public class TestMultipleAssertionTypes{

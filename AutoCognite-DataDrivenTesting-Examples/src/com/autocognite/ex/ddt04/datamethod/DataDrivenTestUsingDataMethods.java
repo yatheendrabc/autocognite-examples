@@ -18,15 +18,11 @@
  ******************************************************************************/
 package com.autocognite.ex.ddt04.datamethod;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
-import org.apache.log4j.Logger;
-
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
-import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
-import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
+import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotate.ddt.DataMethod;
+import com.autocognite.testcommons.annotate.ddt.DriveWithDataMethod;
 
 @TestClass
 public class DataDrivenTestUsingDataMethods{

@@ -18,13 +18,12 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto02.fixtures;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotate.TestClass;
 
 @TestClass
 public class TestWithAllFixtures{
@@ -38,12 +37,12 @@ public class TestWithAllFixtures{
 		System.out.println("" + ": Called setUpMethod");
 	}
 	
-	public void setUpInstance(){
-		System.out.println("" + ": Called setUpInstance");
+	public void setUpTest(){
+		System.out.println("" + ": Called setUpTest");
 	}
 	
-	public void tearDownInstance(){
-		System.out.println("" + ": Called tearDownInstance");
+	public void testDownTest(){
+		System.out.println("" + ": Called testDownTest");
 	}
 	
 	public void tearDownMethod(){

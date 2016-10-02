@@ -18,16 +18,13 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import static com.autocognite.user.validator.lib.Assertions.assertContains;
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.assertNull;
-import static com.autocognite.user.validator.lib.Assertions.error;
+import static com.autocognite.testcommons.assertions.Assertions.assertContains;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.assertNull;
+import static com.autocognite.testcommons.assertions.Assertions.error;
 
-import com.autocognite.user.databroker.DataBroker;
-import com.autocognite.user.generic.utils.lib.DataBatteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
-import com.autocognite.user.testcore.lib.annotate.TestMethod;
+import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotate.TestMethod;
 
 @TestClass(
 		name="Custom name", 

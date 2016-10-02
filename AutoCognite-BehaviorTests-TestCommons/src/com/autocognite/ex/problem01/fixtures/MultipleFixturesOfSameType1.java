@@ -20,13 +20,13 @@ package com.autocognite.ex.problem01.fixtures;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.AfterMethod;
-import com.autocognite.user.testcore.lib.annotate.BeforeClass;
-import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotate.BeforeClass;
+import com.autocognite.testcommons.annotate.BeforeMethod;
+import com.autocognite.testcommons.annotate.TestClass;
 
-public class MultipleFixturesOfSameType1 extends Test{
+@TestClass
+public class MultipleFixturesOfSameType1{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	@BeforeClass

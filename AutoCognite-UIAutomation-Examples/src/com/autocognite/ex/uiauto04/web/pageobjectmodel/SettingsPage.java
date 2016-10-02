@@ -15,7 +15,7 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import static com.autocognite.user.validator.lib.Assertions.assertTrue;
+import static com.autocognite.testcommons.assertions.Assertions.assertTrue;
 
 import com.autocognite.user.uiautomator.api.UiDriver;
 import com.autocognite.user.uiautomator.api.UiElement;

@@ -15,14 +15,15 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.testcommons.annotate.TestClass;
 import com.autocognite.user.uiautomator.lib.factory.UiDriverFactory;
 
-public class WPTest extends Test {
+@TestClass
+public class WPTest {
 	HomePage home = null;
 	
 	public void setUp() throws Exception{
-		home = new HomePage(UiDriverFactory.getWebUiDriver(getRunConfig()));	
+		home = new HomePage(UiDriverFactory.getWebUiDriver());	
 	}
 
 	public void test() throws Exception{

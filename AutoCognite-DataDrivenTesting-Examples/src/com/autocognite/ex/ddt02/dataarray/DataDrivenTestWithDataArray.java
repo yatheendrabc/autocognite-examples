@@ -18,17 +18,16 @@
  ******************************************************************************/
 package com.autocognite.ex.ddt02.dataarray;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.databroker.lib.datarecord.DataRecord;
-import com.autocognite.user.testcore.api.enums.DataFormat;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
-import com.autocognite.user.testcore.lib.annotate.ddt.Data;
-import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataArray;
+import com.autocognite.Batteries;
+import com.autocognite.batteries.databroker.DataRecord;
+import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotate.ddt.Data;
+import com.autocognite.testcommons.annotate.ddt.DriveWithDataArray;
+import com.autocognite.testcommons.enums.DataFormat;
 //
 @TestClass
 public class DataDrivenTestWithDataArray{

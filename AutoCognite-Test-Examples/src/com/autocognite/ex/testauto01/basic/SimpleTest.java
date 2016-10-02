@@ -18,15 +18,22 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto01.basic;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.error;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.error;
 
-import com.autocognite.user.testcore.lib.annotate.TestClass;
+import org.apache.log4j.Logger;
+
+import com.autocognite.Batteries;
+import com.autocognite.batteries.config.RunConfig;
+import com.autocognite.batteries.util.DataBatteries;
+import com.autocognite.testcommons.annotate.TestClass;
 
 @TestClass
 public class SimpleTest{
-
+	private static Logger logger = Batteries.getCentralLogger();
+	
 	public void testMethodPass() throws Exception{	
+		logger.debug(DataBatteries.flatten(RunConfig.props()));
 		assertEquals(1,1);
 	}
 	

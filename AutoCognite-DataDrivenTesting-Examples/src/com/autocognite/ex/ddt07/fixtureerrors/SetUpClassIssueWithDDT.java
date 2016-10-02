@@ -18,16 +18,15 @@
  ******************************************************************************/
 package com.autocognite.ex.ddt07.fixtureerrors;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.fail;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.fail;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
-import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
-import com.autocognite.user.testcore.lib.annotate.ddt.DriveWithDataMethod;
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotate.ddt.DataMethod;
+import com.autocognite.testcommons.annotate.ddt.DriveWithDataMethod;
 
 @TestClass
 public class SetUpClassIssueWithDDT{
@@ -43,14 +42,14 @@ public class SetUpClassIssueWithDDT{
 		fail("Simulating an issue in setUp");
 	}
 	
-	public void setUpInstance() throws Exception{
-		logger.info("Called setUpInstance");
-		fail("Simulating an issue in setUpInstance");
+	public void setUpTest() throws Exception{
+		logger.info("Called setUpTest");
+		fail("Simulating an issue in setUpTest");
 	}
 	
-	public void tearDownInstance() throws Exception{
-		logger.info("Called tearDownInstance");
-		fail("Simulating an issue in tearDownInstance");
+	public void testDownTest() throws Exception{
+		logger.info("Called testDownTest");
+		fail("Simulating an issue in testDownTest");
 	}
 	
 	public void tearDownMethod() throws Exception{

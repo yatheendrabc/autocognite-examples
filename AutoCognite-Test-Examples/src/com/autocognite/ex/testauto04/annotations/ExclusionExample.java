@@ -18,12 +18,11 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.error;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.error;
 
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.Exclude;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
+import com.autocognite.testcommons.annotate.Exclude;
+import com.autocognite.testcommons.annotate.TestClass;
 
 @TestClass
 public class ExclusionExample{

@@ -18,14 +18,13 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto05.fixtureissues;
 
-import static com.autocognite.user.validator.lib.Assertions.assertEquals;
-import static com.autocognite.user.validator.lib.Assertions.fail;
+import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
+import static com.autocognite.testcommons.assertions.Assertions.fail;
 
 import org.apache.log4j.Logger;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotate.TestClass;
 
 @TestClass
 public class TestWithSetUpClassIssue{
@@ -41,14 +40,14 @@ public class TestWithSetUpClassIssue{
 		fail("Simulating an issue in setUp");
 	}
 	
-	public void setUpInstance() throws Exception{
-		System.out.println("" + ": Called setUpInstance");
-		fail("Simulating an issue in setUpInstance");
+	public void setUpTest() throws Exception{
+		System.out.println("" + ": Called setUpTest");
+		fail("Simulating an issue in setUpTest");
 	}
 	
-	public void tearDownInstance() throws Exception{
-		System.out.println("" + ": Called tearDownInstance");
-		fail("Simulating an issue in tearDownInstance");
+	public void testDownTest() throws Exception{
+		System.out.println("" + ": Called testDownTest");
+		fail("Simulating an issue in testDownTest");
 	}
 	
 	public void tearDownMethod() throws Exception{

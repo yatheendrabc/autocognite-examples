@@ -20,11 +20,11 @@ package com.autocognite.ex.ddt05.datagenerator;
 
 import java.util.Iterator;
 
-import com.autocognite.user.databroker.api.DataSource;
-import com.autocognite.user.databroker.api.exceptions.DataSourceFinishedException;
-import com.autocognite.user.databroker.lib.datarecord.DataRecord;
-import com.autocognite.user.databroker.lib.datarecord.DataRecordContainer;
-import com.autocognite.user.testcore.lib.annotate.ddt.DataGenerator;
+import com.autocognite.batteries.databroker.DataRecord;
+import com.autocognite.batteries.databroker.DataRecordContainer;
+import com.autocognite.batteries.databroker.DataSource;
+import com.autocognite.batteries.databroker.DataSourceFinishedException;
+import com.autocognite.testcommons.annotate.ddt.DataGenerator;
 
 /*
  * It's greedy. All values are loaded in memory.

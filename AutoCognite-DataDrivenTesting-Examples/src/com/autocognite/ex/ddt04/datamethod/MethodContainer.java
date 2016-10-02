@@ -18,7 +18,7 @@
  ******************************************************************************/
 package com.autocognite.ex.ddt04.datamethod;
 
-import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
+import com.autocognite.testcommons.annotate.ddt.DataMethod;
 
 public class MethodContainer{
 

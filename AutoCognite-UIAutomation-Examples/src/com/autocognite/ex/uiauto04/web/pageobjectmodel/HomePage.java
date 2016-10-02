@@ -34,7 +34,7 @@ public class HomePage extends SimplePage {
 		element("LOGIN").enterText("user");
 		element("PASSWORD").enterText("bitnami");
 		element("SUBMIT").click();
-		return new WelcomePage(this.getRunConfig(), this.getUiDriver());
+		return new WelcomePage(this.getUiDriver());
 	}
 	
 }

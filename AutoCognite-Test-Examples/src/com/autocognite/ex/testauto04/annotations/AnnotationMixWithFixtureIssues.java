@@ -18,19 +18,18 @@
  ******************************************************************************/
 package com.autocognite.ex.testauto04.annotations;
 
-import static com.autocognite.user.validator.lib.Assertions.fail;
+import static com.autocognite.testcommons.assertions.Assertions.error;
+import static com.autocognite.testcommons.assertions.Assertions.fail;
 
 import org.apache.log4j.Logger;
-import static com.autocognite.user.validator.lib.Assertions.*;
 
-import com.autocognite.user.batteries.Batteries;
-import com.autocognite.user.testcore.lib.Test;
-import com.autocognite.user.testcore.lib.annotate.AfterClass;
-import com.autocognite.user.testcore.lib.annotate.AfterMethod;
-import com.autocognite.user.testcore.lib.annotate.BeforeClass;
-import com.autocognite.user.testcore.lib.annotate.BeforeMethod;
-import com.autocognite.user.testcore.lib.annotate.TestMethod;
-import com.autocognite.user.testcore.lib.annotate.TestClass;
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotate.AfterClass;
+import com.autocognite.testcommons.annotate.AfterMethod;
+import com.autocognite.testcommons.annotate.BeforeClass;
+import com.autocognite.testcommons.annotate.BeforeMethod;
+import com.autocognite.testcommons.annotate.TestClass;
+import com.autocognite.testcommons.annotate.TestMethod;
 
 @TestClass(
 		name="Custom name", 

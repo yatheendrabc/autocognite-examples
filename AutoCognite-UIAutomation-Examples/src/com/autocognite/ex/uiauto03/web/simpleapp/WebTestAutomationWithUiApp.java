@@ -18,9 +18,9 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto03.web.simpleapp;
 
-import static com.autocognite.user.validator.lib.Assertions.assertTrue;
+import static com.autocognite.testcommons.assertions.Assertions.assertTrue;
 
-import com.autocognite.user.testcore.lib.Test;
+import com.autocognite.testcommons.annotate.TestClass;
 import com.autocognite.user.uiautomator.api.App;
 import com.autocognite.user.uiautomator.api.Page;
 import com.autocognite.user.uiautomator.api.UiDriver;
@@ -28,13 +28,14 @@ import com.autocognite.user.uiautomator.api.UiElement;
 import com.autocognite.user.uiautomator.lib.factory.UiDriverFactory;
 import com.autocognite.user.uiautomator.lib.factory.UiFactory;
 
-public class WebTestAutomationWithUiApp extends Test{
+@TestClass
+public class WebTestAutomationWithUiApp {
 	static String appUrl = "http://10.10.1.32";
 	static String adminUrl = appUrl + "/wp-admin/";
 	static String logoutUrl = appUrl + "/wp-login.php?action=logout";
 	
 	public void test() throws Exception{
-		UiDriver uiDriver = UiDriverFactory.getWebUiDriver(getRunConfig());
+		UiDriver uiDriver = UiDriverFactory.getWebUiDriver();
 		uiDriver.goTo(adminUrl);
 		
 		App wordpress = UiFactory.getSimpleApp("wordpress", uiDriver, "wordpress");

@@ -18,8 +18,8 @@
  ******************************************************************************/
 package com.autocognite.ex.ddt04.datamethod;
 
-import com.autocognite.user.testcore.lib.annotate.ddt.DataMethod;
-import com.autocognite.user.testcore.lib.annotate.ddt.DataMethodContainer;
+import com.autocognite.testcommons.annotate.ddt.DataMethod;
+import com.autocognite.testcommons.annotate.ddt.DataMethodContainer;
 
 @DataMethodContainer("User friendly method container name.")
 public class AnnotatedMethodContainer{
