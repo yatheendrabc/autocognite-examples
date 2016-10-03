@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.problem01.fixtures;
+package com.autocognite.t01.samenamefixtures;
 
 import org.apache.log4j.Logger;
 

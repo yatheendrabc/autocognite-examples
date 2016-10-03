@@ -16,41 +16,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.problem01.fixtures;
 
-import org.apache.log4j.Logger;
 
-import com.autocognite.Batteries;
-import com.autocognite.testcommons.annotations.BeforeClass;
-import com.autocognite.testcommons.annotations.BeforeMethod;
-import com.autocognite.testcommons.annotations.TestClass;
+import static com.autocognite.testcommons.assertions.Assertions.*;
+import com.autocognite.testcommons.annotations.*;
 
 @TestClass
-public class MultipleFixturesOfSameType1{
-	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+public class TestNotInPackage{
 	
-	@BeforeClass
-	public void someMethod1(){
-		
+	public void testMethodPass() throws Exception{	
+		assertEquals(1,1);
 	}
 	
-	@BeforeClass
-	public void someMethod2(){
-		
+	public void testMethodFail() throws Exception{
+		assertEquals(1,2);
 	}
 	
-	@BeforeMethod
-	public void someMethod3(){
-		
-	}
-	
-	@BeforeMethod
-	public void someMethod4(){
-		
-	}
-
-	public void test1(){
-		logger.debug("Should not have happened.");
+	public void testMethodError() throws Exception{
+		error();
 	}
 
 }
