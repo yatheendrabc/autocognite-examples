@@ -25,8 +25,7 @@ import org.apache.log4j.Logger;
 import com.autocognite.Batteries;
 import com.autocognite.batteries.databroker.DataRecord;
 import com.autocognite.testcommons.annotations.TestClass;
-import com.autocognite.testcommons.annotations.ddt.Data;
-import com.autocognite.testcommons.annotations.ddt.DriveWithDataArray;
+import com.autocognite.testcommons.annotations.ddt.*;
 import com.autocognite.testcommons.enums.DataFormat;
 //
 @TestClass
