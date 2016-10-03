@@ -1,5 +1,5 @@
 AutoCognite Examples
-Copyright 2016 AutoCognite Testing Research Pvt Ltd
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
 www.AutoCognite.com
 support@autocognite.com
 
@@ -67,7 +67,7 @@ The following software may be included in this product: Apache Commons IO. This 
 
 Apache Commons IO
 Copyright 2002-2014 The Apache Software Foundation
-	
+  
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
 
@@ -112,7 +112,7 @@ This software contains the following notice:
 
 Apache Commons Validator
 Copyright 2001-2015 The Apache Software Foundation
-	
+  
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
 
@@ -299,28 +299,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-
-AutoCognite Appium
-------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Appium. This software contains the following license and notice below:
-
-AutoCognite Appium
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-
 AutoCognite Batteries
 ---------------------
 Source Link: http://www.autocognite.com
@@ -328,150 +306,13 @@ Source Link: http://www.autocognite.com
 The following software may be included in this product: AutoCognite Batteries. This software contains the following license and notice below:
 
 AutoCognite Batteries
-Copyright 2015-16 Rahul Verma
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Configurator
-------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Configurator. This software contains the following license and notice below:
-
-AutoCognite Configurator
-Copyright 2015-16 The Apache Software Foundation
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Data Broker
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Data Broker. This software contains the following license and notice below:
-
-AutoCognite Data Broker
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Data Filter
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Data Filter. This software contains the following license and notice below:
-
-AutoCognite Data Filter
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Data Driven Test Styler
------------------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Data Driven Test Styler. This software contains the following license and notice below:
-
-AutoCognite Data Driven Test Styler
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Discoverer
-----------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Discoverer. This software contains the following license and notice below:
-
-AutoCognite Discoverer
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Selenium
---------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Selenium. This software contains the following license and notice below:
-
-AutoCognite Selenium
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Sikuli
-------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Sikuli. This software contains the following license and notice below:
-
-AutoCognite Sikuli
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -488,70 +329,13 @@ Source Link: http://www.autocognite.com
 The following software may be included in this product: AutoCognite Test Commons. This software contains the following license and notice below:
 
 AutoCognite Test Commons
-Copyright 2015-16 Rahul Verma
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Test Reporter
--------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Test Reporter. This software contains the following license and notice below:
-
-AutoCognite Test Reporter
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Test Runner
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Test Runner. This software contains the following license and notice below:
-
-AutoCognite Test Runner
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Test Styler
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Test Styler. This software contains the following license and notice below:
-
-AutoCognite Test Styler
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -568,10 +352,13 @@ Source Link: http://www.autocognite.com
 The following software may be included in this product: AutoCognite UI Automator. This software contains the following license and notice below:
 
 AutoCognite UI Automator
-Copyright 2015-16 Rahul Verma
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -581,37 +368,20 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
 
-AutoCognite UniTEE
-------------------
+AutoCognite UniTEE - Unified Test Engine Exemplified
+----------------------------------------------------
 Source Link: http://www.autocognite.com
 
 The following software may be included in this product: AutoCognite UniTEE. This software contains the following license and notice below:
 
-AutoCognite UniTEE
-Copyright 2015-16 Rahul Verma
+AutoCognite UniTEE - Unified Test Engine Exemplified
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-A copy of the Apache License, 2.0 is also provided as a part of the Software distribution at /docs/licenses/Apache-LICENSE-2.0.txt
-
-AutoCognite Validator
----------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Validator. This software contains the following license and notice below:
-
-AutoCognite Validator
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

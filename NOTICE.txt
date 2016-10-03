@@ -40,7 +40,7 @@ This software contains the following notice:
 
 Apache Commons IO
 Copyright 2002-2014 The Apache Software Foundation
-	
+  
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
 
@@ -69,7 +69,7 @@ This software contains the following notice:
 
 Apache Commons Validator
 Copyright 2001-2015 The Apache Software Foundation
-	
+  
 This product includes software developed at
 The Apache Software Foundation (http://www.apache.org/).
 
@@ -223,20 +223,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-AutoCognite Appium
-------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Appium.
-
-This software contains the following notice:
-
-AutoCognite Appium
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
 AutoCognite Batteries
 ---------------------
 Source Link: http://www.autocognite.com
@@ -246,108 +232,13 @@ The following software may be included in this product: AutoCognite Batteries.
 This software contains the following notice:
 
 AutoCognite Batteries
-Copyright 2015-16 Rahul Verma
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Configurator
-------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Configurator.
-
-This software contains the following notice:
-
-AutoCognite Configurator
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Data Broker
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Data Broker.
-
-This software contains the following notice:
-
-AutoCognite Data Broker
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Data Filter
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Data Filter.
-
-This software contains the following notice:
-
-AutoCognite Data Filter
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Data Driven Test Styler
------------------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Data Driven Test Styler.
-
-This software contains the following notice:
-
-AutoCognite Data Driven Test Styler
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Discoverer
-----------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Discoverer.
-
-This software contains the following notice:
-
-AutoCognite Discoverer
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Selenium
---------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Selenium.
-
-This software contains the following notice:
-
-AutoCognite Selenium
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Sikuli
-------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Sikuli.
-
-This software contains the following notice:
-
-AutoCognite Sikuli
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 AutoCognite Test Commons
 ------------------------
@@ -358,52 +249,13 @@ The following software may be included in this product: AutoCognite Test Commons
 This software contains the following notice:
 
 AutoCognite Test Commons
-Copyright 2015-16 Rahul Verma
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Test Reporter
--------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Test Reporter.
-
-This software contains the following notice:
-
-AutoCognite Test Reporter
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Test Runner
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Test Runner.
-
-This software contains the following notice:
-
-AutoCognite Test Runner
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-AutoCognite Test Styler
------------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Test Styler. 
-
-This software contains the following notice:
-
-AutoCognite Test Styler
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
 AutoCognite UI Automator
 ------------------------
@@ -414,38 +266,27 @@ The following software may be included in this product: AutoCognite UI Automator
 This software contains the following notice:
 
 AutoCognite UI Automator
-Copyright 2015-16 Rahul Verma
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
 
-AutoCognite UniTEE
-------------------
+AutoCognite UniTEE - Unified Test Engine Exemplified
+----------------------------------------------------
 Source Link: http://www.autocognite.com
 
 The following software may be included in this product: AutoCognite UniTEE.
 
 This software contains the following notice:
 
-AutoCognite UniTEE
-Copyright 2015-16 Rahul Verma
+AutoCognite UniTEE - Unified Test Engine Exemplified
+Copyright 2015-16 AutoCognite Testing Research Pvt Ltd
+www.AutoCognite.com
+support@autocognite.com
 
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
-
-
-AutoCognite Validator
----------------------
-Source Link: http://www.autocognite.com
-
-The following software may be included in this product: AutoCognite Validator.
-
-This software contains the following notice:
-
-AutoCognite Validator
-Copyright 2015-16 Rahul Verma
-
-This product includes software developed by
-Rahul Verma (Web: http://www.autocognite.com, Email: rv@autocognite.com)
-
+This Software includes software developed by
+AutoCognite Testing Research Pvt Ltd
+(Web: http://www.autocognite.com, Email: support@autocognite.com)
