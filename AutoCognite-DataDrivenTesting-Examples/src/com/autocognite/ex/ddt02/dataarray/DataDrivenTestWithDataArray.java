@@ -19,18 +19,13 @@
 package com.autocognite.ex.ddt02.dataarray;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
-
-import org.apache.log4j.Logger;
-
-import com.autocognite.Batteries;
 import com.autocognite.batteries.databroker.DataRecord;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.*;
 import com.autocognite.testcommons.enums.DataFormat;
-//
+
 @TestClass
 public class DataDrivenTestWithDataArray{
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	// What we have done so far is good for one record.
 	// What happens when we need more?
@@ -39,44 +34,38 @@ public class DataDrivenTestWithDataArray{
 	// Formats work as expected.
 	@DriveWithDataArray(
 			{
-				@Data({"1","2","3"}), 
-				@Data({"3","4","10"})
+				@Data({"1","2","1::2"}), 
+				@Data({"4","5","4::6"})
 			}
 	)
-	public void testWithDataArray(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = Integer.parseInt(leftOp);
-		int r = Integer.parseInt(rightOp);
-		int es = Integer.parseInt(expectedSum);
-		assertEquals(es, l + r);
+	public void testWithDataArray(String left, String right, String expected) throws Exception{
+		String actual = String.format("%s::%s", left, right);
+		assertEquals(actual, expected);
 	}
 
 	@DriveWithDataArray(
 	records = {
-				@Data({"1","2","3"}), 
-				@Data({"3","4","10"})
+			@Data({"1","2","1::2"}), 
+			@Data({"4","5","4::6"})
 			},
 	format = DataFormat.LIST
 	)
 	public void testWithDataArrayListFormat(DataRecord record) throws Exception{
-		int l = Integer.parseInt(record.valueAt(0));
-		int r = Integer.parseInt(record.valueAt(1));
-		int es = Integer.parseInt(record.valueAt(2));
-		assertEquals(es, l + r);
-	}
+		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
+		assertEquals(actual, record.valueAt(2));
+	}	
 	
 	@DriveWithDataArray(
 	headers = {"left", "right", "expected"},
 	records = {
-				@Data({"1","2","3"}), 
-				@Data({"3","4","10"})
+			@Data({"1","2","1::2"}), 
+			@Data({"4","5","4::6"})
 			},
 	format = DataFormat.MAP
 	)
 	public void testWithDataArrayMapFormat(DataRecord record) throws Exception{
-		int l = Integer.parseInt(record.valueOf("left"));
-		int r = Integer.parseInt(record.valueOf("right"));
-		int es = Integer.parseInt(record.valueOf("EXPECTED"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 	
 }

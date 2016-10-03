@@ -26,7 +26,7 @@ import com.autocognite.testcommons.annotations.ddt.DriveWithDataMethod;
 @TestClass
 public class DataDrivenTestUsingExternalMethods{
 	@DriveWithDataMethod(
-			name = "User defined method name",
+			name = "User defined data method name",
 			containerClass = MethodContainer.class
 	)
 	public void testByProvidingClass(int left, int right, String expected) throws Exception{
@@ -36,7 +36,7 @@ public class DataDrivenTestUsingExternalMethods{
 	
 	
 	@DriveWithDataMethod(
-			name = "User defined method name",
+			name = "User defined data method name",
 			containerClass = AnnotatedMethodContainer.class
 	)
 	public void testByProvidingClass2(int left, int right, String expected) throws Exception{
@@ -45,7 +45,7 @@ public class DataDrivenTestUsingExternalMethods{
 	}
 	
 	@DriveWithDataMethod(
-			name = "User defined method name",
+			name = "User defined data method name",
 			container = "AnnotatedMethodContainer"
 	)
 	public void testByProvidingClassName1(int left, int right, String expected) throws Exception{
@@ -54,8 +54,8 @@ public class DataDrivenTestUsingExternalMethods{
 	}
 	
 	@DriveWithDataMethod(
-			name = "User defined method name",
-			container = "User friendly method container name."
+			name = "User defined data method name",
+			container = "User defined data method container name."
 	)
 	public void testByProvidingClassName2(int left, int right, String expected) throws Exception{
 		String actual = String.format("%d::%d", left, right);

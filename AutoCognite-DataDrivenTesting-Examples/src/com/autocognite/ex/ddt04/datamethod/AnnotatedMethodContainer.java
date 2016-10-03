@@ -21,14 +21,14 @@ package com.autocognite.ex.ddt04.datamethod;
 import com.autocognite.testcommons.annotations.ddt.DataMethod;
 import com.autocognite.testcommons.annotations.ddt.DataMethodContainer;
 
-@DataMethodContainer("User friendly method container name.")
+@DataMethodContainer("User defined data method container name")
 public class AnnotatedMethodContainer{
 
-	@DataMethod("User defined method name")
+	@DataMethod("User defined data method name")
 	public static Object[][] getData2(){
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		return records;
 	}

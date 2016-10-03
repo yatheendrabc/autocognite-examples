@@ -23,15 +23,20 @@ import com.autocognite.testcommons.annotations.*;
 
 @TestClass
 public class SimpleTest{
-	
+
 	public void testMethodPass() throws Exception{	
 		assertEquals(1,1);
 	}
-	
+
+	@TestMethod
+	public void anyNameTest() throws Exception{	
+		assertEquals(1,1);
+	}
+
 	public void testMethodFail() throws Exception{
 		assertEquals(1,2);
 	}
-	
+
 	public void testMethodError() throws Exception{
 		error();
 	}

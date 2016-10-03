@@ -19,87 +19,52 @@
 package com.autocognite.ex.ddt03.datafile;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
-
-import org.apache.log4j.Logger;
-
-import com.autocognite.Batteries;
 import com.autocognite.batteries.databroker.DataRecord;
-import com.autocognite.batteries.util.DataBatteries;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.DriveWithDataFile;
 import com.autocognite.testcommons.enums.DataFormat;
-//Test
+
 @TestClass
 public class DataDrivenTestUsingFiles{
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
-	private int strToInt(Object object) {
-		return Integer.parseInt((String) object);
-	}
+	// The arguments is an absolute path or path inside/relative to default data sources (/data/sources) directory.
+	// For these examples, the files are assumed to be present inside the default directory
 	
-	// Using Data Arrays becomes cumbersome as you come up with more and more interesting data to drive tests.
-	// An easy way to get this managed is by putting data in external files.
-	// If you provide a full file path, that is considered, else it is considered relative to default data directory.
-	@DriveWithDataFile("/Users/rahulverma/Documents/coding_workbench/temp/data/input.xls")
-	public void testWithXLSDataFile1(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
-		assertEquals(es, l + r);
-	}	
-	
-	
-	// If you place the data file in the default data directory (<root>/data/sources), the path can ommitted as it is
-	// calculated relative to the default directory.
 	@DriveWithDataFile("input.xls")
-	public void testWithXLSDataFile2(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
-		assertEquals(es, l + r);
+	public void testWithXLSDataFile(String left, String right, String expected) throws Exception{
+		String actual = String.format("%s::%s", left, right);
+		assertEquals(actual, expected);
 	}	
 
 	@DriveWithDataFile(location="input.xls", format=DataFormat.LIST)
 	public void testWithXLSDataFileListFormat(DataRecord record) throws Exception{
-		int l = strToInt(record.valueAt(0));
-		int r = strToInt(record.valueAt(1));
-		int es = strToInt(record.valueAt(2));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
+		assertEquals(actual, record.valueAt(2));
 	}	
 	
 	@DriveWithDataFile(location="input.xls", format=DataFormat.MAP)
 	public void testWithXLSDataFileMapFormat(DataRecord record) throws Exception{
-		logger.debug(DataBatteries.flatten(record.map()));
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
-		int es = strToInt(record.valueOf("SUM"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 	
 	// You can use a tab delimited file in the same manner
 	@DriveWithDataFile("input.txt")
-	public void testWithTSVDataFile(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
-		assertEquals(es, l + r);
-	}	
+	public void testWithTSVDataFile(String left, String right, String expected) throws Exception{
+		String actual = String.format("%s::%s", left, right);
+		assertEquals(actual, expected);
+	}
 
 	@DriveWithDataFile(location="input.txt", format=DataFormat.LIST)
 	public void testWithTSVDataFileListFormat(DataRecord record) throws Exception{
-		int l = strToInt(record.valueAt(0));
-		int r = strToInt(record.valueAt(1));
-		int es = strToInt(record.valueAt(2));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
+		assertEquals(actual, record.valueAt(2));
 	}	
 	
 	@DriveWithDataFile(location="input.txt", format=DataFormat.MAP)
 	public void testWithTSVDataFileMapFormat(DataRecord record) throws Exception{
-		logger.debug(DataBatteries.flatten(record.map()));
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
-		int es = strToInt(record.valueOf("SUM"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 	
 	// You can use a CSV file or any other delimited file by specifying delimiter
@@ -107,11 +72,9 @@ public class DataDrivenTestUsingFiles{
 			location = "input.csv",
 			delimiter = ","
 	)
-	public void testWithCSVDataFile(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = strToInt(leftOp);
-		int r = strToInt(rightOp);
-		int es = strToInt(expectedSum);
-		assertEquals(es, l + r);
+	public void testWithCSVDataFile(String left, String right, String expected) throws Exception{
+		String actual = String.format("%s::%s", left, right);
+		assertEquals(actual, expected);
 	}	
 
 	@DriveWithDataFile(
@@ -120,10 +83,8 @@ public class DataDrivenTestUsingFiles{
 			format=DataFormat.LIST
 	)
 	public void testWithCSVDataFileListFormat(DataRecord record) throws Exception{
-		int l = strToInt(record.valueAt(0));
-		int r = strToInt(record.valueAt(1));
-		int es = strToInt(record.valueAt(2));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
+		assertEquals(actual, record.valueAt(2));
 	}	
 	
 	@DriveWithDataFile(
@@ -132,11 +93,8 @@ public class DataDrivenTestUsingFiles{
 			format=DataFormat.MAP
 	)
 	public void testWithCSVDataFileMapFormat(DataRecord record) throws Exception{
-		logger.info(DataBatteries.flatten(record.map()));
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
-		int es = strToInt(record.valueOf("SUM"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 	
 	// You can also use INI file.
@@ -147,11 +105,8 @@ public class DataDrivenTestUsingFiles{
 			format=DataFormat.MAP
 	)
 	public void testWithINIDataFileMapFormat(DataRecord record) throws Exception{
-//		logger.info(DataBatteries.flatten(record.map()));
-		int l = strToInt(record.valueOf("left"));
-		int r = strToInt(record.valueOf("right"));
-		int es = strToInt(record.valueOf("SUM"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 	
 }

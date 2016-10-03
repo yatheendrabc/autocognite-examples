@@ -19,10 +19,6 @@
 package com.autocognite.ex.ddt01.data;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
-
-import org.apache.log4j.Logger;
-
-import com.autocognite.Batteries;
 import com.autocognite.batteries.databroker.DataRecord;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.DriveWithData;
@@ -30,49 +26,38 @@ import com.autocognite.testcommons.enums.DataFormat;
 
 @TestClass
 public class TestWithBasicDataSeparation{
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
-	@DriveWithData({"1","2","3"})
-	public void testWithSingleDataRecordPass(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = Integer.parseInt(leftOp);
-		int r = Integer.parseInt(rightOp);
-		int es = Integer.parseInt(expectedSum);
-		assertEquals(es, l + r);
+	@DriveWithData({"1","2","1::2"})
+	public void testWithSingleDataRecordPass(String left, String right, String expected) throws Exception{
+		String actual = String.format("%s::%s", left, right);
+		assertEquals(actual, expected);
 	}
 	
-	@DriveWithData({"1","2","4"})
-	public void testWithSingleDataRecordFail(String leftOp, String rightOp, String expectedSum) throws Exception{
-		int l = Integer.parseInt(leftOp);
-		int r = Integer.parseInt(rightOp);
-		int es = Integer.parseInt(expectedSum);
-		assertEquals(es, l + r);
+	@DriveWithData({"1","2","1::3"})
+	public void testWithSingleDataRecordFail(String left, String right, String expected) throws Exception{
+		String actual = String.format("%s::%s", left, right);
+		assertEquals(actual, expected);
 	}
 	
-	@DriveWithData(record={"1","2","3"}, format=DataFormat.LIST)
+	@DriveWithData(record={"1","2","1::2"}, format=DataFormat.LIST)
 	public void testWithSingleDataRecordListFormatPass(DataRecord record) throws Exception{
-		int l = Integer.parseInt(record.valueAt(0));
-		int r = Integer.parseInt(record.valueAt(1));
-		int es = Integer.parseInt(record.valueAt(2));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
+		assertEquals(actual, record.valueAt(2));
 	}	
 	
-	@DriveWithData(record={"left=1","right=2","expected=3"}, format=DataFormat.MAP)
+	@DriveWithData(record={"left=1","right=2","expected=1::2"}, format=DataFormat.MAP)
 	public void testWithSingleDataRecordMapFormatPass(DataRecord record) throws Exception{
-		int l = Integer.parseInt(record.valueOf("left"));
-		int r = Integer.parseInt(record.valueOf("right"));
-		int es = Integer.parseInt(record.valueOf("EXPECTED"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 	@DriveWithData(
 			headers = {"left", "right", "expected"},
-			record={"1","2","3"},
+			record={"1","2","1::2"},
 			format=DataFormat.MAP
 	)
 	public void testWithSingleDataRecordMapFormatSepHeaders(DataRecord record) throws Exception{
-		int l = Integer.parseInt(record.valueOf("left"));
-		int r = Integer.parseInt(record.valueOf("right"));
-		int es = Integer.parseInt(record.valueOf("EXPECTED"));
-		assertEquals(es, l + r);
+		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
+		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
 }
 

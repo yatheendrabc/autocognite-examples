@@ -31,7 +31,7 @@ public class DataDrivenTestUsingDataMethods{
 	public Object[][] getData(){
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		return records;
 	}
@@ -43,16 +43,16 @@ public class DataDrivenTestUsingDataMethods{
 	}	
 	
 	
-	@DataMethod("A User Friendly Name")
+	@DataMethod("User defined data method name")
 	public Object[][] getData2(){
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		return records;
 	}
 
-	@DriveWithDataMethod("A User Friendly Name")
+	@DriveWithDataMethod("User defined data method name")
 	public void testWithLocalDataMethod2(int left, int right, String expected) throws Exception{
 		String actual = String.format("%d::%d", left, right);
 		assertEquals(actual, expected);

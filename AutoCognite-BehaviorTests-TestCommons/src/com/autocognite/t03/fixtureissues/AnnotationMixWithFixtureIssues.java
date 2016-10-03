@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto04.annotations;
+package com.autocognite.t03.fixtureissues;
 
 import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;

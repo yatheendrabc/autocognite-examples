@@ -16,22 +16,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto05.fixtureissues;
+package com.autocognite.t03.fixtureissues;
 
 import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;
 
 @TestClass
-public class TestWithSetUpClassIssue{
+public class TestWithSetUpTestIssue{
 	
 	public void setUpClass() throws Exception{
 		System.out.println("UserTest: Called setUpClass");
-		fail("Simulating an issue in setUpClass");
 	}
 	
 	public void setUpMethod() throws Exception{
 		System.out.println("UserTest: Called setUp");
-		fail("Simulating an issue in setUp");
 	}
 	
 	public void setUpTest() throws Exception{

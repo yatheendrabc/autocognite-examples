@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.ddt07.fixtureerrors;
+package com.autocognite.t03.fixtureissues;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 import static com.autocognite.testcommons.assertions.Assertions.fail;
@@ -29,8 +29,8 @@ import com.autocognite.testcommons.annotations.ddt.DataMethod;
 import com.autocognite.testcommons.annotations.ddt.DriveWithDataMethod;
 
 @TestClass
-public class SetUpIssueWithDDT{
-	private Logger logger = Batteries.getCentralLogger();
+public class SetUpTestIssueWithDDT{
+	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 	
 	public void setUpClass() throws Exception{
 		logger.info("UserTest: Called setUpClass");
@@ -38,12 +38,11 @@ public class SetUpIssueWithDDT{
 	
 	public void setUpMethod() throws Exception{
 		logger.info("UserTest: Called setUp");
-		fail("Simulating an issue in setUp");
 	}
 	
 	public void setUpTest() throws Exception{
 		logger.info("Called setUpTest");
-		fail("Simulating an issue in setUpTest");
+		fail("Simulating an issue in setUp");
 	}
 	
 	public void testDownTest() throws Exception{
