@@ -26,6 +26,7 @@ import com.autocognite.testcommons.enums.DataFormat;
 
 @TestClass
 public class TestWithBasicDataSeparation{
+
 	
 	@DriveWithData({"1","2","1::2"})
 	public void testWithSingleDataRecordPass(String left, String right, String expected) throws Exception{
