@@ -51,6 +51,7 @@ public class TestWithBasicDataSeparation{
 		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
 		assertEquals(actual, record.valueOf("EXPECTED"));
 	}
+	
 	@DriveWithData(
 			headers = {"left", "right", "expected"},
 			record={"1","2","1::2"},

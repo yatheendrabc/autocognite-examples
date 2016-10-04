@@ -20,9 +20,6 @@ package com.autocognite.ex.ddt05.datagenerator;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
-import org.apache.log4j.Logger;
-
-import com.autocognite.Batteries;
 import com.autocognite.batteries.databroker.DataRecord;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.DriveWithDataGenerator;
@@ -30,30 +27,23 @@ import com.autocognite.testcommons.enums.DataFormat;
 
 @TestClass
 public class DataDrivenTestUsingDataGenerators{
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
-
-	@DriveWithDataGenerator(name="DataGenerator-1", format=DataFormat.MAP)
+	
+	@DriveWithDataGenerator(name="Greedy", format=DataFormat.MAP)
 	public void testGreedy(DataRecord record) throws Exception{
-		int l = (int) record.objectOf("left");
-		int r = (int) record.objectOf("right");
-		String es = (String) record.objectOf("printStr");
-		assertEquals(es, String.format("%d::%d", l, r));
+		String actual = String.format("%s::%s", record.objectOf("left"), record.objectOf("right"));
+		assertEquals(actual, record.objectOf("EXPECTED"));
 	}	
 	
 	@DriveWithDataGenerator(name="Lazy", format=DataFormat.MAP)
 	public void testLazy(DataRecord record) throws Exception{
-		int l = (int) record.objectOf("left");
-		int r = (int) record.objectOf("right");
-		String es = (String) record.objectOf("printStr");
-		assertEquals(es, String.format("%d::%d", l, r));
+		String actual = String.format("%s::%s", record.objectOf("left"), record.objectOf("right"));
+		assertEquals(actual, record.objectOf("EXPECTED"));
 	}	
 	
-	@DriveWithDataGenerator(generatorClass = NonAnnotatedDG.class, format=DataFormat.MAP)
+	@DriveWithDataGenerator(generatorClass = NonAnnotatedGreedyDG.class, format=DataFormat.MAP)
 	public void testNonAnnotatedDG(DataRecord record) throws Exception{
-		int l = (int) record.objectOf("left");
-		int r = (int) record.objectOf("right");
-		String es = (String) record.objectOf("printStr");
-		assertEquals(es, String.format("%d::%d", l, r));
+		String actual = String.format("%s::%s", record.objectOf("left"), record.objectOf("right"));
+		assertEquals(actual, record.objectOf("EXPECTED"));
 	}	
 
 

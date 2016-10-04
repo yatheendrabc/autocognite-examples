@@ -46,12 +46,12 @@ public class FlexibleMethodsDemo{
 	
 	@BeforeTest
 	public void launchTool(){
-		System.out.println("Custom Set Up Instance executed");
+		System.out.println("Custom Set Up Test executed");
 	}
 	
 	@AfterTest
 	public void stopTool(){
-		System.out.println("Custom Tear Down Instance executed");
+		System.out.println("Custom Tear Down Test executed");
 	}
 	
 	@TestMethod

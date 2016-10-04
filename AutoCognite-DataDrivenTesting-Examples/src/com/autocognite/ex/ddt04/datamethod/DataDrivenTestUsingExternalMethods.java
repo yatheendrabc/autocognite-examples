@@ -55,7 +55,7 @@ public class DataDrivenTestUsingExternalMethods{
 	
 	@DriveWithDataMethod(
 			name = "User defined data method name",
-			container = "User defined data method container name."
+			container = "User defined data method container name"
 	)
 	public void testByProvidingClassName2(int left, int right, String expected) throws Exception{
 		String actual = String.format("%d::%d", left, right);
