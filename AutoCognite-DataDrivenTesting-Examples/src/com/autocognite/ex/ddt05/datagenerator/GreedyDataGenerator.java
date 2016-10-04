@@ -32,7 +32,7 @@ import com.autocognite.testcommons.annotations.ddt.DataGenerator;
  * (Optional) Notice that we are providing header values. This makes it useful for all test signatures.
  */
 
-@DataGenerator("DataGenerator-1")
+@DataGenerator("Greedy")
 public class GreedyDataGenerator implements DataSource {
 	DataRecordContainer container = null;
 	Iterator<DataRecord> iter = null;
@@ -40,12 +40,12 @@ public class GreedyDataGenerator implements DataSource {
 	public GreedyDataGenerator(){
 		container = new DataRecordContainer();
 		// Create headers and assign to container
-		String[] names = {"left", "right", "printStr"};
+		String[] names = {"left", "right", "expected"};
 		container.setHeaders(names);
 		//Rest is same
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		container.addAll(records);
 		iter = container.iterator();

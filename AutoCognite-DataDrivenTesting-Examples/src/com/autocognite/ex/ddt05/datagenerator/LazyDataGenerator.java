@@ -36,7 +36,7 @@ import com.autocognite.testcommons.annotations.ddt.DataGenerator;
 public class LazyDataGenerator implements DataSource {
 	int counter = -1;
 	Random random = new Random();
-	String[] headers = new String[] {"Left", "Right", "printStr"};
+	String[] headers = new String[] {"Left", "Right", "expected"};
 	
 	public LazyDataGenerator(){
 	}

@@ -22,7 +22,6 @@ import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
 import com.autocognite.batteries.databroker.DataRecord;
 import com.autocognite.batteries.databroker.DataRecordContainer;
-import com.autocognite.batteries.util.DataBatteries;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.DataMethod;
 import com.autocognite.testcommons.annotations.ddt.DriveWithDataMethod;
@@ -35,7 +34,7 @@ public class DataMethodsNonDefaultFormats{
 	public Object[][] getObjectsArray(){
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		return records;
 	}
@@ -48,10 +47,8 @@ public class DataMethodsNonDefaultFormats{
 	
 	@DriveWithDataMethod(name="DG1", format=DataFormat.LIST)
 	public void testWithLocalNamedGeneratorMethodListFormat1(DataRecord record) throws Exception{
-		int l = (int) record.objectAt(0);
-		int r = (int) record.objectAt(1);
-		String es = (String) record.objectAt(2);
-		assertEquals(es, String.format("%d::%d", l, r));
+		String actual = String.format("%s::%s", record.objectAt(0), record.objectAt(1));
+		assertEquals(actual, record.objectAt(2));
 	}	
 	
 	@DataMethod("DG2")
@@ -59,7 +56,7 @@ public class DataMethodsNonDefaultFormats{
 		DataRecordContainer container = new DataRecordContainer();
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		container.addAll(records);
 		return container;
@@ -67,22 +64,20 @@ public class DataMethodsNonDefaultFormats{
 
 	@DriveWithDataMethod(name="DG1", format=DataFormat.LIST)
 	public void testWithLocalNamedGeneratorMethodListFormat2(DataRecord record) throws Exception{
-		int l = (int) record.objectAt(0);
-		int r = (int) record.objectAt(1);
-		String es = (String) record.objectAt(2);
-		assertEquals(es, String.format("%d::%d", l, r));
+		String actual = String.format("%s::%s", record.objectAt(0), record.objectAt(1));
+		assertEquals(actual, record.objectAt(2));
 	}	
 	
 	@DataMethod("DG2")
 	public DataRecordContainer getMapData(){
 		DataRecordContainer container = new DataRecordContainer();
 		// Create headers and assign to container
-		String[] names = {"left", "right", "printStr"};
+		String[] names = {"left", "right", "expected"};
 		container.setHeaders(names);
 		//Rest is same
 		Object[][] records = {
 				{1,2,"1::2"},
-				{1,2,"1::5"},
+				{4,5,"4::6"},
 		};
 		container.addAll(records);
 		return container;
@@ -90,11 +85,8 @@ public class DataMethodsNonDefaultFormats{
 
 	@DriveWithDataMethod(name="DG2", format=DataFormat.MAP) 
 	public void testWithLocalNamedGeneratorMethodMapFormat(DataRecord record) throws Exception{
-		DataBatteries.print(record.map());
-		int l = (int) record.objectOf("left");
-		int r = (int) record.objectOf("right");
-		String es = (String) record.objectOf("printStr");
-		assertEquals(es, String.format("%d::%d", l, r));
+		String actual = String.format("%s::%s", record.objectOf("left"), record.objectOf("right"));
+		assertEquals(actual, record.objectOf("EXPECTED"));
 	}	
 	
 }

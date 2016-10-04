@@ -31,11 +31,11 @@ import com.autocognite.batteries.databroker.DataSourceFinishedException;
  * (Optional) Notice that we are providing header values. This makes it useful for all test signatures.
  */
 
-public class NonAnnotatedDG implements DataSource {
+public class NonAnnotatedGreedyDG implements DataSource {
 	DataRecordContainer container = null;
 	Iterator<DataRecord> iter = null;
 	
-	public NonAnnotatedDG(){
+	public NonAnnotatedGreedyDG(){
 		container = new DataRecordContainer();
 		// Create headers and assign to container
 		String[] names = {"left", "right", "printStr"};
