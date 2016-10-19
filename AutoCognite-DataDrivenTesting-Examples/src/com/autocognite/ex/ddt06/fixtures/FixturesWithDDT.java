@@ -43,8 +43,8 @@ public class FixturesWithDDT{
 		logger.info("Called setUpTest");
 	}
 	
-	public void testDownTest(){
-		logger.info("Called testDownTest");
+	public void tearDownTest(){
+		logger.info("Called tearDownTest");
 	}
 	
 	public void tearDownMethod(){

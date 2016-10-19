@@ -16,28 +16,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto01.basic;
+package com.autocognite.t05.dependencies;
 
-import static com.autocognite.testcommons.assertions.Assertions.*;
-import com.autocognite.testcommons.annotations.*;
+import org.apache.log4j.Logger;
+
+import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotations.TestClass;
+import com.autocognite.testcommons.annotations.depend.DependsOn;
 
 @TestClass
-public class SimpleTest{
+public class SameClassMethodDeps{
+	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
-	public void testMethodPass() throws Exception{	
-		assertEquals(1,1);
+	public void test2(){
+		logger.debug("Should be executed 1st.");
+	}
+	
+	@DependsOn("test3")
+	public void test1(){
+		logger.debug("Should be executed 3rd.");
 	}
 
-	@TestMethod
-	public void anyNameTest() throws Exception{	
-		assertEquals(1,1);
+	@DependsOn("test7")
+	public void test3(){
+		logger.debug("Should be executed 2nd.");
 	}
-
-	public void testMethodFail() throws Exception{
-		assertEquals(1,2);
-	}
-
-	public void testMethodError() throws Exception{
-		error();
+	
+	@DependsOn({"test1"})//, "test3", "test2"})
+	public void test7(){
+		logger.debug("Should be executed 4th.");
 	}
 }
+

@@ -36,7 +36,7 @@ public class TestWithAllFixtures{
 		System.out.println("" + ": Called setUpTest");
 	}
 	
-	public void testDownTest(){
+	public void tearDownTest(){
 		System.out.println("" + ": Called testDownTest");
 	}
 	
