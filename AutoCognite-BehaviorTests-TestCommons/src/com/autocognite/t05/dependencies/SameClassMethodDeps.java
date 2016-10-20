@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
 import com.autocognite.testcommons.annotations.TestClass;
-import com.autocognite.testcommons.annotations.depend.DependsOn;
+import com.autocognite.testcommons.annotations.deps.DependsOn;
 
 @TestClass
 public class SameClassMethodDeps{
