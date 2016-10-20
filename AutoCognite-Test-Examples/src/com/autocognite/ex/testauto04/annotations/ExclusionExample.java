@@ -20,7 +20,7 @@ package com.autocognite.ex.testauto04.annotations;
 
 import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;
-
+//
 @TestClass
 public class ExclusionExample{
 
