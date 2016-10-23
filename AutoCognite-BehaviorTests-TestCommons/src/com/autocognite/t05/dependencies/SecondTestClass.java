@@ -23,13 +23,14 @@ import org.apache.log4j.Logger;
 import com.autocognite.Batteries;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.deps.DependsOn;
+import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-public class SameClassMethodDeps{
+public class SecondTestClass{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
-	public void test2(){
-		logger.debug("Should be executed 1st.");
+	public void test2() throws Exception{
+		Assertions.fail();
 	}
 	
 	@DependsOn("test3")
@@ -37,14 +38,19 @@ public class SameClassMethodDeps{
 		logger.debug("Should be executed 3rd.");
 	}
 
-	@DependsOn("test7")
+	@DependsOn("test10") // For a non-existing name, dependency is ignored.
 	public void test3(){
 		logger.debug("Should be executed 2nd.");
 	}
 	
-	@DependsOn({"test1"})//, "test3", "test2"})
+	@DependsOn({"test3", "test2"})
 	public void test7(){
 		logger.debug("Should be executed 4th.");
+	}
+	
+	@DependsOn({"com.autocognite.t05.dependencies.ThirdTestClass.testEx"})
+	public void testEx(){
+		logger.debug("Executed");
 	}
 }
 
