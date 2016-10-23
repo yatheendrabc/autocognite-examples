@@ -21,8 +21,8 @@ package com.autocognite.t05.dependencies;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
+import com.autocognite.testcommons.annotations.DependsOn;
 import com.autocognite.testcommons.annotations.TestClass;
-import com.autocognite.testcommons.annotations.deps.DependsOn;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
