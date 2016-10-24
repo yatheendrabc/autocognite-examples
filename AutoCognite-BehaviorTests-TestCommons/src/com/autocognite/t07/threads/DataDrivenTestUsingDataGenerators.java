@@ -16,7 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.ddt05.datagenerator;
+package com.autocognite.t07.threads;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertEquals;
 
