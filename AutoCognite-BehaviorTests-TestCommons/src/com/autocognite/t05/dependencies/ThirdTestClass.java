@@ -21,7 +21,6 @@ package com.autocognite.t05.dependencies;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
-import com.autocognite.testcommons.annotations.DependsOn;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.assertions.Assertions;
 
@@ -30,22 +29,7 @@ public class ThirdTestClass{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
 	public void test2() throws Exception{
-		Assertions.fail();
-	}
-	
-	@DependsOn("test3")
-	public void test1(){
-		logger.debug("Should be executed 3rd.");
-	}
-
-	@DependsOn("test10") // For a non-existing name, dependency is ignored.
-	public void test3(){
-		logger.debug("Should be executed 2nd.");
-	}
-	
-	@DependsOn({"test3", "test2"})
-	public void test7(){
-		logger.debug("Should be executed 4th.");
+		logger.debug("Executed");
 	}
 	
 	public void testEx() throws Exception{

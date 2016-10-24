@@ -29,23 +29,8 @@ import com.autocognite.testcommons.assertions.Assertions;
 public class SecondTestClass{
 	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
 
-	public void test2() throws Exception{
-		Assertions.fail();
-	}
-	
-	@DependsOn("test3")
-	public void test1(){
-		logger.debug("Should be executed 3rd.");
-	}
-
-	@DependsOn("test10") // For a non-existing name, dependency is ignored.
-	public void test3(){
-		logger.debug("Should be executed 2nd.");
-	}
-	
-	@DependsOn({"test3", "test2"})
-	public void test7(){
-		logger.debug("Should be executed 4th.");
+	public void test1() throws Exception{
+		logger.debug("Executed");
 	}
 	
 	@DependsOn({"com.autocognite.t05.dependencies.ThirdTestClass.testEx"})

@@ -35,27 +35,27 @@ public class FirstTestClass{
 	
 	@DependsOn("test3")
 	public void test1(){
-		logger.debug("Should be executed 3rd.");
+		logger.debug("Should be executed.");
 	}
 
 	@DependsOn("test10") // For a non-existing name, dependency is ignored.
 	public void test3(){
-		logger.debug("Should be executed 2nd.");
+		logger.debug("Should be executed.");
 	}
 	
 	@DependsOn({"test3", "test2"})
 	public void test7(){
-		logger.debug("Should be executed 4th.");
+		logger.debug("Should be executed.");
 	}
 	
 	@DependsOn({"com.autocognite.t05.dependencies.SecondTestClass.testEx"})
 	public void testExternalDep(){
-		logger.debug("Should be executed 4th.");
+		logger.debug("Should not be executed because SecondTestClass.testEx is excluded because ThirdTestClass.testEx fails.");
 	}
 	
 	@DependsOn("test7")
 	public void testChainDepWithinClass(){
-		logger.debug("Shouldn't execute because test 2 fails, causing test7 not to execute and hence this too.");
+		logger.debug("Shouldn't execute because test2 fails, causing test7 not to execute and hence this too.");
 	}
 }
 
