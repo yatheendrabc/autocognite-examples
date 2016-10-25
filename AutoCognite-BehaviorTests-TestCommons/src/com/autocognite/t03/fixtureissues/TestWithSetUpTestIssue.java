@@ -37,7 +37,7 @@ public class TestWithSetUpTestIssue{
 		fail("Simulating an issue in setUpTest");
 	}
 	
-	public void testDownTest() throws Exception{
+	public void tearDownTest() throws Exception{
 		System.out.println("" + ": Called testDownTest");
 		fail("Simulating an issue in testDownTest");
 	}
