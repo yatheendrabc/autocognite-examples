@@ -23,7 +23,7 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(properties = {})
+@Clone(properties = {})
 public class Wrong_UserConfig_Class_EmptyProps{
 	
 	public Wrong_UserConfig_Class_EmptyProps(){

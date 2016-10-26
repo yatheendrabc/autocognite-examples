@@ -21,7 +21,7 @@ package com.autocognite.t06.invoker;
 import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;
 //
-@Invoke(3)
+@Clone(3)
 @TestClass
 public class BasicMultiInvokeExample{
 	
@@ -49,7 +49,7 @@ public class BasicMultiInvokeExample{
 		System.out.println("" + ": Called tearDownClass");
 	}
 
-	@Invoke(5)
+	@Clone(5)
 	public void testMethod1() throws Exception{
 		System.out.println("" + ": Called testMethod 1");
 		assertEquals(1,1);

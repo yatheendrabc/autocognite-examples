@@ -23,7 +23,7 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(properties = {"a=b"})
+@Clone(properties = {"a=b"})
 public class Right_UserConfig_Class_UDCArg{
 	
 	public Right_UserConfig_Class_UDCArg(UserDefinedConfig config){

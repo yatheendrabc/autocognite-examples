@@ -23,7 +23,7 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(properties = {"my.prop=value1,value2"})
+@Clone(properties = {"my.prop=value1,value2"})
 public class Fine_UserConfig_Class_1InvokeMultiPropSet{
 	private UserDefinedConfig myConfig = null;
 	

@@ -20,12 +20,12 @@ package com.autocognite.t09.dataref;
 
 import com.autocognite.batteries.config.UserDefinedConfig;
 import com.autocognite.batteries.databroker.DataReference;
-import com.autocognite.testcommons.annotations.Invoke;
+import com.autocognite.testcommons.annotations.Clone;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.FileDataReference;
 
 @FileDataReference("dataref.xls")
-@Invoke(properties={"a=b"})
+@Clone(properties={"a=b"})
 @TestClass
 public class Wrong_DataRef_Class_WithUserProps_WrongArgOrder{
 	

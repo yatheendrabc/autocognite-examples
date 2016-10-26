@@ -23,7 +23,7 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(count=3, properties = {"my.prop=value1,value2,value3"})
+@Clone(count=3, properties = {"my.prop=value1,value2,value3"})
 public class Right_UserConfig_Class_3Invoke3PropSet{
 	private UserDefinedConfig myConfig = null;
 	
