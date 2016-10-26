@@ -20,7 +20,7 @@ package com.autocognite.t06.invoker;
 
 import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;
-
+//
 @Invoke(3)
 @TestClass
 public class BasicMultiInvokeExample{
