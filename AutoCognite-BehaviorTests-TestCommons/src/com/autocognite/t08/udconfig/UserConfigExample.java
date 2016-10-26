@@ -16,46 +16,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.t06.invoker;
+package com.autocognite.t08.udconfig;
 
-import static com.autocognite.testcommons.assertions.Assertions.*;
+import com.autocognite.batteries.config.UserDefinedConfig;
 import com.autocognite.testcommons.annotations.*;
 
-@Invoke(3)
-public class TestWithAllFixtures{
+@TestClass
+@Invoke(properties = {"my.prop=value1"})
+public class UserConfigExample{
+	private UserDefinedConfig myConfig = null;
 	
-	public void setUpClass(){
-		System.out.println("" + ": Called setUpClass");
-	}
-	
-	public void setUpMethod(){
-		System.out.println("" + ": Called setUpMethod");
-	}
-	
-	public void setUpTest(){
-		System.out.println("" + ": Called setUpTest");
-	}
-	
-	public void tearDownTest(){
-		System.out.println("" + ": Called testDownTest");
-	}
-	
-	public void tearDownMethod(){
-		System.out.println("" + ": Called tearDownMethod");
-	}
-	
-	public void tearDownClass(){
-		System.out.println("" + ": Called tearDownClass");
+	public UserConfigExample(UserDefinedConfig config){
+		System.err.println(config.props());
+		this.myConfig = config;
 	}
 
-	@Invoke(5)
-	public void testMethod1() throws Exception{
-		System.out.println("" + ": Called testMethod 1");
-		assertEquals(1,1);
-	}
-	
-	public void testMethod2() throws Exception{
-		System.out.println("" + ": Called testMethod 2");
-		assertEquals(3,4);
+	public void testEx() throws Exception{	
+		System.out.println(myConfig.value("my.prop"));
 	}
 }

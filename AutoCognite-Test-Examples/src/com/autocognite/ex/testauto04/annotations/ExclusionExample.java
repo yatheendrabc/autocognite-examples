@@ -37,4 +37,27 @@ public class ExclusionExample{
 		error();
 	}
 
+	public void setUpClass(){
+		System.out.println("" + ": Called setUpClass");
+	}
+	
+	public void setUpMethod(){
+		System.out.println("" + ": Called setUpMethod");
+	}
+	
+	public void setUpTest(){
+		System.out.println("" + ": Called setUpTest");
+	}
+	
+	public void tearDownTest(){
+		System.out.println("" + ": Called tearDownTest");
+	}
+	
+	public void tearDownMethod(){
+		System.out.println("" + ": Called tearDownMethod");
+	}
+	
+	public void tearDownClass(){
+		System.out.println("" + ": Called tearDownClass");
+	}
 }

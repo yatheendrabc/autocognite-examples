@@ -16,13 +16,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.ex.testauto02.fixtures;
+package com.autocognite.t06.invoker;
 
 import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;
 
+@Invoke(3)
 @TestClass
-public class TestWithAllFixtures{
+public class BasicMultiInvokeExample{
 	
 	public void setUpClass(){
 		System.out.println("" + ": Called setUpClass");
@@ -37,7 +38,7 @@ public class TestWithAllFixtures{
 	}
 	
 	public void tearDownTest(){
-		System.out.println("" + ": Called tearDownTest");
+		System.out.println("" + ": Called testDownTest");
 	}
 	
 	public void tearDownMethod(){
@@ -48,6 +49,7 @@ public class TestWithAllFixtures{
 		System.out.println("" + ": Called tearDownClass");
 	}
 
+	@Invoke(5)
 	public void testMethod1() throws Exception{
 		System.out.println("" + ": Called testMethod 1");
 		assertEquals(1,1);
