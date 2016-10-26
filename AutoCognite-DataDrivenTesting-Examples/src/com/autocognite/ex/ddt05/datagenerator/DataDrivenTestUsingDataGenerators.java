@@ -35,7 +35,7 @@ public class DataDrivenTestUsingDataGenerators{
 		assertEquals(actual, record.objectOf("EXPECTED"));
 	}	
 	
-	@TestMethod(testThreads=10)
+	@TestMethod(childThreads=10)
 	@DriveWithDataGenerator(name="Lazy", format=DataFormat.MAP)
 	public void testLazy(DataRecord record) throws Exception{
 		String actual = String.format("%s::%s", record.objectOf("left"), record.objectOf("right"));
