@@ -23,9 +23,9 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(properties = {})
-public class Wrong_UserConfig_EmptyProps{
+@Invoke(properties = {"a=b"})
+public class Right_UserConfig_Class_UDCArg{
 	
-	public Wrong_UserConfig_EmptyProps(){
+	public Right_UserConfig_Class_UDCArg(UserDefinedConfig config){
 	}
 }

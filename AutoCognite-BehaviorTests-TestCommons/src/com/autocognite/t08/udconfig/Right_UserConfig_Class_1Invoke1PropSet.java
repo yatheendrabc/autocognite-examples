@@ -23,11 +23,11 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(count=3, properties = {"my.prop=value1"})
-public class Fine_UserConfig_3Invoke1PropSet{
+@Invoke(properties = {"my.prop=value1"})
+public class Right_UserConfig_Class_1Invoke1PropSet{
 	private UserDefinedConfig myConfig = null;
 	
-	public Fine_UserConfig_3Invoke1PropSet(UserDefinedConfig config){
+	public Right_UserConfig_Class_1Invoke1PropSet(UserDefinedConfig config){
 		System.err.println(config.props());
 		this.myConfig = config;
 	}

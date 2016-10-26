@@ -16,23 +16,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.t09.dataref;
+package com.autocognite.t08.udconfig;
 
-import com.autocognite.batteries.databroker.DataReference;
-import com.autocognite.testcommons.annotations.TestClass;
-import com.autocognite.testcommons.annotations.ddt.FileDataReference;
+import com.autocognite.batteries.config.UserDefinedConfig;
+import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
-@FileDataReference("dataref.xls")
 @TestClass
-public class Right_DataRef_Class1{
-	private DataReference dataRef = null;
+@Invoke(properties = {})
+public class Wrong_UserConfig_Class_EmptyProps{
 	
-	public Right_DataRef_Class1(DataReference dataRef){
-		this.dataRef = dataRef;
-	}
-
-	public void testEx() throws Exception{	
-		Assertions.assertEquals(dataRef.getRecord("Bronze").valueOf("user"), "B1");
+	public Wrong_UserConfig_Class_EmptyProps(){
 	}
 }

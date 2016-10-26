@@ -23,11 +23,11 @@ import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(count=3, properties = {"same.for.all=value1", "diff12.same23=value1,value2", "diff.for.all=value1,value2,value3"})
-public class Fine_UserConfig_3InvokeMixedPropCount_UseLastValueForOthers{
+@Invoke(count=3, properties = {"my.prop=value1"})
+public class Fine_UserConfig_Class_3Invoke1PropSet{
 	private UserDefinedConfig myConfig = null;
 	
-	public Fine_UserConfig_3InvokeMixedPropCount_UseLastValueForOthers(UserDefinedConfig config){
+	public Fine_UserConfig_Class_3Invoke1PropSet(UserDefinedConfig config){
 		System.err.println(config.props());
 		this.myConfig = config;
 	}

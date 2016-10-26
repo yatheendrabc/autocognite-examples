@@ -16,20 +16,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.t08.udconfig;
+package com.autocognite.t09.dataref;
 
-import com.autocognite.batteries.config.UserDefinedConfig;
-import com.autocognite.testcommons.annotations.*;
-import com.autocognite.testcommons.assertions.Assertions;
+import com.autocognite.batteries.databroker.DataReference;
+import com.autocognite.testcommons.annotations.TestClass;
+import com.autocognite.testcommons.annotations.ddt.FileDataReference;
 
 @TestClass
-@Invoke(count=3, properties = {"my.prop=value1,value2,value3"})
-public class Right_UserConfig_3Invoke3PropSet{
-	private UserDefinedConfig myConfig = null;
+public class Wrong_NoDataRef_NoDefaultConstructor{
 	
-	public Right_UserConfig_3Invoke3PropSet(UserDefinedConfig config){
-		System.err.println(config.props());
-		this.myConfig = config;
+	public Wrong_NoDataRef_NoDefaultConstructor(DataReference dataRef){
 	}
-
 }

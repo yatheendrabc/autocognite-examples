@@ -24,8 +24,8 @@ import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
 @Invoke(properties = {"a=b"})
-public class Wrong_UserConfig_NoUDCArg{
+public class Wrong_UserConfig_Class_NoUDCArg{
 	
-	public Wrong_UserConfig_NoUDCArg(){
+	public Wrong_UserConfig_Class_NoUDCArg(){
 	}
 }
