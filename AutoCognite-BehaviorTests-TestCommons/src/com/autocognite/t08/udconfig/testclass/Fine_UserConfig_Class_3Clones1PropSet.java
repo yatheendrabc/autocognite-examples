@@ -16,18 +16,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.t08.udconfig;
+package com.autocognite.t08.udconfig.testclass;
 
 import com.autocognite.batteries.config.UserDefinedConfig;
 import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Clone(properties = {"my.prop=value1,value2"})
-public class Fine_UserConfig_Class_1InvokeMultiPropSet{
+@Clone(count=3, properties = {"my.prop=value1"})
+public class Fine_UserConfig_Class_3Clones1PropSet{
 	private UserDefinedConfig myConfig = null;
 	
-	public Fine_UserConfig_Class_1InvokeMultiPropSet(UserDefinedConfig config){
+	public Fine_UserConfig_Class_3Clones1PropSet(UserDefinedConfig config){
 		System.err.println(config.props());
 		this.myConfig = config;
 	}

@@ -22,7 +22,7 @@ import static com.autocognite.testcommons.assertions.Assertions.*;
 import com.autocognite.testcommons.annotations.*;
 
 @Clone(3)
-@TestClass(methodThreads=3)
+@TestClass(childThreads=3)
 public class TestWithAllFixtures{
 	
 	public void setUpClass(){

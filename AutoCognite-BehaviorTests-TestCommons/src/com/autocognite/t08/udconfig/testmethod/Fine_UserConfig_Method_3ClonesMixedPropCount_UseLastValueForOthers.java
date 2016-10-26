@@ -16,16 +16,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package com.autocognite.t08.udconfig;
+package com.autocognite.t08.udconfig.testmethod;
 
 import com.autocognite.batteries.config.UserDefinedConfig;
 import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Clone(properties = {"a=b"})
-public class Right_UserConfig_Class_UDCArg{
-	
-	public Right_UserConfig_Class_UDCArg(UserDefinedConfig config){
+@Clone(count=3, properties = {"same.for.all=value1", "diff12.same23=value1,value2", "diff.for.all=value1,value2,value3"})
+public class Fine_UserConfig_Method_3ClonesMixedPropCount_UseLastValueForOthers{
+
+	@Clone(count=3, properties = {"same.for.all=value1", "diff12.same23=value1,value2", "diff.for.all=value1,value2,value3"})
+	public void testEx(UserDefinedConfig config){
+		System.err.println(config.props());
 	}
 }
