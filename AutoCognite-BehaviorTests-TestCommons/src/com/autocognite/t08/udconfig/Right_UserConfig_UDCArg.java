@@ -20,18 +20,12 @@ package com.autocognite.t08.udconfig;
 
 import com.autocognite.batteries.config.UserDefinedConfig;
 import com.autocognite.testcommons.annotations.*;
+import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
-@Invoke(properties = {"my.prop=value1"})
-public class UserConfigExample{
-	private UserDefinedConfig myConfig = null;
+@Invoke(properties = {"a=b"})
+public class Right_UserConfig_UDCArg{
 	
-	public UserConfigExample(UserDefinedConfig config){
-		System.err.println(config.props());
-		this.myConfig = config;
-	}
-
-	public void testEx() throws Exception{	
-		System.out.println(myConfig.value("my.prop"));
+	public Right_UserConfig_UDCArg(UserDefinedConfig config){
 	}
 }

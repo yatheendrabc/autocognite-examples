@@ -36,13 +36,13 @@ public class DataDrivenTestUsingFiles{
 		assertEquals(actual, expected);
 	}	
 
-	@DriveWithDataFile(location="input.xls", format=DataFormat.LIST)
+	@DriveWithDataFile(path="input.xls", format=DataFormat.LIST)
 	public void testWithXLSDataFileListFormat(DataRecord record) throws Exception{
 		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
 		assertEquals(actual, record.valueAt(2));
 	}	
 	
-	@DriveWithDataFile(location="input.xls", format=DataFormat.MAP)
+	@DriveWithDataFile(path="input.xls", format=DataFormat.MAP)
 	public void testWithXLSDataFileMapFormat(DataRecord record) throws Exception{
 		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
 		assertEquals(actual, record.valueOf("EXPECTED"));
@@ -55,13 +55,13 @@ public class DataDrivenTestUsingFiles{
 		assertEquals(actual, expected);
 	}
 
-	@DriveWithDataFile(location="input.txt", format=DataFormat.LIST)
+	@DriveWithDataFile(path="input.txt", format=DataFormat.LIST)
 	public void testWithTSVDataFileListFormat(DataRecord record) throws Exception{
 		String actual = String.format("%s::%s", record.valueAt(0), record.valueAt(1));
 		assertEquals(actual, record.valueAt(2));
 	}	
 	
-	@DriveWithDataFile(location="input.txt", format=DataFormat.MAP)
+	@DriveWithDataFile(path="input.txt", format=DataFormat.MAP)
 	public void testWithTSVDataFileMapFormat(DataRecord record) throws Exception{
 		String actual = String.format("%s::%s", record.valueOf("left"), record.valueOf("right"));
 		assertEquals(actual, record.valueOf("EXPECTED"));
@@ -69,7 +69,7 @@ public class DataDrivenTestUsingFiles{
 	
 	// You can use a CSV file or any other delimited file by specifying delimiter
 	@DriveWithDataFile(
-			location = "input.csv",
+			path = "input.csv",
 			delimiter = ","
 	)
 	public void testWithCSVDataFile(String left, String right, String expected) throws Exception{
@@ -78,7 +78,7 @@ public class DataDrivenTestUsingFiles{
 	}	
 
 	@DriveWithDataFile(
-			location = "input.csv",
+			path = "input.csv",
 			delimiter = ",", 
 			format=DataFormat.LIST
 	)
@@ -88,7 +88,7 @@ public class DataDrivenTestUsingFiles{
 	}	
 	
 	@DriveWithDataFile(
-			location = "input.csv",
+			path = "input.csv",
 			delimiter = ",", 
 			format=DataFormat.MAP
 	)
@@ -101,7 +101,7 @@ public class DataDrivenTestUsingFiles{
 	// As the section data inside an INI file is unordered, don't use it for positional reading.
 	// This means that the INI format should only be used for Map data format.	
 	@DriveWithDataFile(
-			location = "input.ini",
+			path = "input.ini",
 			format=DataFormat.MAP
 	)
 	public void testWithINIDataFileMapFormat(DataRecord record) throws Exception{

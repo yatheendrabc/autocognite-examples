@@ -22,24 +22,14 @@ import com.autocognite.batteries.config.UserDefinedConfig;
 import com.autocognite.testcommons.annotations.*;
 import com.autocognite.testcommons.assertions.Assertions;
 
-@TestClass(methodThreads=3)
-@Invoke(count=5, properties = {"my.prop=value1,value2"})
-public class UserConfigExample3{
+@TestClass
+@Invoke(count=3, properties = {"my.prop=value1,value2,value3"})
+public class Right_UserConfig_3Invoke3PropSet{
 	private UserDefinedConfig myConfig = null;
 	
-	public UserConfigExample3(UserDefinedConfig config){
+	public Right_UserConfig_3Invoke3PropSet(UserDefinedConfig config){
 		System.err.println(config.props());
 		this.myConfig = config;
 	}
 
-	public void setUpClass() throws Exception{
-		Assertions.assertEquals(myConfig.value("my.prop"), "hoho");
-	}
-	
-	public void testEx() throws Exception{	
-		
-	}
-	
-	public void tearDownClass() throws Exception{
-	}
 }
