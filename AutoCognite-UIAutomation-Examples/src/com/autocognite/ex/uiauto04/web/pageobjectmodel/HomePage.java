@@ -15,8 +15,8 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
+import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
-import com.autocognite.user.uiautomator.api.UiDriver;
 
 public class HomePage extends SimplePage {
 	public HomePage (UiDriver uiDriver) throws Exception{

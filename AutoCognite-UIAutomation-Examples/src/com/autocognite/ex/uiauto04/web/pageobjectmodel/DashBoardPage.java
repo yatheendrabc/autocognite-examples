@@ -15,10 +15,10 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
+import com.autocognite.uiautomator.api.Page;
+import com.autocognite.uiautomator.api.UiDriver;
 import com.autocognite.uiautomator.ex.config.WordPressConfiguration;
-import com.autocognite.user.uiautomator.api.Page;
-import com.autocognite.user.uiautomator.api.UiDriver;
-import com.autocognite.user.uiautomator.lib.BasePageSection;
+import com.autocognite.uiautomator.lib.BasePageSection;
 
 public abstract class DashBoardPage extends SimplePage {
 	LeftNavigation leftNav = null;

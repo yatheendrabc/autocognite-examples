@@ -15,8 +15,8 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import com.autocognite.user.uiautomator.api.UiDriver;
-import com.autocognite.user.uiautomator.lib.BasePage;
+import com.autocognite.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.lib.BasePage;
 
 public abstract class SimplePage extends BasePage {
 

@@ -24,13 +24,14 @@ import static com.autocognite.testcommons.assertions.Assertions.fail;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
+import com.autocognite.batteries.config.RunConfig;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.annotations.ddt.DataMethod;
 import com.autocognite.testcommons.annotations.ddt.DriveWithDataMethod;
 
 @TestClass
 public class SetUpClassIssueWithDDT{
-	private Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+	private Logger logger = RunConfig.getCentralLogger();
 	
 	public void setUpClass() throws Exception{
 		logger.info("UserTest: Called setUpClass");

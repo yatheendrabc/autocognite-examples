@@ -15,7 +15,7 @@
  ******************************************************************************/
 package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
-import com.autocognite.user.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.api.UiDriver;
 
 public class WelcomePage extends DashBoardPage {
 	public WelcomePage (UiDriver uiDriver) throws Exception{

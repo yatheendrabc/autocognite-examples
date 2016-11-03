@@ -21,13 +21,14 @@ package com.autocognite.t01.samenamefixtures;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
+import com.autocognite.batteries.config.RunConfig;
 import com.autocognite.testcommons.annotations.BeforeClass;
 import com.autocognite.testcommons.annotations.BeforeMethod;
 import com.autocognite.testcommons.annotations.TestClass;
 
 @TestClass
 public class MultipleFixturesOfSameType1{
-	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+	private static Logger logger = RunConfig.getCentralLogger();
 	
 	@BeforeClass
 	public void someMethod1(){

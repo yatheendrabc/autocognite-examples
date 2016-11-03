@@ -21,13 +21,14 @@ package com.autocognite.t05.dependencies;
 import org.apache.log4j.Logger;
 
 import com.autocognite.Batteries;
+import com.autocognite.batteries.config.RunConfig;
 import com.autocognite.testcommons.annotations.DependsOn;
 import com.autocognite.testcommons.annotations.TestClass;
 import com.autocognite.testcommons.assertions.Assertions;
 
 @TestClass
 public class SecondTestClass{
-	private static Logger logger = Logger.getLogger(Batteries.getCentralLogName());
+	private static Logger logger = Logger.getLogger(RunConfig.getCentralLogName());
 
 	public void test1() throws Exception{
 		logger.debug("Executed");

@@ -17,8 +17,8 @@ package com.autocognite.ex.uiauto04.web.pageobjectmodel;
 
 import static com.autocognite.testcommons.assertions.Assertions.assertTrue;
 
-import com.autocognite.user.uiautomator.api.UiDriver;
-import com.autocognite.user.uiautomator.api.UiElement;
+import com.autocognite.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.api.UiElement;
 
 public class SettingsPage extends DashBoardPage {
 	public SettingsPage (UiDriver uiDriver) throws Exception{

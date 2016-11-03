@@ -21,11 +21,11 @@ package com.autocognite.ex.uiauto02.web.pages;
 import static com.autocognite.testcommons.assertions.Assertions.assertTrue;
 
 import com.autocognite.testcommons.annotations.TestClass;
-import com.autocognite.user.uiautomator.api.Page;
-import com.autocognite.user.uiautomator.api.UiDriver;
-import com.autocognite.user.uiautomator.api.UiElement;
-import com.autocognite.user.uiautomator.lib.factory.UiDriverFactory;
-import com.autocognite.user.uiautomator.lib.factory.UiFactory;
+import com.autocognite.uiautomator.api.Page;
+import com.autocognite.uiautomator.api.UiDriver;
+import com.autocognite.uiautomator.api.UiElement;
+import com.autocognite.uiautomator.lib.factory.UiDriverFactory;
+import com.autocognite.uiautomator.lib.factory.UiFactory;
 
 @TestClass
 public class WebTestAutomationWithBasicUI {
